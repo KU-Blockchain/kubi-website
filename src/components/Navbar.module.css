@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .rightMenu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rightMenu a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .drawer {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    height: auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+    z-index: 1000;
+  }
+  
+  .drawerItem {
+
+        color: black;         
+        padding: 10px 10px;
+        text-decoration: none;
+        margin: 5px 0;        
+        display: flex;
+        justify-content: center;
+      
+  }
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .rightMenu {
+      display: none;
+    }
+    
+    .hamburger, .drawer {
+      display: block;
+    }
+  }
+  

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import OutlineButton from "./OutlineButton";
 import styles from "./Navbar.module.css"; // Import the CSS module
+import Image from "next/image";
 
 const Navbar = () => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <Link href="/">
-        <OutlineButton title="home" />
+        <Image src="/images/homeButton.png" width="70" height="70" />
       </Link>
 
       <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>

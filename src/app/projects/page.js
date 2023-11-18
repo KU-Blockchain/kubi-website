@@ -25,8 +25,8 @@ const styles = {
   projectCard: {
     borderRadius: "8px",
     padding: "15px 15px",
-    backgroundColor: "#AEE1EB",
-    color: "#286269",
+    backgroundColor: "navyblue",
+    color: "white",
     outline: "none",
     transition: "0.3s",
     width: "500px",

@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
+import SolidColorButton from "../../components/SolidColorButton";
 
 export default function MembershipPage() {
   return (
@@ -7,7 +9,11 @@ export default function MembershipPage() {
       <Navbar />
       <p> welcom to membership</p>
 
-      <p>should have some info about the dao here</p>
+      <p>
+        shoudl have form to fill out if interested in membership and wanting to
+        talk to someone
+      </p>
+      <SolidColorButton title="About the DAO" link="/projects/DAO" />
     </>
   );
 }

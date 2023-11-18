@@ -6,6 +6,8 @@ export default function EventsPage() {
     <>
       <Navbar />
       <p> welcom to events</p>
+      <p> should have calendar with upcoming events</p>
+      <p> should have highlights of past events</p>
     </>
   );
 }

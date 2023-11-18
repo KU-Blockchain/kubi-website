@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const OutlineButton = ({ title, onClick, link, textColor = "black" }) => {
+const OutlineButton = ({ title, onClick, link, textColor = "white" }) => {
   if (link) {
     return (
       <Link
@@ -47,6 +47,7 @@ const styles = {
     backgroundColor: "black",
     color: "white",
     cursor: "pointer",
+    textDecoration: "none",
 
     "&:hover": {
       backgroundColor: "black",

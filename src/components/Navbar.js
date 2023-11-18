@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import OutlineButton from "./OutlineButton";
+import SolidColorButton from "./SolidColorButton";
 import styles from "./Navbar.module.css"; // Import the CSS module
 import Image from "next/image";
 
@@ -30,13 +30,19 @@ const Navbar = () => {
 
       <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
         <Link href="/#about" className={styles.drawerItem}>
-          <OutlineButton title="about" />
+          <SolidColorButton title="about" />
         </Link>
         <Link href="/projects" className={styles.drawerItem}>
-          <OutlineButton title="projects" />
+          <SolidColorButton title="projects" />
         </Link>
         <Link href="/events" className={styles.drawerItem}>
-          <OutlineButton title="events" />
+          <SolidColorButton title="events" />
+        </Link>
+        <Link href="/resources" className={styles.drawerItem}>
+          <SolidColorButton title="resources" />
+        </Link>
+        <Link href="/membership" className={styles.drawerItem}>
+          <SolidColorButton title="membership" />
         </Link>
       </div>
 

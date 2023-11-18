@@ -9,7 +9,6 @@ const OutlineButton = ({ title, onClick, link, textColor = "black" }) => {
         style={{
           ...styles.buttonLink,
           color: textColor,
-          borderColor: textColor,
         }}
       >
         {title}
@@ -31,14 +30,11 @@ const OutlineButton = ({ title, onClick, link, textColor = "black" }) => {
 export default OutlineButton;
 const styles = {
   button: {
-    border: "2px solid black",
     borderRadius: "8px",
     padding: "8px 16px",
-    backgroundColor: "transparent",
-    // color: "black",
+    backgroundColor: "black",
+    color: "white",
     cursor: "pointer",
-    outline: "none",
-    transition: "0.3s",
     "&:hover": {
       backgroundColor: "black",
       color: "white",
@@ -46,15 +42,12 @@ const styles = {
   },
   buttonLink: {
     display: "inline-block",
-    border: "2px solid black",
     borderRadius: "8px",
     padding: "8px 16px",
-    backgroundColor: "transparent",
-    //color: "black",
+    backgroundColor: "black",
+    color: "white",
     cursor: "pointer",
-    textDecoration: "none",
-    outline: "none",
-    transition: "0.3s",
+
     "&:hover": {
       backgroundColor: "black",
       color: "white",

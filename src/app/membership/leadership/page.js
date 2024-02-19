@@ -5,7 +5,7 @@ export default function LeadershipPage() {
   return (
     <>
       <Navbar />
-      <p> leadership page</p>
+      <p> leadership page, yash is the king</p>
 
       <p>should have a section about the exec team</p>
       <p>

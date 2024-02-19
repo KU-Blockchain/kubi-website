@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/react";
 
 const OutlineButton = ({ title, onClick, link, textColor = "white" }) => {
   if (link) {
@@ -10,6 +10,7 @@ const OutlineButton = ({ title, onClick, link, textColor = "white" }) => {
           ...styles.buttonLink,
           color: textColor,
         }}
+        
       >
         {title}
       </Link>

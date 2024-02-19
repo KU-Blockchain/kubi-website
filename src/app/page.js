@@ -1,8 +1,8 @@
+'use client'
 import Image from "next/image";
-import Link from "next/link";
-
+import { Button } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
-
+import { Link } from "@chakra-ui/next-js";
 export default function Home() {
   return (
     <>
@@ -28,7 +28,7 @@ export default function Home() {
           in addition to linkedin and github we want join discord, medium, etc.
         </p>
       </div>
-    </>
+      </>
   );
 }
 

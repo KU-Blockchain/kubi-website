@@ -1,13 +1,33 @@
 'use client'
 import Image from "next/image";
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Center, Flex } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
 import { Link } from "@chakra-ui/next-js";
+import ImageSlider from "@/components/ImageSlider";
 export default function Home() {
+
+  const slidesArray=[
+    {url:"/images/coverpage.jpg", title:"Test1"},
+    {url:"/images/SaketPlagiarsim.jpg", title:"Test2"},
+    {url:"/images/coverpage.jpg", title:"Test3"}
+  ]
+
+  const containerStyles = {
+    width: "500px",
+    height: "280px",
+    margin: "0 auto",
+  };
   return (
     <>
       <Navbar />
       <h2 style={styles.centeredTitle}>Welcome to KUBI web</h2>
+      <Box bg="blueviolet" alignItems="center" justifyContent="center">
+          <ImageSlider images={slidesArray}/>
+      </Box>
+        
+          
+      
+      
       <div id="about">
         <p> this section will talk about our mission and ethos</p>
         <div style={styles.icon}>
@@ -27,7 +47,8 @@ export default function Home() {
         <p>
           in addition to linkedin and github we want join discord, medium, etc.
         </p>
-      </div>
+      </div>    
+      
       </>
   );
 }

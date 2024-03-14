@@ -18,11 +18,12 @@ const ImageCarousel = ({ images }) => {
   };
 
   return (
-    <div >
+    <div>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div style={{display:"flex", flexDirection:"row", justifyContent:"center"}} key={index}>
-            <img src={image.url} alt={`Image ${index + 1}`} />
+          <div style={{display:"flex", flexDirection:"row", justifyContent:"center", height:"350px"}} key={index}>
+            <img style={{maxHeight:"100%", objectFit:"contain"}} src={image.url} alt={`Image ${index + 1}`} />
+            {image.title}
           </div>
         ))}
       </Slider>

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import SolidColorButton from "../../components/SolidColorButton";
-
+import Footer from "@/components/footer";
 export default function MembershipPage() {
   return (
     <>
@@ -14,6 +14,7 @@ export default function MembershipPage() {
         talk to someone
       </p>
       <SolidColorButton title="About the DAO" link="/projects/DAO" />
+      <Footer />
     </>
   );
 }

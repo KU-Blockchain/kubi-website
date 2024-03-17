@@ -2,21 +2,31 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import SolidColorButton from "../../components/SolidColorButton";
-
+import Footer from "@/components/footer";
+import { Center, Text, Stack } from "@chakra-ui/react";
+import ProjectHolder from "@/components/projectholder";
+import { projectCard } from "@/components/globalStyles";
 export default function ProjectsPage() {
+  let testText="KUBI DAO is offers a unique model for collaboration, incentives, and privileges. Our hybrid tokenomics system combines KUBIX and KUBI tokens to create a platform that encourages active participation and fair distribution of rewards. This is all enabled by bloclchain tehcnology, built on the Polygon mumbai testnet. Welcome to the KU Blockchain DAO!"
   return (
     <>
       <Navbar />
-      <p> welcom to projects</p>
+      <Text fontSize='6xl' align="center">Student Led Projects</Text>
+      <hr></hr>
       <p>
         {" "}
         here we will have a list of all past and present projects and link to
         each page
       </p>
-      <div style={styles.projectCard}>
-        <p>example: here is some info about the DAO project</p>
-        <SolidColorButton title="Learn More" link="/projects/DAO" />
-      </div>
+      <Stack spacing={4}>
+        <ProjectHolder text={testText} />
+        <ProjectHolder text={testText} />
+        <ProjectHolder text={testText} />
+        <ProjectHolder text={testText} />
+        <ProjectHolder text={testText} />
+      </Stack>
+      
+      
     </>
   );
 }

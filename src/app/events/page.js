@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import { Center } from "@chakra-ui/react";
-
+import Footer from "@/components/footer";
 export default function EventsPage() {
   return (
     <>
@@ -13,6 +13,7 @@ export default function EventsPage() {
       </Center>
       
       <p> should have highlights of past events</p>
+      <Footer />
     </>
   );
 }

@@ -7,6 +7,7 @@ import ImageSlider from "@/components/ImageSlider";
 import Section from "@/components/section";
 import Footer from "@/components/footer";
 import {centeredTitle}from "@/components/globalStyles.js";
+import { Text } from "@chakra-ui/react";
 export default function Home() {
 
   const colors={
@@ -29,8 +30,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <h2 style={centeredTitle}>Welcome to KUBI web</h2>
-
+      <Text fontSize='6xl' align="center">Welcome to KU Blockchain Institute</Text>
+      <hr></hr>
       <div id="about">
       <Box bg="blueviolet" alignItems="center" justifyContent="center">
           <ImageSlider images={slidesArray}/>

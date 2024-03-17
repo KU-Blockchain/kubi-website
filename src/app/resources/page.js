@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-
+import Footer from "@/components/footer";
 export default function ResourcesPage() {
   return (
     <>
@@ -12,6 +12,7 @@ export default function ResourcesPage() {
         also need a sectin thats an overview of applicatoins of blochcain in
         diff sectors
       </p>
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-
+import Footer from "@/components/footer";
 export default function LeadershipPage() {
   return (
     <>
@@ -13,6 +13,7 @@ export default function LeadershipPage() {
         and faculty)
       </p>
       <p>should have info on our election process</p>
+      <Footer />
     </>
   );
 }

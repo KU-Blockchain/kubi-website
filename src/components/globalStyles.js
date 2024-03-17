@@ -19,3 +19,17 @@ export const centeredTitle = {
   marginBottom: "20px",
   marginTop: "20px",
 }
+
+export const projectCard= {
+  borderRadius: "8px",
+  padding: "15px 15px",
+  backgroundColor: "red",
+  color: "white",
+  outline: "none",
+  transition: "0.3s",
+  width: "500px",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  textAlign: "center",
+}

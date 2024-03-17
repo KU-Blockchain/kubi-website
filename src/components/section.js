@@ -1,11 +1,15 @@
 'use client';
 import { Box, Center, Flex, Img, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 function Section({image, text, bgcolor,heading, fontcolor, headingColor}){
   let fColor=fontcolor
   return(
       <>
-      <Flex bg={bgcolor} paddingTop="5%" paddingBottom="5%">
+      <motion.div 
+      initial={{ opacity: 0, x:200 }}
+      whileInView={{ opacity: 1, x:0 }} 
+      style={{display:"flex", flexDirection:"row", backgroundColor:`${bgcolor}`, paddingTop:"5%", paddingBottom:"5%"}}>
         <Box w="50%" p="4rem">
           <Center color={headingColor}><h1>{heading}</h1></Center>
         
@@ -18,7 +22,7 @@ function Section({image, text, bgcolor,heading, fontcolor, headingColor}){
             <Img src={image} width="50%" p={5}/>
           </Center>
         </Box>
-      </Flex>
+      </motion.div>
         
       </>
   );

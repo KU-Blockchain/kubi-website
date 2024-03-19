@@ -8,7 +8,6 @@ import Section from "@/components/section";
 import Footer from "@/components/footer";
 import {centeredTitle}from "@/components/globalStyles.js";
 import { Text } from "@chakra-ui/react";
-import AnimatedBox from "@/components/animatedbox";
 export default function Home() {
 
   const colors={

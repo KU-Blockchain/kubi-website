@@ -8,6 +8,7 @@ import Section from "@/components/section";
 import Footer from "@/components/footer";
 import {centeredTitle}from "@/components/globalStyles.js";
 import { Text } from "@chakra-ui/react";
+import AnimatedBox from "@/components/animatedbox";
 export default function Home() {
 
   const colors={
@@ -15,8 +16,8 @@ export default function Home() {
     whiteBg:"white"
   }
   const slidesArray=[
-    {url:"/images/WebsiteAssets/perry-alexander.jpg", title:"Test1"},
-    {url:"/images/DevImage.png", title:"Test2"},
+    {url:"/images/DevImage.png", title:"Test1"},
+    {url:"/images/WebsiteAssets/perry-alexander.jpg", title:"Test2"},
     {url:"/images/Research.png", title:"Test3"}
   ]
 
@@ -33,7 +34,7 @@ export default function Home() {
       <Text fontSize='6xl' align="center">Welcome to KU Blockchain Institute</Text>
       <hr></hr>
       <div id="about">
-      <Box bg="blueviolet" alignItems="center" justifyContent="center">
+      <Box alignItems="center" justifyContent="center">
           <ImageSlider images={slidesArray}/>
       </Box>
       <br>

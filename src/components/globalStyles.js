@@ -32,3 +32,14 @@ export const projectCard= {
   alignItems: "center",
   textAlign: "center",
 }
+
+
+export const buttonStyle = {
+  borderRadius: "8px",
+  padding: "8px 16px",
+  backgroundColor: "black",
+  color: "white",
+  cursor: "pointer",
+  marginBottom:"20px",
+  paddingBottom:"5px"
+}

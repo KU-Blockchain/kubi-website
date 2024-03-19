@@ -1,9 +1,6 @@
 // components/ImageCarousel.js
 'use client'
 import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import { useState, useEffect } from 'react';
 import {motion, useAnimate} from "framer-motion";
 import { Button, Center, HStack } from '@chakra-ui/react';

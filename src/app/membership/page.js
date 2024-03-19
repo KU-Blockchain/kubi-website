@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import SolidColorButton from "../../components/SolidColorButton";
 import Footer from "@/components/footer";
+import {buttonStyle} from "@/components/globalStyles.js";
 export default function MembershipPage() {
   return (
     <>
@@ -13,7 +14,7 @@ export default function MembershipPage() {
         shoudl have form to fill out if interested in membership and wanting to
         talk to someone
       </p>
-      <SolidColorButton title="About the DAO" link="/projects/DAO" />
+      <a href="https://www.google.com" target="_blank" style={buttonStyle}>About DAO</a>
       <Footer />
     </>
   );

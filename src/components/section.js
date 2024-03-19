@@ -13,10 +13,12 @@ function Section({image, text, bgcolor,heading, fontcolor, headingColor}){
       style={{display:"flex", flexDirection:"row", backgroundColor:`${bgcolor}`, paddingTop:"5%", paddingBottom:"5%"}}>
         <Box w="50%" p="4rem">
           <Center color={headingColor}><h1>{heading}</h1></Center>
-        
+          <p>
           <Text color={fColor} align="center" fontFamily="sans-sherif" fontWeight={500}>
             {text}
           </Text> 
+          </p>
+          
         </Box>
         <Box>
           <Center>

@@ -27,9 +27,8 @@ export const projectCard= {
   color: "white",
   outline: "none",
   transition: "0.3s",
-  width: "500px",
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   alignItems: "center",
   textAlign: "center",
 }

@@ -20,7 +20,6 @@ const ImageCarousel = ({ images }) => {
       setIndex(prev=>prev+1);
     }
     
-    setIsAnimating(true);
   }
 
   function prevIndex(){
@@ -31,7 +30,6 @@ const ImageCarousel = ({ images }) => {
       setIndex(prev=>prev-1);
     }
 
-    setIsAnimating(true);
   }
   
   function addclass()

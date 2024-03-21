@@ -8,7 +8,7 @@ function Footer(){
   
   return(
       <>
-      <motion.div initial={{ opacity: 0, y:300 }} whileInView={{ opacity: 1, y:0 }} >
+      <motion.div initial={{ opacity: 0}} whileInView={{ opacity: 1 }} >
         <Center display="flex" flexDirection="column" bg={colors.blueBg}>
           <Image width="100" height="100" style={Bigicon} src="/images/WebsiteAssets/KUBI Logos/RGB PNG's (for web use)/KUBC-logo-RGB-500.png"/>
           <Text fontSize="3xl" color={colors.whiteBg}><b>KU Blockchain Institute</b></Text>

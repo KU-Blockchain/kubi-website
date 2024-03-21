@@ -13,7 +13,7 @@ export default function ProjectsPage() {
     ResearchImage:"/images/WebsiteAssets/Research.png"
   }
   return (
-    <div style={{backgroundColor:"lightblue"}}>
+    <div>
       <Navbar />
       <Text fontSize='6xl' align="center">Student Led Projects</Text>
       <hr></hr>

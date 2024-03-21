@@ -25,7 +25,7 @@ export default function Home() {
     margin: "0 auto",
   };
   return (
-    <div style={{backgroundColor:"lightblue"}}>
+    <div>
       <Navbar />
       <Text fontSize='6xl' align="center">Welcome to KU Blockchain Institute</Text>
       <hr></hr>

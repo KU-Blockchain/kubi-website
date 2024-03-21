@@ -1,12 +1,9 @@
 'use client'
-import Image from "next/image";
 import { Box, Button, Center, Flex } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
-import { Link } from "@chakra-ui/next-js";
 import ImageSlider from "@/components/ImageSlider";
 import Section from "@/components/section";
 import Footer from "@/components/footer";
-import {centeredTitle}from "@/components/globalStyles.js";
 import { Text } from "@chakra-ui/react";
 export default function Home() {
 
@@ -28,7 +25,7 @@ export default function Home() {
     margin: "0 auto",
   };
   return (
-    <>
+    <div style={{backgroundColor:"lightblue"}}>
       <Navbar />
       <Text fontSize='6xl' align="center">Welcome to KU Blockchain Institute</Text>
       <hr></hr>
@@ -44,7 +41,7 @@ export default function Home() {
         
       </div>    
       <Footer />
-      </>
+      </div>
   );
 }
 

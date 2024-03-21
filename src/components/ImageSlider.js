@@ -10,17 +10,6 @@ const ImageCarousel = ({ images }) => {
 
   const [index, setIndex]=useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    arrows:true,
-  };
-  
   
   function nextIndex(){
     if(index==images.length-1){
@@ -55,14 +44,6 @@ const ImageCarousel = ({ images }) => {
 
   return (
     <div>
-      {/* <Slider {...settings}>
-        {images.map((image, index) => (
-          <div style={{display:"flex", flexDirection:"row", justifyContent:"center",overflow:"hidden",height:"350px"}} key={index}>
-            <img style={{maxWidth:"100%", height:"auto"}} src={image.url} alt={`Image ${index + 1}`} />
-          </div>
-        ))}
-      </Slider> */}
-
       <motion.div style={{maxHeight:"500px",overflow:"hidden", alignItems:"center", alignContent:"center"}} 
       animate={isAnimating ? { opacity: 0.5, x: 0.5 } : { opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}

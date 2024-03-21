@@ -13,7 +13,7 @@ export default function ProjectsPage() {
     ResearchImage:"/images/WebsiteAssets/Research.png"
   }
   return (
-    <>
+    <div style={{backgroundColor:"lightblue"}}>
       <Navbar />
       <Text fontSize='6xl' align="center">Student Led Projects</Text>
       <hr></hr>
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
       </Stack>
       
       
-    </>
+    </div>
   );
 }
 

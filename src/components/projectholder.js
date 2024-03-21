@@ -1,22 +1,25 @@
 'use client'
-import { projectCard } from "@/components/globalStyles";
+import { projectCard, roundImage } from "@/components/globalStyles";
 import { motion } from "framer-motion";
 import { Flex, Img, Text, Button } from "@chakra-ui/react";
-function ProjectHolder({text, image}) {
+import styles from "@/components/globalstyles.module.css";
+function ProjectHolder({text, image, link}) {
 
+  if(link==null){
+    link="https://www.google.com";
+  }
   return(
+
     <>
-      <motion.div style={projectCard}
+      <motion.div className={styles.projectCard} style={projectCard}
       initial={{ opacity: 0, x:500 }}
       whileInView={{ opacity: 1, x:0 }}
       viewport={{ once: true }}>
-          <Img src={image} width="45%"></Img>
+          <img style={roundImage} src={image}></img>
           <div>
-            <Text fonSize="6xl">{text}</Text>
-            <Button>View Project</Button>
+            <Text fontSize="xl">{text}</Text>
+            <Button colorScheme="linkedin" onClick={() => window.open(link, "_blank")}>View Project</Button>
           </div>
-          
-        
       </motion.div>
     </>
   );

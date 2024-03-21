@@ -6,11 +6,11 @@ import Footer from "@/components/footer";
 import { Center, Text, Stack } from "@chakra-ui/react";
 import ProjectHolder from "@/components/projectholder";
 export default function ProjectsPage() {
-  let testText="KUBI DAO is offers a unique model for collaboration, incentives, and privileges. Our hybrid tokenomics system combines KUBIX and KUBI tokens to create a platform that encourages active participation and fair distribution of rewards. This is all enabled by bloclchain tehcnology, built on the Polygon mumbai testnet. Welcome to the KU Blockchain DAO!"
+  let testText="KUBI DAO is offers a unique model for collaboration, incentives, and privileges. Our hybrid tokenomics system combines KUBIX and KUBI tokens to create a platform that encourages active participation and fair distribution of rewards. This is all enabled by bloclchain tehcnology, built on the Polygon mumbai testnet. Welcome to the KU Blockchain DAO!KUBI DAO is offers a unique model for collaboration, incentives, and privileges. Our hybrid tokenomics system combines KUBIX and KUBI tokens to create a platform that encourages active participation and fair distribution of rewards. This is all enabled by bloclchain tehcnology, built on the Polygon mumbai testnet. Welcome to the KU Blockchain DAO!"
 
   const assets={
     DAOImage:"/images/WebsiteAssets/DAOimage.png",
-    ResearchImage:"/images/WebsiteAssets/Research.png"
+    ResearchImage:"/images/Research.png"
   }
   return (
     <div>
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
       </p>
       <Stack spacing={4}>
         <ProjectHolder text={testText} image={assets.DAOImage} />
-        <ProjectHolder text={testText} image={assets.DAOImage} />
+        <ProjectHolder text={testText} image={assets.ResearchImage} />
         <ProjectHolder text={testText} image={assets.DAOImage} />
       </Stack>
       
@@ -33,18 +33,3 @@ export default function ProjectsPage() {
   );
 }
 
-const styles = {
-  projectCard: {
-    borderRadius: "8px",
-    padding: "15px 15px",
-    backgroundColor: "navyblue",
-    color: "white",
-    outline: "none",
-    transition: "0.3s",
-    width: "500px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-  },
-};

@@ -23,14 +23,24 @@ export const centeredTitle = {
 export const projectCard= {
   borderRadius: "8px",
   padding: "15px 15px",
-  backgroundColor: "red",
-  color: "white",
+  margin: "20px",
+  color: "black",
   outline: "none",
   transition: "0.3s",
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   textAlign: "center",
+  borderBottom: "1px solid black",
+}
+
+
+
+export const roundImage = {
+  borderRadius: "50%",
+  width: "35%",
+  height: "auto",
+  objectFit: "contain",
 }
 
 

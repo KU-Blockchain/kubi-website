@@ -47,7 +47,7 @@ const ImageCarousel = ({ images }) => {
   
   
   return (
-    <div >
+    <div style={{margin:"0px"}}>
       <motion.div id='imageHolder' style={{maxHeight:"500px",overflow:"hidden", alignItems:"center", alignContent:"center"}} 
       >
         <motion.img 
@@ -56,9 +56,9 @@ const ImageCarousel = ({ images }) => {
         style={{maxWidth:"100%", height:"auto"}} src={images[index].url} />
       </motion.div>
       <Center>
-          <HStack spacing={3}>
-            <Button onClick={prevIndex}>Previous</Button>
-            <Button onClick={nextIndex}>next</Button>
+          <HStack spacing={1000}>
+            <Button onClick={prevIndex}>&lt;&lt;</Button>
+            <Button onClick={nextIndex}>&gt;&gt;</Button>
           </HStack>
         </Center>
       

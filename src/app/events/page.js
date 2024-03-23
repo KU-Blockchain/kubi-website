@@ -5,6 +5,7 @@ import { Center, Button } from "@chakra-ui/react";
 import Footer from "@/components/footer";
 import { Text } from "@chakra-ui/react";
 import Section from "@/components/section";
+import WebpageHeading from "@/components/webpageheading";
 export default function EventsPage() {
   
     const [showIframe, setShowIframe] = useState(false);
@@ -45,8 +46,7 @@ export default function EventsPage() {
     return (
       <>
         <Navbar />
-        <Text fontSize='6xl' align="center" color="blue.500" fontWeight="bold">Events</Text>
-        <hr></hr>
+        <WebpageHeading heading={"Events"} />
         
         <Text fontSize='3xl' align="center" color="blue.500" fontWeight="bold">Some of our past events</Text>
 

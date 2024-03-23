@@ -6,6 +6,7 @@ import Section from "@/components/section";
 import Footer from "@/components/footer";
 import { Text } from "@chakra-ui/react";
 import {motion} from "framer-motion";
+import WebpageHeading from "@/components/webpageheading";
 export default function Home() {
 
   const colors={
@@ -16,7 +17,8 @@ export default function Home() {
     {
       url:"/images/WebsiteAssets/Campus.png", 
       title:"Who Are We",
-      text:"The University of Kansas Blockchain Institute is a student-led technology initiative established under the Institute for Information Sciences (I2S). We strive to make Lawrence the technology hub of the Midwest through the interdisciplinary research, education, and development of distributed ledger technologies at KU. "},
+      text:"The University of Kansas Blockchain Institute is a student-led technology initiative established under the Institute for Information Sciences (I2S). We strive to make Lawrence the technology hub of the Midwest through the interdisciplinary research, education, and development of distributed ledger technologies at KU. "
+    },
 
     {
       url:"/images/Education.png", 
@@ -47,13 +49,9 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <motion.div
-      initial={{ opacity: 0, x:300}}
-      whileInView={{ opacity: 1, x:0 }}>
-        <Text fontSize='6xl' align="center" color="blue.500" fontWeight="bold">Welcome to KU Blockchain Institute</Text>
-      </motion.div>
-      
-      <hr></hr>
+      <WebpageHeading heading={"Welcome to KU Blockchain"} />
+
+
       <div id="about">
         <Box alignItems="center" justifyContent="center">
           <ImageSlider images={slidesArray}/>

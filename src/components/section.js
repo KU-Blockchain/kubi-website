@@ -13,7 +13,7 @@ function Section({
   customStyle = {}
 }) {
   
-  const sectionStyle = { display: "flex", flexDirection: "row", backgroundColor: `${bgcolor}`, paddingTop: "5%", paddingBottom: "5%", border: `1px solid ${fontcolor} `, borderRadius: "10px",...customStyle };
+  const sectionStyle = { display: "flex", flexDirection: "row", backgroundColor: `${bgcolor}`, paddingTop: "5%", paddingBottom: "5%", borderRadius: "10px", maxHeight:"500px", overflow:"hidden",...customStyle };
   return(
       <>
       <motion.div 
@@ -30,8 +30,8 @@ function Section({
           
         </Box>
         <Box>
-          <Center>
-            <Img src={image} width="50%" p={5}/>
+          <Center >
+            <Img src={image} width="30rem" p={5}/>
           </Center>
         </Box>
       </motion.div>

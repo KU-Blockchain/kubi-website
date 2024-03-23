@@ -14,8 +14,33 @@ export default function EventsPage() {
     };
 
     const sections = [
-      {image: "/testImages/CoolLinkedInPic.jpg", text: "This is a test event", heading: "Test Event 1"},
+      {
+        image: "/testImages/CoolLinkedInPic.jpg", 
+        text: "This is a test event", 
+        heading: "Test Event 1", 
+        customStyle: {paddingBottom: 0, paddingTop:0, border: "1px solid black",}
+      },
+      {
+        image: "/testImages/SexyPic.jpg", 
+        text: "This is a test event", 
+        heading: "Test Event 2", 
+        customStyle: {paddingBottom: 0}
+      },
+      {
+        image: "/testImages/hudpic.jpg", 
+        text: "This is a test event", 
+        heading: "Test Event 3", 
+        customStyle: {paddingBottom: 0}
+      },
+      {
+        image: "/testImages/IM ACTUALLY AMAZING.png", 
+        text: "This is a test event", 
+        heading: "Test Event 4", 
+        customStyle: {paddingBottom: 0}
+      },
     ];
+
+
 
     return (
       <>
@@ -25,7 +50,17 @@ export default function EventsPage() {
         
         <Text fontSize='3xl' align="center" color="blue.500" fontWeight="bold">Some of our past events</Text>
 
-        <Section image={sections[0].image} text={sections[0].text} heading={sections[0].heading} customStyle={{borderRadius: "30%"}} />
+        {sections.map((section, index) => (
+          <>
+            <Section
+              key={index}
+              image={section.image}
+              text={section.text}
+              heading={section.heading}
+              customStyle={section.customStyle}
+            />
+          </>
+        ))}
 
         <Button colorScheme="pink" onClick={toggleIframeVisibility}>
           {showIframe ? "Hide Iframe" : "Show Iframe"}

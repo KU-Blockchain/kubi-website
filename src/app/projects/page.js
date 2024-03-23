@@ -15,7 +15,7 @@ export default function ProjectsPage() {
   return (
     <div>
       <Navbar />
-      <Text fontSize='6xl' align="center">Student Led Projects</Text>
+      <Text fontSize='6xl' align="center" color="blue.500" fontWeight="bold">Student Led Projects</Text>
       <hr></hr>
       <p>
         {" "}

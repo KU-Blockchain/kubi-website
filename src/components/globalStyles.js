@@ -31,7 +31,6 @@ export const projectCard= {
   flexDirection: "row",
   alignItems: "center",
   textAlign: "center",
-  borderBottom: "1px solid black",
 }
 
 

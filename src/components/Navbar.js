@@ -24,8 +24,8 @@ const Navbar = () => {
   }, []);
   return (
     <nav className={styles.navbar}>
-      <Link href="/">
-        <Image src="/images/homeButton.png" width="70" height="70" />
+      <Link href="/" style={{marginLeft:"10%"}}>
+        <Image src="/images/WebsiteAssets/KUBI Logos/RGB PNG's (for web use)/KUBC-logo-RGB-1200.png" width="120" height="150" />
       </Link>
 
       <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>

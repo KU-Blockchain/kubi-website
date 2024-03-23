@@ -10,7 +10,7 @@ function Section({image, text, bgcolor,heading, fontcolor, headingColor}){
       <motion.div 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }} 
-      style={{display:"flex", flexDirection:"row", backgroundColor:`${bgcolor}`, paddingTop:"5%", paddingBottom:"5%"}}>
+      style={{display:"flex", flexDirection:"row", backgroundColor:`${bgcolor}`, paddingTop:"5%", paddingBottom:"5%", border: `1px solid ${fontcolor} `, borderRadius:"10px"}}>
         <Box w="50%" p="4rem">
           <Center color={headingColor}><h1>{heading}</h1></Center>
           <p>

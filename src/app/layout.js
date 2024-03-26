@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import 'bootstrap/dist/css/bootstrap.css';
 import BootstrapClient from '@/components/BootstrapClient.js';
+require('bootstrap/dist/js/bootstrap.bundle.min.js');
 import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 // export const metadata = {
@@ -11,13 +12,12 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    require('bootstrap/dist/js/bootstrap.bundle.min.js');
-  }, []);
 
   return (
     <html lang="en">
-        <Providers><body className={inter.className}>{children} </body></Providers>
+        <Providers>
+          <body className={inter.className}>{children} </body>
+        </Providers>
     </html>
   );
 }

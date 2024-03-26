@@ -53,6 +53,7 @@ const ImageCarousel = ({ images }) => {
         <motion.img 
         initial={{ opacity: 0, x:200 }}
         whileInView={{ opacity: 1, x:0 }}
+        viewport={{ once: true }}
         style={{maxWidth:"100%", height:"auto"}} src={images[index].url} />
       </motion.div>
       <Center>

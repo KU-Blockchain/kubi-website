@@ -14,6 +14,7 @@ function Section({
 }) {
   
   const sectionStyle = { display: "flex", flexDirection: "row", backgroundColor: `${bgcolor}`, paddingTop: "5%", paddingBottom: "5%", borderRadius: "10px", maxHeight:"500px", overflow:"hidden",...customStyle };
+  
   return(
       <>
       <motion.div 
@@ -22,7 +23,7 @@ function Section({
       viewport={{ once: true }} 
       style={sectionStyle}>
         <Box w="50%" p="4rem">
-          <Center color={headingColor}><h1>{heading}</h1></Center>
+          <Center color={headingColor}><Text fontSize="3xl">{heading}</Text></Center>
           <p>
           <Text color={fontcolor} align="center" fontFamily="sans-sherif" fontWeight={500}>
             {text}

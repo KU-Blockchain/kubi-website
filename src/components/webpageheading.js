@@ -3,7 +3,7 @@ import React from 'react';
 import {motion} from "framer-motion";
 import { Text } from "@chakra-ui/react";
 
-const WebpageHeading = ({heading}) => {
+const WebpageHeading = ({heading}) => { 
   return (
     <>
     <motion.div

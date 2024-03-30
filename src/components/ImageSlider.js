@@ -3,7 +3,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import {motion, useAnimate} from "framer-motion";
-import { Button, Center, HStack } from '@chakra-ui/react';
+import { Button, Center, Flex, HStack } from '@chakra-ui/react';
 import styles from "@/components/globalstyles.module.css";
 import next from 'next';
 
@@ -48,20 +48,20 @@ const ImageCarousel = ({ images }) => {
   
   return (
     <div style={{margin:"0px"}}>
-      <motion.div id='imageHolder' style={{maxHeight:"500px",overflow:"hidden", alignItems:"center", alignContent:"center"}} 
-      >
+      <motion.div id='imageHolder' style={{maxHeight:"500px",overflow:"hidden", alignItems:"center", alignContent:"center",}}>
+
         <motion.img 
         initial={{ opacity: 0, x:200 }}
         whileInView={{ opacity: 1, x:0 }}
         viewport={{ once: true }}
         style={{maxWidth:"100%", height:"auto"}} src={images[index].url} />
       </motion.div>
-      <Center>
-          <HStack spacing={1000}>
+      <Flex justifyContent="center">
+          <HStack spacing="100%">
             <Button onClick={prevIndex}>&lt;&lt;</Button>
             <Button onClick={nextIndex}>&gt;&gt;</Button>
           </HStack>
-        </Center>
+        </Flex>
       
     </div>
   );

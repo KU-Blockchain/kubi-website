@@ -37,8 +37,8 @@ export default function EventsPage() {
       },
       {
         image: "/testImages/IM ACTUALLY AMAZING.png", 
-        text: "This is a test event", 
-        heading: "Test Event 4", 
+        text: "Visited by Joe Roets, the founder of DragonChain, this event was a unique opportunity to learn about the latest in blockchain technology from an industry expert. Joe shared his insights on the future of blockchain and the potential of DragonChain to revolutionize the industry.", 
+        heading: "Industry Highlight: DragonChain", 
         customStyle: {}
       },
     ];

@@ -11,10 +11,7 @@ function ProjectHolder({text, image, link}) {
   return(
 
     <>
-      <motion.div className={styles.projectCard} style={projectCard}
-      initial={{ opacity: 0, x:500 }}
-      whileInView={{ opacity: 1, x:0 }}
-      viewport={{ once: true }}>
+      <motion.div className={styles.projectCard} style={projectCard}>
           <img style={roundImage} src={image}></img>
           <div>
             <Text fontSize="xl">{text}</Text>

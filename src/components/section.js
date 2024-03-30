@@ -17,6 +17,7 @@ function Section({
 
   return(
       <>
+      
       <motion.div 
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -25,11 +26,11 @@ function Section({
       className={styles.sectionShadow}>
         <Box w="50%" p="4rem">
           <Center color={headingColor}><Text fontSize="3xl">{heading}</Text></Center>
-          <p>
+          <div>
           <Text color={fontcolor} align="center" fontFamily="Times New Roman" fontWeight={500}>
             {text}
           </Text> 
-          </p>
+          </div>
           
         </Box>
         <Box>

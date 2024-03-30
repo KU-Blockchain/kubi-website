@@ -2,10 +2,9 @@
 'use client'
 import React from 'react';
 import { useState, useEffect } from 'react';
-import {motion, useAnimate} from "framer-motion";
+import {motion} from "framer-motion";
 import { Button, Center, Flex, HStack } from '@chakra-ui/react';
 import styles from "@/components/globalstyles.module.css";
-import next from 'next';
 
 const ImageCarousel = ({ images }) => {
 

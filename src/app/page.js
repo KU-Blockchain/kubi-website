@@ -47,7 +47,7 @@ export default function Home() {
     margin: "0 auto",
   };
   return (
-    <div>
+    <>
       <Navbar />
       <WebpageHeading heading={"Welcome to KU Blockchain"} />
 
@@ -70,7 +70,7 @@ export default function Home() {
         ))}
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

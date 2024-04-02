@@ -59,6 +59,7 @@ export default function Home() {
         <br></br>
         {slidesArray.map((slide, index) => (
           <Section
+            key={index}
             image={slide.url}
             text={slide.text}
             bgcolor={index % 2 === 0 ? colors.whiteBg : colors.blueBg}

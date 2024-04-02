@@ -13,6 +13,11 @@ export default function Home() {
     blueBg:"#0051ba",
     whiteBg:"white"
   }
+  const slidesSources=[
+    "/images/WebsiteAssets/perry-alexander.jpg",
+    "/images/Education.png",
+    "/images/Research.png",
+  ]
   const slidesArray=[
     {
       url:"/images/WebsiteAssets/Campus.png", 
@@ -39,13 +44,6 @@ export default function Home() {
 
   ]
 
-  let testText="The University of Kansas Blockchain Institute is a student-led technology initiative established under the Institute for Information Sciences (I2S). We strive to make Lawrence the technology hub of the Midwest through the interdisciplinary research, education, and development of distributed ledger technologies at KU. "
-
-  const containerStyles = {
-    width: "500px",
-    height: "280px",
-    margin: "0 auto",
-  };
   return (
     <>
       <Navbar />
@@ -54,7 +52,7 @@ export default function Home() {
 
       <div id="about">
         <Box alignItems="center" justifyContent="center">
-          <ImageSlider images={slidesArray}/>
+          <ImageSlider images={slidesSources}/>
         </Box>
         <br></br>
         {slidesArray.map((slide, index) => (

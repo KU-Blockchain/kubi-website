@@ -59,16 +59,18 @@
   .button {
     border-radius: 8px;
     padding: 8px 16px;
-    background-color: #0051ba;
+    background-color: rgb(0, 81, 186);
     color: white;
     cursor: pointer;
-
-    
+    transition: 0.15s;
+    border: white 2px solid;
   }
 
   .button:hover {
-    background-color: black;
-    color: red;
+    scale: 1.2;
+  }
+  .button:active {
+    scale: 1.1;
   }
   .buttonLink {
     display: inline-block;
@@ -78,7 +80,6 @@
     cursor: pointer;
     text-decoration: none;
 
-    
   }
 
   .buttonLink:hover {

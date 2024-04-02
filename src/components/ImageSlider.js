@@ -10,11 +10,22 @@ const ImageCarousel = ({ images }) => {
 
   const [index, setIndex]=useState(0);
   
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex(prev => (prev + 1) % images.length);
+      addclass()
+    }, 5000); // 5000 milliseconds = 5 seconds
   
+    // Clear the interval when the component unmounts
+    return () => clearInterval(interval);
+  }, []);
+
   function nextIndex(){
     addclass()
-    if(index==images.length-1){
+    console.log(index)
+    if(index>=images.length-1){
       setIndex(0);
+      console.log("reset");
     }
     else{
       setIndex(prev=>prev+1);
@@ -23,7 +34,7 @@ const ImageCarousel = ({ images }) => {
   }
 
   function prevIndex(){
-    if(index==0){
+    if(index<=0){
       setIndex(images.length-1);
     }
     else{
@@ -48,13 +59,13 @@ const ImageCarousel = ({ images }) => {
   
   return (
     <div style={{margin:"0px"}}>
-      <motion.div id='imageHolder' style={{maxHeight:"500px",overflow:"hidden", alignItems:"center", alignContent:"center",}}>
+      <motion.div id='imageHolder' style={{maxHeight:"450px",overflow:"hidden", alignItems:"center", alignContent:"center",}}>
 
         <motion.img 
         initial={{ opacity: 0, x:200 }}
         whileInView={{ opacity: 1, x:0 }}
         viewport={{ once: true }}
-        style={{maxWidth:"100%", height:"auto"}} src={images[index].url} />
+        style={{maxWidth:"100%", height:"auto"}} src={images[index]} />
       </motion.div>
       <Flex justifyContent="center">
           <HStack spacing="100%">

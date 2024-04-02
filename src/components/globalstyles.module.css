@@ -1,6 +1,6 @@
 
 .ClickedImage{
-  animation: FadeInAnimation 0.5s ease-in-out;
+  animation: FadeInAnimation 1s ease-in-out;
 }
 
 .UnClickedImage{

@@ -10,6 +10,7 @@ const ImageCarousel = ({ images }) => {
 
   const [index, setIndex]=useState(0);
   
+  
   function nextIndex(){
     addclass()
     if(index==images.length-1){

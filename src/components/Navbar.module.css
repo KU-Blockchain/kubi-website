@@ -9,6 +9,7 @@
     background-color: #0051ba;
     border-radius: 10px;
   }
+
   
   .rightMenu {
     display: flex;
@@ -53,6 +54,35 @@
         display: flex;
         justify-content: center;
       
+  }
+  /*Button Styles Navbar*/
+  .button {
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: #0051ba;
+    color: white;
+    cursor: pointer;
+
+    
+  }
+
+  .button:hover {
+    background-color: black;
+    color: red;
+  }
+  .buttonLink {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+
+    
+  }
+
+  .buttonLink:hover {
+    color: white;
   }
   /* Media Queries */
   @media (max-width: 768px) {

@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "@chakra-ui/react";
-
+import navStyles from "./Navbar.module.css";
 const OutlineButton = ({ title, onClick, link, textColor = "white" }) => {
   if (link) {
     return (
       <Link
+        className={navStyles.buttonLink}
         href={link}
         style={{
-          ...styles.buttonLink,
           color: textColor,
         }}
         
@@ -19,13 +19,13 @@ const OutlineButton = ({ title, onClick, link, textColor = "white" }) => {
 
   if (onClick && typeof onClick === "function") {
     return (
-      <button style={styles.button} onClick={onClick}>
+      <button className={navStyles.button} onClick={onClick}>
         {title}
       </button>
     );
   }
 
-  return <button style={styles.button}>{title}</button>;
+  return <button className={navStyles.button}>{title}</button>;
 };
 
 export default OutlineButton;
@@ -33,8 +33,8 @@ const styles = {
   button: {
     borderRadius: "8px",
     padding: "8px 16px",
-    backgroundColor: "black",
-    color: "white",
+    backgroundColor: "#0051ba",
+    color: "red",
     cursor: "pointer",
     "&:hover": {
       backgroundColor: "black",
@@ -45,13 +45,11 @@ const styles = {
     display: "inline-block",
     borderRadius: "8px",
     padding: "8px 16px",
-    backgroundColor: "black",
     color: "white",
     cursor: "pointer",
     textDecoration: "none",
 
     "&:hover": {
-      backgroundColor: "black",
       color: "white",
     },
   },

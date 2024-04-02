@@ -29,8 +29,8 @@ const Navbar = () => {
       </Link>
 
       <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
-        <Link href="/#about" className={styles.drawerItem}>
-          <SolidColorButton title="about" />
+        <Link href="/" className={styles.drawerItem}>
+          <SolidColorButton title="Home" />
         </Link>
         <Link href="/projects" className={styles.drawerItem}>
           <SolidColorButton title="projects" />

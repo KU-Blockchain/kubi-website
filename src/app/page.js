@@ -64,6 +64,7 @@ export default function Home() {
             heading={slide.title}
             fontcolor={index % 2 === 0 ? colors.blueBg : colors.whiteBg}
             headingColor={index % 2 === 0 ? colors.blueBg : colors.whiteBg}
+            type={index % 2}
             customStyle={{margin:"2rem", border: "2px solid purple", borderRadius: "20px"}}
           />
         ))}

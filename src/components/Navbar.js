@@ -30,10 +30,13 @@ const Navbar = () => {
 
       <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
         <Link href="/" className={styles.drawerItem}>
-          <SolidColorButton title="Home" />
+         Home
         </Link>
         <Link href="/projects" className={styles.drawerItem}>
-          <SolidColorButton title="projects" />
+          Projects
+        </Link>
+        <Link href="/membership" className={styles.drawerItem}>
+          Membership
         </Link>
         <Link href="/events" className={styles.drawerItem}>
           <SolidColorButton title="events" />
@@ -41,9 +44,7 @@ const Navbar = () => {
         <Link href="/resources" className={styles.drawerItem}>
           <SolidColorButton title="resources" />
         </Link>
-        <Link href="/membership" className={styles.drawerItem}>
-          <SolidColorButton title="membership" />
-        </Link>
+        
       </div>
 
       <div

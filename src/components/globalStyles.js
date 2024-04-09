@@ -1,4 +1,3 @@
- 
 export const colors={
   blueBg:"#0051ba",
   whiteBg:"white"

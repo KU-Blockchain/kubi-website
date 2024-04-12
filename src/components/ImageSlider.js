@@ -68,10 +68,10 @@ const ImageCarousel = ({ images }) => {
         style={{maxWidth:"100%", height:"auto"}} src={images[index]} />
       </motion.div>
       <Flex justifyContent="center">
-          <HStack spacing="100%">
+          {/* <HStack spacing="100%">
             <Button onClick={prevIndex}>&lt;&lt;</Button>
             <Button onClick={nextIndex}>&gt;&gt;</Button>
-          </HStack>
+          </HStack> */}
         </Flex>
       
     </div>

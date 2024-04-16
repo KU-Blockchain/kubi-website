@@ -4,8 +4,6 @@ import Navbar from "@/components/Navbar";
 import ImageSlider from "@/components/ImageSlider";
 import Section from "@/components/section";
 import Footer from "@/components/footer";
-import { Text } from "@chakra-ui/react";
-import {motion} from "framer-motion";
 import WebpageHeading from "@/components/webpageheading";
 export default function Home() {
 

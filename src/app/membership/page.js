@@ -71,16 +71,15 @@ export default function MembershipPage() {
       let message = document.getElementById("message").value;
       const packMessage={firstName: firstName, lastName: lastName, emailID: email, message: message};
       
-      const data = getEmailContext()
-      console.log(data);
+      const data = sendEmail(packMessage);
       //clearForm();
     }
   }
 
   async function sendEmail(packMessage) {
-    console.log('Sending email:', packMessage);
+    console.log(packMessage);
     try {
-      const res = await fetch('http://localhost:3000/api/emailContext', {
+      const res = await fetch('/api/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,38 +88,13 @@ export default function MembershipPage() {
       });
 
       if (res.ok) {
-        console.log('Email sent successfully');
+        
       } else {
-        const errorData = await res.json(); // Or res.text() if response is not JSON
+        const errorData = await res.text(); // Or res.text() if response is not JSON
         console.error('Failed to send the email:', res.status, errorData);
       }
     } catch (error) {
       console.error('An error occurred while sending the email:', error);
-    }
-  }
-
-  async function getEmailContext() {
-    try {
-      const response = await fetch('/api/emailContext', {
-        method: 'GET', // Specify the method, GET in this case
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        const data = await response.json(); // Parse the JSON data from the response
-        console.log('Email context received:', data);
-        return data; // Return the data for further processing
-      } else {
-        // Handle HTTP errors
-        console.error('Failed to retrieve email context', response.status);
-        return null; // Or throw an error or return an error object
-      }
-    } catch (error) {
-      // Handle errors that occurred during the fetch call
-      console.error('An error occurred while fetching the email context:', error);
-      return null; // Or throw an error or return an error object
     }
   }
 

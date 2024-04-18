@@ -25,7 +25,7 @@ function Footer(){
           </div>
           <div style={icon}>
               <Link href="https://discord.gg/HKyd3dSDSh">
-                <Image src="/images/icons/discordReal.jpg" width="70" height="70" />
+                <Image src="/images/icons/discord.png" width="70" height="70" />
               </Link>
           </div>
         </Center>

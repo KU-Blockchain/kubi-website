@@ -32,6 +32,9 @@ const Navbar = () => {
         <Link href="/" className={styles.drawerItem}>
          Home
         </Link>
+        <Link href="/about" className={styles.drawerItem}>
+         about
+        </Link>
         <Link href="/projects" className={styles.drawerItem}>
           Projects
         </Link>

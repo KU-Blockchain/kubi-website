@@ -12,9 +12,16 @@ export default function Home() {
     whiteBg:"white"
   }
   const slidesSources=[
-    "/images/WebsiteAssets/perry-alexander.jpg",
-    "/images/Education.png",
-    "/images/Research.png",
+    {
+      url: "/images/WebsiteAssets/perry-alexander.jpg",
+      title:"Perry Alexander",
+    },
+    {
+      url: "/images/Education.png",
+    },
+    {
+      url: "/images/Research.png",
+    }
   ]
   const slidesArray=[
     {
@@ -32,7 +39,7 @@ export default function Home() {
     {
       url:"/images/Research.png", 
       title:"Research",
-      text:"The University of Kanas Blockchain Institute provides a platform for researchers, both faculty and student-led, to collaborate, publish work, mentor students, and educate curious minds. Contact our team at the Membership page if you would like to learn more about the resources and support our team can provide for blockchain related research projects."
+      text:"The University of Kansas Blockchain Institute provides a platform for researchers, both faculty and student-led, to collaborate, publish work, mentor students, and educate curious minds. Contact our team at the Membership page if you would like to learn more about the resources and support our team can provide for blockchain related research projects."
     },
     {
       url:"/images/DevImage.png",

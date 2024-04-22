@@ -17,23 +17,23 @@ const Navbar = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
     <nav className={styles.navbar}>
-      <Link href="/" style={{marginLeft:"10%"}}>
-        <Image src="/images/WebsiteAssets/KUBI Logos/RGB PNG's (for web use)/KUBC-logo-RGB-1200.png" width="120" height="150" />
+      <Link href="/" style={{ marginLeft: "8%" }}>
+        <Image
+          src="/images/WebsiteAssets/KUBI Logos/white_logo.png"
+          width="120"
+          height="150"
+        />
       </Link>
 
       <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
-        <Link href="/" className={styles.drawerItem}>
-         Home
-        </Link>
         <Link href="/about" className={styles.drawerItem}>
-         about
+          About
         </Link>
         <Link href="/projects" className={styles.drawerItem}>
           Projects
@@ -47,7 +47,6 @@ const Navbar = () => {
         <Link href="/resources" className={styles.drawerItem}>
           <SolidColorButton title="resources" />
         </Link>
-        
       </div>
 
       <div

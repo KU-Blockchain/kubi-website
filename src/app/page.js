@@ -46,7 +46,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <WebpageHeading heading={"Welcome to KU Blockchain"} />
+      <WebpageHeading
+        heading={"The University of Kansas Blockchain Institute"}
+      />
 
       <div id="about">
         <Box alignItems="center" justifyContent="center">
@@ -61,11 +63,7 @@ export default function Home() {
             heading={slide.title}
             fontcolor={"black"}
             type={index % 2}
-            customStyle={{
-              margin: "2rem",
-              border: "2px solid purple",
-              borderRadius: "20px",
-            }}
+            customStyle={{}}
           />
         ))}
       </div>

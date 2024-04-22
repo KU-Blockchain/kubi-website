@@ -6,7 +6,7 @@
     padding: 10px 0;
     position: relative;
     margin: 0;
-    background-color: #0051ba;
+    background-color: #1e3f6b;
     border-radius: 10px;
   }
 
@@ -60,11 +60,10 @@
   .button {
     border-radius: 8px;
     padding: 8px 16px;
-    background-color: rgb(0, 81, 186);
     color: white;
     cursor: pointer;
     transition: 0.15s;
-    border: white 2px solid;
+    border: rgba(234, 203, 27, 0.753) 2px solid;
   }
 
   .button:hover {

@@ -33,19 +33,19 @@ const Navbar = () => {
 
       <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
         <Link href="/about" className={styles.drawerItem}>
-          About
+          <SolidColorButton title="About" />
         </Link>
         <Link href="/projects" className={styles.drawerItem}>
-          Projects
+          <SolidColorButton title="Projects" />
         </Link>
         <Link href="/membership" className={styles.drawerItem}>
-          Membership
+          <SolidColorButton title="Membership" />
         </Link>
         <Link href="/events" className={styles.drawerItem}>
-          <SolidColorButton title="events" />
+          <SolidColorButton title="Events" />
         </Link>
         <Link href="/resources" className={styles.drawerItem}>
-          <SolidColorButton title="resources" />
+          <SolidColorButton title="Resources" />
         </Link>
       </div>
 

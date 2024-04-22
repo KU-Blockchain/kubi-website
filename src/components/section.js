@@ -24,6 +24,10 @@ function Section({
     justifyContent: "space-evenly",
     overflow: "hidden",
     ...customStyle,
+    margin: "2rem",
+    border: "2px solid gold",
+
+    borderRadius: "20px",
   };
 
   if (type === 1) {

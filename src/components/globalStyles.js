@@ -25,18 +25,18 @@ export const centeredTitle = {
   marginTop: "20px",
 };
 
-export const projectCard = {
-  borderRadius: "8px",
-  padding: "15px 15px",
-  margin: "20px",
-  color: "black",
-  outline: "none",
-  transition: "0.3s",
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  textAlign: "center",
-};
+// export const projectCard = {
+//   borderRadius: "8px",
+//   padding: "15px 15px",
+//   margin: "20px",
+//   color: "black",
+//   outline: "none",
+//   transition: "0.3s",
+//   display: "flex",
+//   flexDirection: "row",
+//   alignItems: "center",
+//   textAlign: "center",
+// };
 
 export const roundImage = {
   borderRadius: "50%",

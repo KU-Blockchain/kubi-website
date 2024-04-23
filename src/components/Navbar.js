@@ -17,37 +17,37 @@ const Navbar = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
     <nav className={styles.navbar}>
-      <Link href="/" style={{marginLeft:"10%"}}>
-        <Image src="/images/WebsiteAssets/KUBI Logos/RGB PNG's (for web use)/KUBC-logo-RGB-1200.png" width="120" height="150" />
+      <Link href="/" style={{ marginLeft: "8%" }}>
+        <Image
+          src="/images/WebsiteAssets/KUBI Logos/white_logo.png"
+          width="120"
+          height="150"
+          alt=""
+        />
       </Link>
 
       <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
-        <Link href="/" className={styles.drawerItem}>
-         Home
-        </Link>
         <Link href="/about" className={styles.drawerItem}>
-         about
+          <SolidColorButton title="About" />
         </Link>
         <Link href="/projects" className={styles.drawerItem}>
-          Projects
+          <SolidColorButton title="Projects" />
         </Link>
         <Link href="/membership" className={styles.drawerItem}>
-          Membership
+          <SolidColorButton title="Membership" />
         </Link>
         <Link href="/events" className={styles.drawerItem}>
-          <SolidColorButton title="events" />
+          <SolidColorButton title="Events" />
         </Link>
         <Link href="/resources" className={styles.drawerItem}>
-          <SolidColorButton title="resources" />
+          <SolidColorButton title="Resources" />
         </Link>
-        
       </div>
 
       <div

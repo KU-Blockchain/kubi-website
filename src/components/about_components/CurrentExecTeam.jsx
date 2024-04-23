@@ -13,7 +13,7 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import PersonCard from "../personCard";
+import PersonCard from "../PersonCard";
 
 const CurrentExecTeam = () => {
   const [selectedExec, setSelectedExec] = useState(null);

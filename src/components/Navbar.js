@@ -28,6 +28,7 @@ const Navbar = () => {
           src="/images/WebsiteAssets/KUBI Logos/white_logo.png"
           width="120"
           height="150"
+          alt=""
         />
       </Link>
 

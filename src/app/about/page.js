@@ -1,17 +1,17 @@
+"use client";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
-export default function LeadershipPage() {
+import CurrentExecTeam from "@/components/about_components/CurrentExecTeam";
+import AdvisoryBoard from "@/components/about_components/AdvisoryBoard";
+
+export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <p> leadership page, yash is the king</p>
-
-      <p>should have a section about the exec team</p>
-      <p>
-        should have a section about the advisory board (participating past execs
-        and faculty)
-      </p>
+      <CurrentExecTeam />
+      <AdvisoryBoard />
+      <p>should have info on our history</p>
       <p>should have info on our election process</p>
       <Footer />
     </>

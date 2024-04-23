@@ -5,6 +5,7 @@ import ImageSlider from "@/components/ImageSlider";
 import Section from "@/components/section";
 import Footer from "@/components/footer";
 import WebpageHeading from "@/components/webpageheading";
+
 export default function Home() {
   const slidesSources = [
     {

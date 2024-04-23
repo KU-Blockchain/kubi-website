@@ -31,13 +31,23 @@ const PersonCard = ({ headshot, name, title, shortBio }) => {
         height="100%"
         justifyContent="space-between"
       >
-        <Image
-          src={headshot}
-          alt={name + " Headshot"}
-          width={150}
-          height={150}
-          style={{ borderRadius: "50%" }}
-        />
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          width="full"
+          height="150px" // Define a fixed height for the image container
+          position="relative"
+        >
+          <Image
+            src={headshot}
+            alt={`${name} Headshot`}
+            width={150}
+            height={150}
+            layout="fixed"
+            style={{ borderRadius: "50%" }} // This ensures the image is rounded
+          />
+        </Box>
         <Text
           mt={2}
           fontSize={["sm", "md"]}

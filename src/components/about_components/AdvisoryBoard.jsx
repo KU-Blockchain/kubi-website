@@ -13,7 +13,7 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import PersonCard from "../personCard";
+import PersonCard from "../PersonCard";
 
 const AdvisoryBoard = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);

@@ -2,60 +2,72 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import SolidColorButton from "./SolidColorButton";
-import styles from "./Navbar.module.css"; // Import the CSS module
-import Image from "next/image";
+import styles from "./Navbar.module.css";
+import { Image } from "@chakra-ui/react";
+
+const navItems = [
+  { path: '/about', title: 'About' },
+  { path: '/projects', title: 'Projects' },
+  { path: '/membership', title: 'Membership' },
+  { path: '/events', title: 'Events' },
+  { path: '/resources', title: 'Resources' },
+];
 
 const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setDrawerOpen(false);
-      }
+      setIsMobile(window.innerWidth <= 768);
     };
 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+
   }, []);
+
   return (
     <nav className={styles.navbar}>
-      <Link href="/" style={{ marginLeft: "8%" }}>
+      <Link href="/">
         <Image
           src="/images/WebsiteAssets/KUBI Logos/white_logo.png"
-          width="120"
-          height="150"
-          alt=""
+          width="21%"
+          alt="KUBI Logo"
         />
       </Link>
 
-      <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
-        <Link href="/about" className={styles.drawerItem}>
-          <SolidColorButton title="About" />
-        </Link>
-        <Link href="/projects" className={styles.drawerItem}>
-          <SolidColorButton title="Projects" />
-        </Link>
-        <Link href="/membership" className={styles.drawerItem}>
-          <SolidColorButton title="Membership" />
-        </Link>
-        <Link href="/events" className={styles.drawerItem}>
-          <SolidColorButton title="Events" />
-        </Link>
-        <Link href="/resources" className={styles.drawerItem}>
-          <SolidColorButton title="Resources" />
-        </Link>
+      {isMobile ? (
+        <div
+          className={styles.hamburger}
+          onClick={() => setDrawerOpen(!isDrawerOpen)}
+        >
+          ☰
+        </div>
+      ) : (
+      <div className={styles.rightMenu}>
+        {navItems.map(item => (
+            <Link key={item.title} href={item.path}>
+              <SolidColorButton title={item.title} />
+            </Link>
+          ))}
       </div>
+      )}
 
-      <div
-        className={styles.hamburger}
-        onClick={() => setDrawerOpen(!isDrawerOpen)}
-      >
-        ☰
-      </div>
+      {isMobile && isDrawerOpen && (
+        <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
+          {navItems.map(item => (
+            <Link key={item.title} className={styles.drawerItem} href={item.path} onClick={() => setDrawerOpen(false)}>
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      )}
+
     </nav>
   );
 };

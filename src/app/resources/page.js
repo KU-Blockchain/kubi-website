@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import { Button, Center, Flex, Text } from "@chakra-ui/react";
 import WebpageHeading from "@/components/webpageheading";
 export default function ResourcesPage() {

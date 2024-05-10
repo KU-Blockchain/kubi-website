@@ -1,9 +1,9 @@
 "use client";
 import { Box, Button, Center, Flex } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import ImageSlider from "@/components/ImageSlider";
 import Section from "@/components/section";
-import Footer from "@/components/footer";
 import WebpageHeading from "@/components/webpageheading";
 
 export default function Home() {
@@ -13,10 +13,12 @@ export default function Home() {
       title: "Perry Alexander",
     },
     {
-      url: "/images/Education.png",
+      url: "/images/WebsiteAssets/campus-background.jpg",
+      title: "KUBI on Campus",
     },
     {
-      url: "/images/Research.png",
+      url: "/images/WebsiteAssets/discord.jpg",
+      title: "Our Discord Server",
     },
   ];
   const slidesArray = [

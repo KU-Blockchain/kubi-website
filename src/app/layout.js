@@ -1,8 +1,10 @@
 'use client'
 import { Inter } from "next/font/google";
-import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 require('dotenv').config();
+import { ChakraProvider } from '@chakra-ui/react'
+import Header from '@/components/Navbar.js'
+import Footer from '@/components/Footer.js'
 
 
 export default function RootLayout({ children }) {
@@ -10,10 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <Providers>
-              {children} 
-        </Providers>
-        </body>
+      <ChakraProvider>
+        {children} 
+      </ChakraProvider>
+      </body>
     </html>
   );
 }

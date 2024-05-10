@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import CurrentExecTeam from "@/components/about_components/CurrentExecTeam";
 import AdvisoryBoard from "@/components/about_components/AdvisoryBoard";
 

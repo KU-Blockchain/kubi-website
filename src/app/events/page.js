@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Center, Button, Switch, Accordion, AccordionItem, AccordionButton, AccordionPanel, Fade  } from "@chakra-ui/react";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import { Text } from "@chakra-ui/react";
 import Section from "@/components/section";
 import WebpageHeading from "@/components/webpageheading";

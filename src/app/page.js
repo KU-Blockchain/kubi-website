@@ -1,10 +1,11 @@
 "use client";
-import { Box, Button, Center, Flex } from "@chakra-ui/react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Box, Button, Center, Flex, Image } from "@chakra-ui/react";
 import ImageSlider from "@/components/ImageSlider";
-import Section from "@/components/section";
+//import Section from "@/components/section";
 import WebpageHeading from "@/components/webpageheading";
+import { colors } from "@/components/globalStyles";
+import styles from "@/components/globalstyles.module.css";
+import { Img, Text } from '@chakra-ui/react';
 
 export default function Home() {
   const slidesSources = [
@@ -48,14 +49,12 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-      <WebpageHeading
-        heading={"The University of Kansas Blockchain Institute"}
-      />
-
-      <div id="about">
-        <Box alignItems="center" justifyContent="center">
+      <div>
+        {/* <Box alignItems="center" justifyContent="center">
           <ImageSlider images={slidesSources} />
+        </Box> */}
+        <Box alignItems="center" justifyContent="center">
+          <Image src="/images/WebsiteAssets/KUBU_Logos/RGB_PNGs/KUBC-logo-RGB-500.png" />
         </Box>
         <br></br>
         {slidesArray.map((slide, index) => (
@@ -70,7 +69,91 @@ export default function Home() {
           />
         ))}
       </div>
-      <Footer />
     </>
   );
+}
+
+
+function Section({
+  image,
+  text,
+  bgcolor = colors.blue2,
+  heading,
+  fontcolor = "white",
+  headingColor = "white",
+  type = 1,
+  customStyle = {},
+}) {
+  const sectionStyle = {
+    display: "flex",
+    flexDirection: "row",
+    backgroundColor: `${bgcolor}`,
+    paddingTop: "5%",
+    paddingBottom: "5%",
+    borderRadius: "10px",
+    maxHeight: "500px",
+    justifyContent: "space-evenly",
+    overflow: "hidden",
+    ...customStyle,
+    margin: "2rem",
+    border: "2px solid gold",
+
+    borderRadius: "20px",
+  };
+
+  if (type === 1) {
+    return (
+      <>
+        <div style={sectionStyle} className={styles.sectionShadow}>
+          <Box w="50%" p="4rem">
+            <Center color={headingColor}>
+              <Text fontSize="3xl">{heading}</Text>
+            </Center>
+            <div>
+              <Text
+                color={fontcolor}
+                align="center"
+                fontFamily="Times New Roman"
+                fontWeight={500}
+              >
+                {text}
+              </Text>
+            </div>
+          </Box>
+          <Box>
+            <Center>
+              <Img src={image} width="30rem" p={5} />
+            </Center>
+          </Box>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div style={sectionStyle} className={styles.sectionShadow}>
+          <Box>
+            <Center>
+              <Img src={image} width="30rem" p={5} />
+            </Center>
+          </Box>
+          <Box w="50%" p="4rem">
+            <Center color={headingColor}>
+              <Text fontSize="3xl">{heading}</Text>
+            </Center>
+            <div>
+              <Text
+                color={fontcolor}
+                align="center"
+                fontFamily="Times New Roman"
+                fontWeight={500}
+              >
+                {text}
+              </Text>
+            </div>
+          </Box>
+        </div>
+      </>
+    );
+  }
 }

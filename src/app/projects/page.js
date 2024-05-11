@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import Navbar from "@/components/Navbar";
-
 import { Center, Box, Text, Stack } from "@chakra-ui/react";
 import ProjectCard from "@/components/ProjectCard";
 
@@ -38,8 +36,6 @@ export default function ProjectsPage() {
 
   return (
     <div>
-      <Navbar />
-
       <Stack spacing={4}>
         {projects.map((project, index) => (
           <Box
@@ -56,8 +52,6 @@ export default function ProjectsPage() {
           </Box>
         ))}
       </Stack>
-
-      {/* <Footer /> Uncomment if Footer is used */}
     </div>
   );
 }

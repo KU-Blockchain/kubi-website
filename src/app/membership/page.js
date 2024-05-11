@@ -1,7 +1,5 @@
 'use client';
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Box, Center, Flex, Img, Text, Input, Textarea, Button, useToast } from "@chakra-ui/react";
 import styles from "@/components/globalstyles.module.css";
 import { useState } from "react";
@@ -106,7 +104,6 @@ export default function MembershipPage() {
   }
   return (
     <>
-      <Navbar />
       <WebpageHeading heading="Chatting with KUBI!" />
       <Center>
         <div id="HorizontalLayout" className={styles.contactFormBase}>
@@ -151,8 +148,6 @@ export default function MembershipPage() {
         </div>
 
       </Center>
-      
-      <Footer />
     </>
   );
 }

@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 require('dotenv').config();
 import { ChakraProvider } from '@chakra-ui/react'
 import Header from '@/components/Navbar.js'
-import Footer from '@/components/Footer.js'
+import Footer from '@/components/footer.js'
 
 
 export default function RootLayout({ children }) {

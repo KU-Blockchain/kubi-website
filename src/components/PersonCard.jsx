@@ -10,18 +10,12 @@ const PersonCard = ({ headshot, name, title, shortBio }) => {
       m={3}
       maxWidth="100%"
       w="full"
+      bg="white"
+      opacity={0.8}
       minH="300px"
+      maxH="500px"
+      overflow="hidden"
     >
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        right={0}
-        bottom={0}
-        bg="white"
-        opacity={0.7}
-        borderRadius="lg"
-      />
       <VStack
         p={4}
         position="relative"
@@ -36,7 +30,7 @@ const PersonCard = ({ headshot, name, title, shortBio }) => {
           justifyContent="center"
           alignItems="center"
           width="full"
-          height="150px" // Define a fixed height for the image container
+          height="150px"
           position="relative"
         >
           <Image
@@ -45,7 +39,7 @@ const PersonCard = ({ headshot, name, title, shortBio }) => {
             width={150}
             height={150}
             layout="fixed"
-            style={{ borderRadius: "50%" }} // This ensures the image is rounded
+            style={{ borderRadius: "50%" }}
           />
         </Box>
         <Text

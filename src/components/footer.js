@@ -2,9 +2,12 @@
 import { Link } from "@chakra-ui/next-js";
 import Image from "next/image";
 import {icon, Bigicon,colors} from "@/components/globalStyles.js"
-import { Box, Center, Img , Text} from "@chakra-ui/react";
+import { Box, Center, Img , Text, IconButton, Icon } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-function Footer(){
+import { BsGithub, BsLinkedin, BsPerson, BsDiscord } from 'react-icons/bs';
+
+
+function Footer() {
   
   return(
       <>
@@ -15,17 +18,17 @@ function Footer(){
         <Center display="flex" flexDirection="row">
           <div style={icon}>
               <Link href="https://github.com/KU-Blockchain">
-                <Image src="/images/icons/githubLogo.png" width="70" height="70" />
+                <IconButton aria-label="Github" icon={<BsGithub />} />
               </Link>
           </div>
           <div style={icon}>
               <Link href="https://www.linkedin.com/company/kublockchain/">
-                <Image src="/images/icons/linkedinLogo.png" width="70" height="70" />
+                <IconButton aria-label="Linkedin" icon={<BsLinkedin />} />
               </Link>
           </div>
           <div style={icon}>
               <Link href="https://discord.gg/HKyd3dSDSh">
-                <Image src="/images/icons/discord.png" width="70" height="70" />
+                <IconButton aria-label="Discord" icon={<BsDiscord />} />
               </Link>
           </div>
         </Center>

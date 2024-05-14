@@ -56,9 +56,6 @@ const AdvisoryBoard = () => {
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center" my={5} m="5">
-      <Heading as="h2" size="xl" textAlign="center" my={5}>
-        Advisory Board
-      </Heading>
       <SimpleGrid columns={[1, null, 3]} spacing={10}>
         {people.map((person, index) => (
           <Box

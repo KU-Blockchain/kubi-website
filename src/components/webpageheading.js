@@ -15,13 +15,14 @@ const WebpageHeading = ({ heading }) => {
         <Text
           fontSize="5xl"
           align="center"
-          color={colors.blue1}
+          color={"white"}
           fontWeight="bold"
         >
           {heading}
         </Text>
       </motion.div>
       <hr></hr>
+      <br></br>
     </>
   );
 };

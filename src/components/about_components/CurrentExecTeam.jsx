@@ -60,10 +60,7 @@ const CurrentExecTeam = () => {
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center" my={5} m="5">
-      <Heading as="h2" size="xl" textAlign="center" my={5}>
-        Current Executive Team
-      </Heading>
-      <SimpleGrid columns={[1, null, 3]} spacing={10}>
+      <SimpleGrid columns={[1, null, 4]} spacing={10}>
         {currentExecs.map((exec, index) => (
           <Box
             key={index}

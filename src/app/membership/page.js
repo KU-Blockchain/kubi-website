@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
-import { Box, Center, Flex, Img, Text, Input, Textarea, Button, useToast } from "@chakra-ui/react";
-import styles from "@/components/globalstyles.module.css";
+import { Box, Center, Flex, Img, Text, Input, Textarea, Button, useToast, HStack } from "@chakra-ui/react";
 import { useState } from "react";
 import WebpageHeading from "@/components/webpageheading";
 
@@ -103,51 +102,60 @@ export default function MembershipPage() {
     document.getElementById("message").value = "";
   }
   return (
-    <>
-      <WebpageHeading heading="Chatting with KUBI!" />
-      <Center>
-        <div id="HorizontalLayout" className={styles.contactFormBase}>
-          <Box id="FormHolder" style={{width:"50%", flex:1}}>
-            <Text align="center" fontSize="2xl">Get in touch with us below!</Text><br></br>
-            <Box id="Form" style={{display:"flex", flexDirection:"column", rowGap:"2rem", paddingLeft:"3rem", paddingRight:"3rem", paddingBottom: "5%"}}>
-              <Box name="InputDiv" style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+    <div>
+      <Box
+        m="auto"
+        px={20}
+        py={5}
+      >
+        <WebpageHeading heading={"Chatting with KUBI!"} />
 
-                <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
-                  First Name:
-                  <Input id="firstName" variant='filled' placeholder='First Name' onChange={checkValidityFname}/>
+          <HStack spacing={5} style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+
+            <Box id="FormHolder" style={{width:"50%", flex:1}}>
+              
+              <Text align="center" fontSize="2xl">Get in touch:</Text><br></br>
+              
+              <Box id="Form" style={{display:"flex", flexDirection:"column", rowGap:"2rem", paddingLeft:"3rem", paddingRight:"3rem", paddingBottom: "5%"}}>
+
+                <Box name="InputDiv" style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
+                    First Name:
+                    <Input id="firstName" variant='filled' placeholder='First Name' onChange={checkValidityFname}/>
+                  </Box>
+                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
+                    Last Name:
+                    <Input id="lastName" variant='filled' placeholder='Last Name' onChange={checkValidityLName}/>
+                  </Box>
                 </Box>
 
                 <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
-                  Last Name:
-                  <Input id="lastName" variant='filled' placeholder='Last Name' onChange={checkValidityLName}/>
+                    Email:
+                    <Input id="email" variant='filled' placeholder='yourname@example.com' onChange={emailValidity} isInvalid={!valid}/>
                 </Box>
-              </Box>
 
-              <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
-                  Email:
-                  <Input id="email" variant='filled' placeholder='yourname@example.com' onChange={emailValidity} isInvalid={!valid}/>
-              </Box>
+                <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
+                    Message:
+                    <Textarea
+                      placeholder='Enter your message here...'
+                      size='md'
+                      variant='filled'
+                      id="message"
+                />
 
-              <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
-                  Message:
-                  <Textarea
-                    placeholder='Enter your message here...'
-                    size='md'
-                    variant='filled'
-                    id="message"
-              />
+                </Box>
+
+                <Button onClick={handleForm}>Submit</Button>
+
               </Box>
-              <Button onClick={handleForm}>Submit</Button>
             </Box>
-            
-            
-          </Box>
-          <div id="OptionalInfo" style={{flex:1}}>
-              <img src="/testImages/Val.png" width="100%" style={{paddingTop:"7%"}}></img>
-          </div>
-        </div>
 
-      </Center>
-    </>
+            <div id="OptionalInfo" style={{flex:1}}>
+                <img src="/testImages/Val.png" width="100%" style={{paddingTop:"7%"}}></img>
+            </div>
+
+          </HStack>
+      </Box>
+    </div>
   );
 }

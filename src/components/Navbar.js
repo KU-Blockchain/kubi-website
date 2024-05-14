@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <Link href="/">
         <Image
-          src="/images/WebsiteAssets/KUBI Logos/white_logo.png"
+          src="/images/WebsiteAssets/KUBI_Logos/white_logo.png"
           width="21%"
           alt="KUBI Logo"
         />
@@ -46,7 +46,7 @@ const Navbar = () => {
           className={styles.hamburger}
           onClick={() => setDrawerOpen(!isDrawerOpen)}
         >
-          ☰
+          {isDrawerOpen ? "X" : "☰"}
         </div>
       ) : (
       <div className={styles.rightMenu}>

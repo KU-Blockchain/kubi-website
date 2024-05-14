@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { Center, Button, Switch, Accordion, AccordionItem, AccordionButton, AccordionPanel, Fade  } from "@chakra-ui/react";
+import { Center, Button, Switch, Accordion, AccordionItem, AccordionButton, AccordionPanel, Fade, Box  } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import Section from "@/components/section";
 import WebpageHeading from "@/components/webpageheading";
@@ -45,6 +45,11 @@ export default function EventsPage() {
 
     return (
       <>
+        <Box
+          m="auto"
+          px={20}
+          py={5}
+        >
         <WebpageHeading heading={"Events"} />
         
         <Text fontSize='3xl' align="center" color="blue.500" fontWeight="bold">Some of our past events</Text>
@@ -83,6 +88,7 @@ export default function EventsPage() {
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
+        </Box>
       </>
     );
   }

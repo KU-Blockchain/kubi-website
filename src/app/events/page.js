@@ -16,22 +16,22 @@ export default function EventsPage() {
 
   const events = [
     {
-      image: "/testImages/CoolLinkedInPic.jpg", 
+      image: "/images/eventimages/ethdenver2024.jpg", 
       text: "ETHDenver: The premier Ethereum event in Denver, Colorado, bringing together blockchain enthusiasts, developers, and innovators worldwide. Explore workshops, hackathons, and networking opportunities while immersing yourself in the latest in decentralized technology. Join a vibrant community driving the future of blockchain innovation.", 
       heading: "ETHDenver 2024"
     },
     {
-      image: "/testImages/hudpic.jpg", 
+      image: "/images/eventimages/hacknight.JPG", 
       text: "This semester's hacknight was a presentation from Tej (VP Engineering) and Micah (Director of Development) about tea.xyz, a platform meant to incentivize and reward open-source contributions, and Internet Computer, a blockchain-based cloud computing platform.", 
       heading: "KUBI HackNight"
     },
     {
-      image: "/testImages/hudpic.jpg", 
+      image: "/images/eventimages/blocktalkandbreakfast.jpg", 
       text: "Blocktalk and Breakfast is a bi-semesterly gathering where members of our community come together to delve into the forefront of blockchain technology while sharing a meal. This event warmly welcomes all students and faculty to participate in enlightening discussions and enjoyable dining experiences.", 
       heading: "BlockTalk and Breakfast"
     },
     {
-      image: "/testImages/hudpic.jpg", 
+      image: "/images/eventimages/dragonchain.jpg", 
       text: "Visited by Joe Roets, the founder of DragonChain, this event was a unique opportunity to learn about the latest in blockchain technology from an industry expert. Joe shared his insights on the future of blockchain and the potential of DragonChain to revolutionize the industry.", 
       heading: "Industry Highlight: DragonChain"
     },
@@ -98,6 +98,8 @@ export default function EventsPage() {
                 <VStack spacing={4} align="stretch">
                   <Image
                     width="100%"
+                    maxH="300px"
+                    objectFit='cover'
                     src={event.image}
                     alt={event.heading}
                   />
@@ -155,6 +157,9 @@ export default function EventsPage() {
                     <HStack>
                       <Image
                         maxW="50%"
+                        boxSize='lg'
+                        maxH="300px"
+                        objectFit='cover'
                         src={event.image}
                         alt={event.heading}
                       />

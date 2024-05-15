@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { Box, Center, Flex, Img, Text, Input, Textarea, Button, useToast, HStack } from "@chakra-ui/react";
+import { Box, Center, Flex, Img, Text, Input, Textarea, Button, useToast, HStack, Image } from "@chakra-ui/react";
 import { useState } from "react";
 import WebpageHeading from "@/components/webpageheading";
 

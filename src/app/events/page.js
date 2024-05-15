@@ -63,7 +63,30 @@ export default function EventsPage() {
         >
           <WebpageHeading heading={"Events"} />
 
-          <Text fontSize='3xl' align="center" color="blue.500" fontWeight="bold">Some of our past events</Text>
+          <Accordion allowToggle>
+            <AccordionItem>
+              <AccordionButton>
+                <Box flex="1" textAlign="center">
+                  <Text fontSize="3xl" fontWeight={500}>Follow our Calendar</Text> 
+                </Box>
+              </AccordionButton>
+              <AccordionPanel>
+                <Center>
+                  <iframe
+                    src="https://calendar.google.com/calendar/embed?src=ku.blockchain.institute%40gmail.com&ctz=America%2FChicago"
+                    style={{ border: 0 }}
+                    width="800"
+                    height="600"
+                    frameborder="0"
+                    scrolling="no"
+                    ></iframe>
+                  </Center>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          <br></br>
+
+          <Text fontSize='3xl' align="center" fontWeight="bold">Some of our past events</Text>
 
           <Stack spacing={5}>
             {events.map((event, index) => (
@@ -89,25 +112,6 @@ export default function EventsPage() {
             ))}
           </Stack>
 
-          <Accordion allowToggle>
-            <AccordionItem>
-              <AccordionButton>
-                <Text fontSize="3xl" align="center" color="blue.600" fontWeight={500}>Follow our Calendar</Text> 
-              </AccordionButton>
-              <AccordionPanel>
-                <Center>
-                  <iframe
-                    src="https://calendar.google.com/calendar/embed?src=ku.blockchain.institute%40gmail.com&ctz=America%2FChicago"
-                    style={{ border: 0 }}
-                    width="800"
-                    height="600"
-                    frameborder="0"
-                    scrolling="no"
-                    ></iframe>
-                  </Center>
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
         </Box>
       ) : (
         <Box
@@ -117,7 +121,29 @@ export default function EventsPage() {
         >
           <WebpageHeading heading={"Events"} />
 
-          <Text fontSize='3xl' align="center" color="blue.500" fontWeight="bold">Some of our past events</Text>
+          <Accordion allowToggle>
+            <AccordionItem>
+              <AccordionButton>
+                <Box flex="1" textAlign="center">
+                  <Text fontSize="3xl" fontWeight={500}>-+-+-+-+-+-+-+-+-  Follow our Calendar  -+-+-+-+-+-+-+-+-</Text> 
+                </Box>
+              </AccordionButton>
+              <AccordionPanel>
+                <Center>
+                  <iframe
+                    src="https://calendar.google.com/calendar/embed?src=ku.blockchain.institute%40gmail.com&ctz=America%2FChicago"
+                    style={{ border: 0 }}
+                    width="800"
+                    height="600"
+                    frameborder="0"
+                    ></iframe>
+                  </Center>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+          <br></br>
+
+          <Text fontSize='3xl' align="center" fontWeight="bold">Some of our past events</Text>
           
             <Stack spacing={5}>
               {events.map((event, index) => (
@@ -148,26 +174,6 @@ export default function EventsPage() {
                 </Card>
               ))}
             </Stack>
-
-            <Accordion allowToggle>
-              <AccordionItem>
-                <AccordionButton>
-                  <Text fontSize="3xl" align="center" color="blue.600" fontWeight={500}>Follow our Calendar</Text> 
-                </AccordionButton>
-                <AccordionPanel>
-                  <Center>
-                    <iframe
-                      src="https://calendar.google.com/calendar/embed?src=ku.blockchain.institute%40gmail.com&ctz=America%2FChicago"
-                      style={{ border: 0 }}
-                      width="800"
-                      height="600"
-                      frameborder="0"
-                      scrolling="no"
-                      ></iframe>
-                    </Center>
-                </AccordionPanel>
-              </AccordionItem>
-            </Accordion>
         </Box>
       )}
     </>

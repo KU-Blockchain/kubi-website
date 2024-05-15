@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack } from "@chakra-ui/react";
+import { Text, Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack } from "@chakra-ui/react";
 import { colors } from "@/components/globalStyles";
 import styles from "@/components/globalstyles.module.css";
-import { Img, Text } from '@chakra-ui/react';
 import Section from "@/components/section";
 
 
@@ -31,7 +30,7 @@ export default function Home() {
     {
       image: "/images/DevImage.png",
       title: "Development",
-      text: "The University of Kansas Digital Finance Conference was held on April 5th, 2019. Speakers from Ripple labs, C2FO, Liquifi, and others, shared insight from the Financial Technology industry. The KU Blockchain Supply Chain Symposium was hosted at the Oread Hotel on October 26th, 2018. We hosted over 100 attendees including industry executives, working professionals, students and academics",
+      text: "The University of Kansas Digital Finance Conference was held on April 5th, 2019. Speakers from Ripple labs, C2FO, Liquifi, and others, shared insight from the Financial Technology industry. The KU Blockchain Supply Chain Symposium was hosted at the Oread Hotel on October 26th, 2018. We hosted over 100 attendees including industry executives, working professionals, students and academics.",
     },
   ];
 
@@ -55,14 +54,22 @@ export default function Home() {
         m="auto"
       >
         <Box
-          py={4}
+          py={6}
         >
           <VStack alignItems="center">
-            <Heading>KU Blockchain Institute</Heading>
-            <Box maxW="xl" p={4}>
-              <Text textAlign="center" fontSize="2xl">The University of Kansas official student organization for everything blockchain, cryptoeconomics, and cryptocurrency.</Text>
+            
+            { isMobile ? (
+              <Heading fontSize="3xl">KU Blockchain Institute</Heading>
+            ) : <Heading fontSize="5xl">KU Blockchain Institute</Heading>
+            }
+
+            <Box maxW="2xl" p={4}>
+              <Text textAlign="center" fontSize="2xl">A student led organization promoting blockchain education and adoption at the University of Kansas.</Text>
             </Box>
-            <Image py={0} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />
+            <HStack>
+              <Button colorScheme="blue" size="lg" onClick={() => window.location.href = "/membership"}>Join Us {'>'}</Button>
+            </HStack>
+            <Image py={4} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />
           </VStack>
         </Box>
 

@@ -11,6 +11,7 @@ const navItems = [
   { path: '/membership', title: 'Membership' },
   { path: '/events', title: 'Events' },
   { path: '/resources', title: 'Resources' },
+  { path: '/research', title: 'Research@KU' }
 ];
 
 const Navbar = () => {

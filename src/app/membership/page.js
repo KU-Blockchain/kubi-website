@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { Box, Center, Flex, Img, Text, Input, Textarea, Button, useToast, HStack, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@chakra-ui/react";
+import { Box, Center, Flex, Img, Text, Input, Textarea, Button, useToast, HStack, VStack, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@chakra-ui/react";
 import WebpageHeading from "@/components/webpageheading";
 
 export default function MembershipPage() {
@@ -122,48 +122,48 @@ export default function MembershipPage() {
     <>
       { isMobile ? ( 
         <Box>
-          <WebpageHeading heading={"Chatting with KUBI!"} />
+          <WebpageHeading heading={"Membership"} />
 
-            <HStack spacing={5} style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
-              <Box id="FormHolder" style={{width:"50%", flex:1}}>
-          
-                <Text align="center" fontSize="2xl">Get in touch:</Text><br></br>
-                
-                <Box id="Form" style={{display:"flex", flexDirection:"column", rowGap:"2rem", paddingLeft:"3rem", paddingRight:"3rem", paddingBottom: "5%"}}>
+          <HStack spacing={5} style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+            <Box id="FormHolder" style={{width:"50%", flex:1}}>
+        
+              <Text align="center" fontSize="2xl">Get in touch:</Text><br></br>
+              
+              <Box id="Form" style={{display:"flex", flexDirection:"column", rowGap:"2rem", paddingLeft:"3rem", paddingRight:"3rem", paddingBottom: "5%"}}>
 
-                  <Box style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
-                    <Box style={{display:"flex", flexDirection:"column", rowGap:"10px", width:"45%"}}>
-                      First Name:
-                      <Input id="firstName" variant='filled' placeholder='First Name' onChange={checkValidityFname}/>
-                    </Box>
-                    <Box style={{display:"flex", flexDirection:"column", rowGap:"10px", width:"45%"}}>
-                      Last Name:
-                      <Input id="lastName" variant='filled' placeholder='Last Name' onChange={checkValidityLName}/>
-                    </Box>
+                <Box style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
+                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px", width:"45%"}}>
+                    First Name:
+                    <Input id="firstName" variant='filled' placeholder='First Name' onChange={checkValidityFname}/>
                   </Box>
-
-                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
-                      Email:
-                      <Input id="email" variant='filled' placeholder='yourname@example.com' onChange={emailValidity} isInvalid={!valid}/>
+                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px", width:"45%"}}>
+                    Last Name:
+                    <Input id="lastName" variant='filled' placeholder='Last Name' onChange={checkValidityLName}/>
                   </Box>
-
-                  <Flex style={{flexDirection:"column", rowGap:"10px"}}>
-                      Message:
-                      <Textarea
-                        placeholder='Enter your message here...'
-                        size='md'
-                        variant='filled'
-                        id="message"
-                      />
-                  </Flex>
-
-                  <Flex style={{justifyContent:"space-between"}}>
-                    <Button style={{width:"75%"}} onClick={handleForm}>Submit</Button>
-                    <Button style={{width:"20%"}} onClick={clearForm}>Clear</Button>
-                  </Flex>
                 </Box>
+
+                <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
+                    Email:
+                    <Input id="email" variant='filled' placeholder='yourname@example.com' onChange={emailValidity} isInvalid={!valid}/>
+                </Box>
+
+                <Flex style={{flexDirection:"column", rowGap:"10px"}}>
+                    Message:
+                    <Textarea
+                      placeholder='Enter your message here...'
+                      size='md'
+                      variant='filled'
+                      id="message"
+                    />
+                </Flex>
+
+                <Flex style={{justifyContent:"space-between"}}>
+                  <Button style={{width:"75%"}} onClick={handleForm}>Submit</Button>
+                  <Button style={{width:"20%"}} onClick={clearForm}>Clear</Button>
+                </Flex>
               </Box>
-            </HStack>
+            </Box>
+          </HStack>
         </Box>
       ) : (
         <Box
@@ -171,7 +171,18 @@ export default function MembershipPage() {
           px={20}
           py={5}
         >
-          <WebpageHeading heading={"Chatting with KUBI!"} />
+          <WebpageHeading heading={"Membership"} />
+
+          <VStack style={{justify:"center"}}>
+            <Text fontSize='3xl' align="center" fontWeight="bold">Steps to Join KUBI: </Text>
+            <Text fontSize='2xl' align="center" fontWeight="bold">1. Join our Discord server</Text>
+            <Button>Discord</Button>
+            <Text fontSize='2xl' align="center" fontWeight="bold">2. Join the DAO</Text>
+            <Button>DAO</Button>
+            <Text fontSize='2xl' align="center" fontWeight="bold">3. Come to our next meeting!</Text>
+          </VStack>
+          <br></br>
+
           <HStack spacing={5} style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
             <Box id="FormHolder" style={{width:"50%", flex:1}}>
         

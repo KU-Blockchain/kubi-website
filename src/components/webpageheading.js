@@ -5,6 +5,9 @@ import { Text } from "@chakra-ui/react";
 import { colors } from "./globalStyles";
 
 const WebpageHeading = ({ heading }) => {
+
+
+  
   return (
     <>
       <motion.div

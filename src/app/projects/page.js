@@ -43,63 +43,85 @@ export default function ProjectsPage() {
 
   return (
     <>
+      {isMobile ? (
       <Box
         m="auto"
-        px={20}
+        px={2}
         py={5}
       >
         <WebpageHeading heading={"Our Projects"} />
 
         <Stack spacing={5}>
           {projects.map((project, index) => (
-            <Card key={index} borderRadius="20px" p={5}>
-              {isMobile ? (
-                <VStack spacing={4} align="stretch">
-                  <Image
-                    width="100%"
-                    src={project.preview_image}
-                    alt={project.title}
-                  />
-                  <CardBody>
-                    <Heading size="lg" mb={2}>
-                      {project.title}
-                    </Heading>
-                    <Text mb={4}>{project.description}</Text>
-                    <Button colorScheme="blue" size="md">
-                      <Link href={project.link}>Learn more</Link>
-                    </Button>
-                  </CardBody>
-                </VStack>
-              ) : (
-                <HStack>
-                  <Image
-                    maxW="50%"
-                    src={project.preview_image}
-                    alt={project.title}
-                  />
-                  <CardBody>
-                    <Flex direction="column" justify="space-between" h="100%">
-                      <Box>
-                        <Heading size="lg" mb={4}>
-                          {project.title}
-                        </Heading>
-                      </Box>
-                      <Box flex="1">
-                        <Text mb={4}>{project.description}</Text>
-                      </Box>
-                      <Box>
-                        <Button colorScheme="blue" size="md">
-                          <Link href={project.link}>Learn more</Link>
-                        </Button>
-                      </Box>
-                    </Flex>
-                  </CardBody>
-                </HStack>
-              )}
+            <Card 
+              key={index} 
+              borderRadius="20px" 
+              p={5}
+            >
+              <VStack spacing={4} align="stretch">
+                <Image
+                  width="100%"
+                  src={project.preview_image}
+                  alt={project.title}
+                />
+                <CardBody>
+                  <Heading size="lg" mb={2}>
+                    {project.title}
+                  </Heading>
+                  <Text mb={4}>{project.description}</Text>
+                  <Button colorScheme="blue" size="md">
+                    <Link href={project.link}>Learn more</Link>
+                  </Button>
+                </CardBody>
+              </VStack>
             </Card>
           ))}
         </Stack>
       </Box>
+      ) : (
+        <Box
+          m="auto"
+          px={20}
+          py={5}
+        >
+          <WebpageHeading heading={"Our Projects"} />
+          
+            <Stack spacing={5}>
+              {projects.map((project, index) => (
+                <Card 
+                  key={index} 
+                  borderRadius="20px" 
+                  p={5}
+                >
+                    <HStack>
+                      <Image
+                        maxW="50%"
+                        src={project.preview_image}
+                        alt={project.title}
+                      />
+                      <CardBody>
+                        <Flex direction="column" justify="space-between" h="100%">
+                          <Box>
+                            <Heading size="lg" mb={4}>
+                              {project.title}
+                            </Heading>
+                          </Box>
+                          <Box flex="1">
+                            <Text mb={4}>{project.description}</Text>
+                          </Box>
+                          <Box>
+                            <Button colorScheme="blue" size="md">
+                              <Link href={project.link}>Learn more</Link>
+                            </Button>
+                          </Box>
+                        </Flex>
+                      </CardBody>
+                    </HStack>
+                </Card>
+              ))}
+            </Stack>
+        </Box>
+      )}
     </>
   );
 }

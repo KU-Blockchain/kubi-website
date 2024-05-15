@@ -1,5 +1,5 @@
 "use client";
-import react, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack } from "@chakra-ui/react";
 import { colors } from "@/components/globalStyles";
 import styles from "@/components/globalstyles.module.css";

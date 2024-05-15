@@ -1,9 +1,6 @@
 "use client";
 import react, { useEffect, useState } from "react";
 import { Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack } from "@chakra-ui/react";
-import ImageSlider from "@/components/ImageSlider";
-//import Section from "@/components/section";
-import WebpageHeading from "@/components/webpageheading";
 import { colors } from "@/components/globalStyles";
 import styles from "@/components/globalstyles.module.css";
 import { Img, Text } from '@chakra-ui/react';
@@ -13,20 +10,6 @@ import Section from "@/components/section";
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
-  const slidesSources = [
-    {
-      url: "/images/WebsiteAssets/perry-alexander.jpg",
-      title: "Perry Alexander",
-    },
-    {
-      url: "/images/WebsiteAssets/campus-background.jpg",
-      title: "KUBI on Campus",
-    },
-    {
-      url: "/images/WebsiteAssets/discord.jpg",
-      title: "Our Discord Server",
-    },
-  ];
   const slidesArray = [
     {
       image: "/images/WebsiteAssets/Campus.png",
@@ -70,60 +53,50 @@ export default function Home() {
     <>
       <Box
         m="auto"
-        px={20}
-        py={5}
       >
-        <Box>
-          <Flex justifyContent="Center">
-            <VStack>
-              <Heading justifyContent="Center">KU Blockchain Institute</Heading>
-              <Text>University of Kansas</Text>
-              {/* <Image src="/images/WebsiteAssets/KUBI_Logos/RGB_PNGs/KUBI-logo-RGB-500.png" /> */}
-              <Image src="/images/WebsiteAssets/campus_line_art_transparent.png" />
-            </VStack>
-          </Flex>
+        <Box
+          py={4}
+        >
+          <VStack alignItems="center">
+            <Heading>KU Blockchain Institute</Heading>
+            <Box maxW="xl" p={4}>
+              <Text textAlign="center" fontSize="2xl">University of Kansas's official student organization for everything blockchain, cryptoeconomics, and cryptocurrency.</Text>
+            </Box>
+            <Image py={0} src="/images/WebsiteAssets/campus_line_art_transparent.png" />
+          </VStack>
         </Box>
 
-        <br></br>
-
-        <Stack spacing={5}>
+        <Stack m={4} spacing={4}>
           {slidesArray.map((slide, index) => (
             <Card 
               key={index} 
-              p={5}
-              variant="elevated"
-              style={{}}
+              p={0}
+              style={{borderRadius: "0px", backgroundColor: colors.headerBackground, color: "white"}}
             >
               {isMobile ? (
-                <VStack spacing={4} align="stretch">
-                  <Image
-                    width="100%"
-                    src={slide.image}
-                    alt={slide.title}
-                  />
+                <VStack spacing={4} align="center">
                   <CardBody>
                     <Heading size="lg" mb={2} textAlign="center">
                       {slide.title}
                     </Heading>
-                    <Text mb={4}>{slide.text}</Text>
+                    <Text textAlign="center" mb={4}>{slide.text}</Text>
                   </CardBody>
                 </VStack>
               ) : (
                 index % 2 === 0 ? (
                   <HStack>
                     <CardBody>
-                      <Flex direction="column" justify="space-between" h="100%">
-                        <Box>
-                          <Heading size="lg" mb={4} textAlign="center">
-                            {slide.title}
-                          </Heading>
-                        </Box>
-                        <Box flex="1">
-                          <Text mb={4} textAlign="center">{slide.text}</Text>
-                        </Box>
+                      <Flex direction="column" justify="space-between">
+                        <Heading size="xl" mb={4} textAlign="center">
+                          {slide.title}
+                        </Heading>
+                        <Text mb={1} fontSize="2xl" textAlign="center">
+                          {slide.text}
+                        </Text>
                       </Flex>
                     </CardBody>
                     <Image
+                      width="400px"
                       maxW="50%"
                       src={slide.image}
                       alt={slide.title}
@@ -132,20 +105,19 @@ export default function Home() {
                 ) : (
                   <HStack>
                     <Image
+                      width="400px"
                       maxW="50%"
                       src={slide.image}
                       alt={slide.title}
                     />
                     <CardBody>
                       <Flex direction="column" justify="space-between" h="100%">
-                        <Box>
-                          <Heading size="lg" mb={4} textAlign="center">
-                            {slide.title}
-                          </Heading>
-                        </Box>
-                        <Box flex="1">
-                          <Text mb={4} textAlign="center">{slide.text}</Text>
-                        </Box>
+                        <Heading size="xl" mb={4} textAlign="center">
+                          {slide.title}
+                        </Heading>
+                        <Text mb={4} fontSize="2xl" textAlign="center">
+                          {slide.text}
+                        </Text>
                       </Flex>
                     </CardBody>
                   </HStack>

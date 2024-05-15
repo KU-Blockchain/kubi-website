@@ -6,25 +6,24 @@ import { Box, Center, Img , Text, IconButton, Icon, Flex, HStack, VStack } from 
 import { motion } from "framer-motion";
 import { BsGithub, BsLinkedin, BsPerson, BsDiscord } from 'react-icons/bs';
 
-
 function Footer() {
   
   return (
     <>
-      <Flex justifyContent="Center" backgroundColor={colors.whiteBg} maxWidth="100%">
+      <Flex justifyContent="Center" maxWidth="100%">
         <motion.div initial={{ opacity: 0}} whileInView={{ opacity: 1 }}>
           <VStack spacing={5}>
             <Image width="450" height="450" src="/images/WebsiteAssets/KUBI_Logos/KU-Blockchain-logo.svg"/>
-            <Text fontSize="3xl" color={colors.whiteBg} mt={-40}><b>KU Blockchain Institute</b></Text>
+            <Text fontSize="3xl" mt={-40}><b>KU Blockchain Institute</b></Text>
             <HStack spacing={5}>
               <Link href="https://github.com/KU-Blockchain">
-                <IconButton aria-label="Github" icon={<BsGithub />} />
+                <IconButton variant='outline' colorScheme='#23406D' aria-label="Github" icon={<BsGithub style={{ color: "#23406D" }} />} />
               </Link>
               <Link href="https://www.linkedin.com/company/kublockchain/">
-                <IconButton aria-label="Linkedin" icon={<BsLinkedin />} />
+                <IconButton variant='outline' colorScheme='#23406D' aria-label="Linkedin" icon={<BsLinkedin />} />
               </Link>
               <Link href="https://discord.gg/HKyd3dSDSh">
-                <IconButton aria-label="Discord" icon={<BsDiscord />} />
+                <IconButton variant='outline' colorScheme='#23406D' aria-label="Discord" icon={<BsDiscord />} />
               </Link>
             </HStack>
           </VStack> 

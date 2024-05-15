@@ -14,6 +14,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import PersonCard from "../PersonCard";
+import { colors } from "../globalStyles.js";
 
 const CurrentExecTeam = () => {
   const [selectedExec, setSelectedExec] = useState(null);
@@ -85,7 +86,7 @@ const CurrentExecTeam = () => {
           size="4xl"
         >
           <ModalOverlay />
-          <ModalContent m={2} borderRadius="xl">
+          <ModalContent m={2} borderRadius="xl" style={{ color: "white", background: colors.headerBackground }}>
             <ModalHeader textAlign="center">{selectedExec.name}</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>

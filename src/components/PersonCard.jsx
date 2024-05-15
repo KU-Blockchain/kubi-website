@@ -11,7 +11,7 @@ const PersonCard = ({ headshot, name, title, shortBio }) => {
       maxWidth="100%"
       w="full"
       bg="white"
-      opacity={0.8}
+      opacity={1}
       minH="300px"
       maxH="500px"
       overflow="hidden"

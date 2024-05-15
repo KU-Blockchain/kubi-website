@@ -13,7 +13,8 @@ export default function RootLayout({ children }) {
         <title>KU Blockchain Institute</title>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>
+      <body style={{ backgroundColor: "#F5F5F5", color: "#23406D" }}>
+      {/* F5F5F5 */}
       <ChakraProvider>
         <Header />
           {children} 

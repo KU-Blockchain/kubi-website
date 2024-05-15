@@ -15,7 +15,6 @@ const WebpageHeading = ({ heading }) => {
         <Text
           fontSize="5xl"
           align="center"
-          color={"white"}
           fontWeight="bold"
         >
           {heading}

@@ -7,6 +7,8 @@ export const colors = {
   red: "##A21521",
   yellow1: "#EAB611",
   yellow2: "#C4940F",
+  pageBackground: "#F5F5F5",
+  headerBackground: "#23406D",
 };
 
 export const icon = {

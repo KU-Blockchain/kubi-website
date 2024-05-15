@@ -36,7 +36,7 @@ const Navbar = () => {
       <Link href="/">
         <Image
           src="/images/WebsiteAssets/KUBI_Logos/white_logo.png"
-          width="25%"
+          width="5lh"
           alt="KUBI Logo"
         />
       </Link>

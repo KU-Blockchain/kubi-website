@@ -14,6 +14,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import PersonCard from "../PersonCard";
+import { colors } from "../globalStyles.js";
 
 const AdvisoryBoard = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -81,7 +82,7 @@ const AdvisoryBoard = () => {
           size="4xl"
         >
           <ModalOverlay />
-          <ModalContent m={2} borderRadius="xl">
+          <ModalContent m={2} borderRadius="xl" style={{ color: "white", background: colors.headerBackground }}>
             <ModalHeader textAlign="center">{selectedPerson.name}</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>

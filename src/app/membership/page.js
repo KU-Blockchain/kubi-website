@@ -151,7 +151,7 @@ export default function MembershipPage() {
             </Box>
 
             <div id="OptionalInfo" style={{flex:1}}>
-                <img src="/testImages/Val.png" width="100%" style={{paddingTop:"7%"}}></img>
+                <Image alt="KUBI" src="/testImages/Val.png" width="100%" style={{paddingTop:"7%"}}></Image>
             </div>
 
           </HStack>

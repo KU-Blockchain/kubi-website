@@ -13,7 +13,7 @@ function Footer() {
       <Flex justifyContent="Center" maxWidth="100%">
         <motion.div initial={{ opacity: 0}} whileInView={{ opacity: 1 }}>
           <VStack spacing={5}>
-            <Image width="450" height="450" src="/images/WebsiteAssets/KUBI_Logos/KU-Blockchain-logo.svg"/>
+            <Image width="450" height="450" alt="KUBI Logo" src="/images/WebsiteAssets/KUBI_Logos/KU-Blockchain-logo.svg"/>
             <Text fontSize="3xl" mt={-40}><b>KU Blockchain Institute</b></Text>
             <HStack spacing={5}>
               <Link href="https://github.com/KU-Blockchain">

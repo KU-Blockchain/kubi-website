@@ -60,9 +60,9 @@ export default function Home() {
           <VStack alignItems="center">
             <Heading>KU Blockchain Institute</Heading>
             <Box maxW="xl" p={4}>
-              <Text textAlign="center" fontSize="2xl">University of Kansas's official student organization for everything blockchain, cryptoeconomics, and cryptocurrency.</Text>
+              <Text textAlign="center" fontSize="2xl">The University of Kansas official student organization for everything blockchain, cryptoeconomics, and cryptocurrency.</Text>
             </Box>
-            <Image py={0} src="/images/WebsiteAssets/campus_line_art_transparent.png" />
+            <Image py={0} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />
           </VStack>
         </Box>
 

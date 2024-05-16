@@ -78,7 +78,6 @@ export default function EventsPage() {
                     width="800"
                     height="600"
                     frameborder="0"
-                    scrolling="no"
                     ></iframe>
                   </Center>
               </AccordionPanel>

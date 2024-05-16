@@ -26,10 +26,18 @@ const CurrentExecTeam = () => {
 
   const currentExecs = [
     {
+      headshot: "/images/headshots/micah_borghese.JPG",
+      title: "President",
+      name: "Micah Borghese",
+      shortBio: "",
+      longBio:
+        "Micah is a senior studying computer science and math. He was been involved with the KU Blockchain Institute since Fall 2023 but his interest in blockchain started long before then. In 8th grade, Micah gave a presentation on if Bitcoin would be the future of currency. Since then, he was explored developing on the blockchain, winning 3rd place at HackKU 2024 for his XRPL sidechain NFT supply chain solution.",
+    },
+    {
       headshot: "/images/headshots/emma_nasseri.jpeg",
       title: "President",
       name: "Emma Nasseri",
-      shortBio: "Emma was pres",
+      shortBio: "",
       longBio:
         "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
     },
@@ -37,7 +45,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/tej_gumaste.jpg",
       title: "VP Engineering",
       name: "Tej Gumaste",
-      shortBio: "Emma was pres",
+      shortBio: "",
       longBio:
         "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
     },
@@ -45,7 +53,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/yash_prajapati.jpeg",
       title: "VP Finance",
       name: "Yash Prajapati",
-      shortBio: "Emma was pres",
+      shortBio: "",
       longBio:
         "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
     },
@@ -53,7 +61,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/jahnvi_maddila.jpeg",
       title: "Director of Communications",
       name: "Jahnvi Maddila",
-      shortBio: "Emma was pres",
+      shortBio: "",
       longBio:
         "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
     },

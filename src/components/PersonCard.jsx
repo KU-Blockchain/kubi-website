@@ -1,4 +1,4 @@
-import { Box, Text, VStack } from "@chakra-ui/react";
+import { Box, Text, VStack, HStack, Button } from "@chakra-ui/react";
 import Image from "next/image";
 
 const PersonCard = ({ headshot, name, title, shortBio }) => {
@@ -59,14 +59,16 @@ const PersonCard = ({ headshot, name, title, shortBio }) => {
         >
           {title}
         </Text>
-        <Text
-          fontSize={["xs", "sm"]}
-          textAlign="center"
-          textColor="black"
-          noOfLines={4}
-        >
-          {shortBio}
-        </Text>
+        {shortBio && (
+          <Text
+            fontSize={["xs", "sm"]}
+            textAlign="center"
+            textColor="black"
+            noOfLines={4}
+          >
+            {shortBio}
+          </Text>
+        )}
       </VStack>
     </Box>
   );

@@ -42,7 +42,7 @@ export default function ResearchPage() {
                 <Text 
                   fontWeight={500} 
                   fontSize="large">
-                    Dr. Perry Alexander <Link href='mailto:palexand@ku.edu'><Badge variant='outline' colorScheme='black'>Contact</Badge></Link> <Link href='https://perry.alexander.name/' isExternal><Badge variant='outline' colorScheme='black'>Personal Website</Badge></Link>
+                    Dr. Perry Alexander <Link href='mailto:palexand@ku.edu'><Badge variant='subtle'>Contact</Badge></Link> <Link href='https://perry.alexander.name/' isExternal><Badge variant='outline'>Personal Website</Badge></Link>
                 </Text>
                 
                 <Text 
@@ -55,7 +55,7 @@ export default function ResearchPage() {
           </HStack>
         </Box>
 
-        <Divider orientation="vertical" height="auto" borderColor="gray.400" borderWidth="0.5px" />
+        <Divider orientation="vertical" height="auto" borderColor="gray.400" borderWidth="1" />
 
         <Box w="30%" p={2}> {/* bg='tomato' */}
           <Text 

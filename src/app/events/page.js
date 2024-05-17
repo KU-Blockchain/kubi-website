@@ -17,7 +17,7 @@ export default function EventsPage() {
   const events = [
     {
       image: "/images/eventimages/ethdenver2024.jpg", 
-      text: "ETHDenver: The premier Ethereum event in Denver, Colorado, bringing together blockchain enthusiasts, developers, and innovators worldwide. Explore workshops, hackathons, and networking opportunities while immersing yourself in the latest in decentralized technology. Join a vibrant community driving the future of blockchain innovation.", 
+      text: "The premier Ethereum event in Denver, Colorado, bringing together blockchain enthusiasts, developers, and innovators worldwide. Explore workshops, hackathons, and networking opportunities while immersing yourself in the latest in decentralized technology. Join a vibrant community driving the future of blockchain innovation.", 
       heading: "ETHDenver 2024"
     },
     {
@@ -77,7 +77,6 @@ export default function EventsPage() {
                     style={{ border: 0 }}
                     width="800"
                     height="600"
-                    frameborder="0"
                     ></iframe>
                   </Center>
               </AccordionPanel>
@@ -136,7 +135,6 @@ export default function EventsPage() {
                     style={{ border: 0 }}
                     width="800"
                     height="600"
-                    frameborder="0"
                     ></iframe>
                   </Center>
               </AccordionPanel>

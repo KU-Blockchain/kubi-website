@@ -35,23 +35,15 @@ const CurrentExecTeam = () => {
     },
     {
       headshot: "/images/headshots/emma_nasseri.jpeg",
-      title: "President",
+      title: "Director of Education",
       name: "Emma Nasseri",
       shortBio: "",
       longBio:
         "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
     },
     {
-      headshot: "/images/headshots/tej_gumaste.jpg",
-      title: "VP Engineering",
-      name: "Tej Gumaste",
-      shortBio: "",
-      longBio:
-        "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
-    },
-    {
       headshot: "/images/headshots/yash_prajapati.jpeg",
-      title: "VP Finance",
+      title: "VP of Finance",
       name: "Yash Prajapati",
       shortBio: "",
       longBio:
@@ -59,7 +51,7 @@ const CurrentExecTeam = () => {
     },
     {
       headshot: "/images/headshots/jahnvi_maddila.jpeg",
-      title: "Director of Communications",
+      title: "VP of Engineering",
       name: "Jahnvi Maddila",
       shortBio: "",
       longBio:

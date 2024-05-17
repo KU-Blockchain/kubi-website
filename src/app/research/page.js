@@ -1,20 +1,129 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { Button, Center, Flex, Text, Box, Square, Image, HStack, VStack, Badge, Divider, Link } from "@chakra-ui/react";
+import { Button, Center, Flex, Text, Box, Square, Image, HStack, VStack, Badge, Divider, Link, Tab, Tabs, TabList, TabPanels, TabPanel } from "@chakra-ui/react";
 import WebpageHeading from "@/components/webpageheading";
 
 
 export default function ResearchPage() {
   const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+
+  }, []);
+
   return (
     <>
+      {isMobile ? (
+        <Box
+          m="auto"
+          px={2}
+          py={5}
+        >
+          <WebpageHeading heading={"Blockchain @ KU"} />
+
+          <Tabs isFitted variant="enclosed">
+            <TabList>
+              <Tab>UBRI</Tab>
+              <Tab>Block News</Tab>
+            </TabList>
+
+            <TabPanels>
+              <TabPanel>
+                <HStack paddingBottom={4}>
+                  <Box w="30%">
+                    <Image 
+                      width="100%"
+                      objectFit="cover"
+                      borderRadius="full"
+                      src="/images/WebsiteAssets/perry-alexander2.jpg"
+                      alt="Perry"
+                    />
+                  </Box>
+                  <Box w="70%">
+                    <VStack align="flex-start">
+                      <Text 
+                        fontWeight={500} 
+                        fontSize="2xl">
+                          The University Blockchain Research Initiative (UBRI)
+                      </Text>
+                      <Text 
+                        fontWeight={500} 
+                        fontSize="large">
+                          Dr. Perry Alexander
+                      </Text>
+                    </VStack>
+                    <Link href='mailto:palexand@ku.edu'><Badge variant='outline'>Contact</Badge></Link> <Link href='https://perry.alexander.name/' isExternal><Badge variant='outline'>Personal Website</Badge></Link>
+                  </Box>
+                </HStack>
+                <Text 
+                  fontSize="medium"
+                >
+                    Dr. Perry Alexander is The AT&T Foundation Distinguished Professor of Electrical Engineering and Computer Science Department and Director of the Information and Telecommunication Technology Center at The University of Kansas. Dr. Alexander oversees the University Blockchain Research Initiative (UBRI) Grant of $2 million donated by Ripple for blockchain research and development at KU. His research interests include system-level modeling, formal verification, language semantics, and trusted computing.
+                </Text>
+              </TabPanel>
+
+              <TabPanel>
+                <Text 
+                fontWeight={500} 
+                fontSize="2xl"
+                align="center"
+                paddingBottom={4}
+                >
+                  Block News
+                </Text>
+
+                <Text 
+                  fontWeight={500}
+                  fontSize="large"
+                  >
+                    Weekly Newsletter
+                </Text>
+                <Box w="100%" paddingBottom={4}>
+                  Sign up to receive weekly updates on the latest blockchain news and events
+                </Box>
+
+                <Text 
+                  fontWeight={500}
+                  fontSize="large"
+                  >
+                    Notion Page
+                </Text>
+                <Box w="100%" paddingBottom={4}>
+                  Foundations of Blockcahin Bootcamp, etc
+                </Box>
+
+                <Text 
+                  fontWeight={500}
+                  fontSize="large"
+                  >
+                    YouTube Channel
+                </Text>
+                <Box w="100%" paddingBottom={4}>
+                  Blockchain 101, etc
+                </Box>
+              </TabPanel>
+            </TabPanels>
+
+          </Tabs>
+
+        
+        </Box>
+      ) : (
       <Box
         m="auto"
         px={20}
         py={5}
       >
-
       <WebpageHeading heading={"Blockchain Research @ KU"} />
 
       <Flex> 
@@ -101,6 +210,7 @@ export default function ResearchPage() {
       </Flex>
 
       </Box>
+      )}
     </>
   );
 }

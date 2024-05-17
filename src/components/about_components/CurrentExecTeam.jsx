@@ -31,15 +31,7 @@ const CurrentExecTeam = () => {
       name: "Micah Borghese",
       shortBio: "",
       longBio:
-        "Micah is a senior studying computer science and math. He was been involved with the KU Blockchain Institute since Fall 2023 but his interest in blockchain started long before then. In 8th grade, Micah gave a presentation on if Bitcoin would be the future of currency. Since then, he was explored developing on the blockchain, winning 3rd place at HackKU 2024 for his XRPL sidechain NFT supply chain solution.",
-    },
-    {
-      headshot: "/images/headshots/emma_nasseri.jpeg",
-      title: "Director of Education",
-      name: "Emma Nasseri",
-      shortBio: "",
-      longBio:
-        "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
+        "Micah is a senior Honors student studying Computer Science and Mathematics. He was been involved with the KU Blockchain Institute since Fall 2023 but his interest in blockchain started long before then. In 8th grade, Micah gave a presentation on if Bitcoin would be the future of currency. Since then, he was explored developing on the blockchain, winning 3rd place at HackKU 2024 for his XRPL sidechain NFT supply chain solution.",
     },
     {
       headshot: "/images/headshots/yash_prajapati.jpeg",
@@ -47,7 +39,7 @@ const CurrentExecTeam = () => {
       name: "Yash Prajapati",
       shortBio: "",
       longBio:
-        "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
+        "To be added.",
     },
     {
       headshot: "/images/headshots/jahnvi_maddila.jpeg",
@@ -55,7 +47,39 @@ const CurrentExecTeam = () => {
       name: "Jahnvi Maddila",
       shortBio: "",
       longBio:
-        "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
+        "To be added.",
+    },
+    {
+      headshot: "",
+      title: "Director of Research and Development",
+      name: "Kyle Spragg",
+      shortBio: "",
+      longBio:
+        "To be added.",
+    },
+    {
+      headshot: "",
+      title: "Director of Marketing and Communications",
+      name: "Emma Du",
+      shortBio: "",
+      longBio:
+        "To be added.",
+    },
+    {
+      headshot: "",
+      title: "Director of Outreach and Growth",
+      name: "Alex Perez",
+      shortBio: "",
+      longBio:
+        "To be added.",
+    },
+    {
+      headshot: "/images/headshots/emma_nasseri.jpeg",
+      title: "Interim Director of Education",
+      name: "Emma Nasseri",
+      shortBio: "",
+      longBio:
+        "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
     },
   ];
 

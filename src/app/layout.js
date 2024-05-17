@@ -11,7 +11,6 @@ export default function RootLayout({ children }) {
     <html>
       <head>
         <title>KU Blockchain Institute</title>
-        <link rel="icon" href="/favicon.ico" />
       </head>
       <body style={{ backgroundColor: "#F5F5F5", color: "#23406D" }}>
       {/* F5F5F5 */}

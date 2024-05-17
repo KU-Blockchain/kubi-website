@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import CurrentExecTeam from "@/components/about_components/CurrentExecTeam";
 import AdvisoryBoard from "@/components/about_components/AdvisoryBoard";
 import WebpageHeading from "@/components/webpageheading";
-import { Heading, Box, Stack } from "@chakra-ui/react";
+import { Heading, Box, Stack, Tab, Tabs, TabList, TabPanels, TabPanel } from "@chakra-ui/react";
 
 export default function AboutPage() {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,22 +31,46 @@ export default function AboutPage() {
         >
           <WebpageHeading heading={"About KUBI"} />
 
-          <Stack>
-            <Heading as="h2" size="xl" textAlign="center" my={5}>
-              Current Executive Team
-            </Heading>
-            <CurrentExecTeam />
-          </Stack>
+          <Tabs isFitted variant="enclosed">
 
-          <Stack>
-            <Heading as="h2" size="xl" textAlign="center" my={5}>
-              Advisory Board
-            </Heading>
-            <AdvisoryBoard />
-          </Stack>
+            <TabList>
+              <Tab>Executive Team</Tab>
+              <Tab>Advisory Board</Tab>
+              <Tab>Our History</Tab>
+            </TabList>
 
-          <p>should have info on our history</p>
-          <p>should have info on our election process</p>
+            <TabPanels>
+              <TabPanel>
+                <Stack>
+                  <Heading as="h2" size="xl" textAlign="center" my={5}>
+                    Current Executive Team
+                  </Heading>
+                  <CurrentExecTeam />
+                </Stack>
+              </TabPanel>
+
+              <TabPanel>
+                <Stack>
+                  <Heading as="h2" size="xl" textAlign="center" my={5}>
+                    Advisory Board
+                  </Heading>
+                  <AdvisoryBoard />
+                </Stack>
+              </TabPanel>
+
+              <TabPanel>
+                <Stack>
+                  <Heading as="h2" size="xl" textAlign="center" my={5}>
+                    Our History
+                  </Heading>
+                  <p>should have info on our history</p>
+                </Stack>
+              </TabPanel>
+
+            </TabPanels>
+
+          </Tabs>
+  
         </Box>
       ) : (
         <Box
@@ -54,24 +78,47 @@ export default function AboutPage() {
           px={20}
           py={5}
         >
-        <WebpageHeading heading={"About KUBI"} />
+          <WebpageHeading heading={"About KUBI"} />
 
-        <Stack>
-          <Heading as="h2" size="xl" textAlign="center" my={5}>
-            Current Executive Team
-          </Heading>
-          <CurrentExecTeam />
-        </Stack>
+          <Tabs isFitted variant="enclosed">
 
-        <Stack>
-          <Heading as="h2" size="xl" textAlign="center" my={5}>
-            Advisory Board
-          </Heading>
-          <AdvisoryBoard />
-        </Stack>
+            <TabList>
+              <Tab>Executive Team</Tab>
+              <Tab>Advisory Board</Tab>
+              <Tab>Our History</Tab>
+            </TabList>
 
-        <p>should have info on our history</p>
-        <p>should have info on our election process</p>
+            <TabPanels>
+              <TabPanel>
+  `             <Stack>
+                  <Heading as="h2" size="xl" textAlign="center" my={5}>
+                    Current Executive Team
+                  </Heading>
+                  <CurrentExecTeam />
+                </Stack>
+              </TabPanel>
+
+              <TabPanel>
+                <Stack>
+                  <Heading as="h2" size="xl" textAlign="center" my={5}>
+                    Advisory Board
+                  </Heading>
+                  <AdvisoryBoard />
+                </Stack>
+              </TabPanel>
+
+              <TabPanel>
+                <Stack>
+                  <Heading as="h2" size="xl" textAlign="center" my={5}>
+                    Our History
+                  </Heading>
+                  <p>should have info on our history</p>
+                </Stack>
+              </TabPanel>
+
+            </TabPanels>
+          </Tabs>
+        
         </Box>
       )}
     </>

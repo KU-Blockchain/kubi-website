@@ -29,9 +29,9 @@ const AdvisoryBoard = () => {
       headshot: "/images/headshots/emma_nasseri.jpeg",
       title: "Former President",
       name: "Emma Nasseri",
-      shortBio: "Emma was pres",
+      shortBio: "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
       longBio:
-        "Austin studied Mathematics and Economics at the University of Kansas. He has worked in research at Uniswap since 2022.",
+        "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
     },
     {
       headshot: "/images/headshots/jennifer_lohoefener.jpeg",

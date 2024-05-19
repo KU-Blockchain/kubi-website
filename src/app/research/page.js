@@ -31,7 +31,7 @@ export default function ResearchPage() {
         >
           <WebpageHeading heading={"Blockchain @ KU"} />
 
-          <Tabs isFitted variant="enclosed">
+          <Tabs mx={6} isFitted variant='soft-rounded' colorScheme='blue'>
             <TabList>
               <Tab>UBRI</Tab>
               <Tab>Block News</Tab>

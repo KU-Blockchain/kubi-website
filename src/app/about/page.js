@@ -31,7 +31,7 @@ export default function AboutPage() {
         >
           <WebpageHeading heading={"About KUBI"} />
 
-          <Tabs isFitted variant="enclosed">
+          <Tabs mx={6} isFitted variant='soft-rounded' colorScheme='blue'>
 
             <TabList>
               <Tab>Executive Team</Tab>
@@ -80,7 +80,7 @@ export default function AboutPage() {
         >
           <WebpageHeading heading={"About KUBI"} />
 
-          <Tabs isFitted variant="enclosed">
+          <Tabs variant='soft-rounded' colorScheme='blue'>
 
             <TabList>
               <Tab>Executive Team</Tab>
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
             <TabPanels>
               <TabPanel>
-  `             <Stack>
+                <Stack>
                   <Heading as="h2" size="xl" textAlign="center" my={5}>
                     Current Executive Team
                   </Heading>

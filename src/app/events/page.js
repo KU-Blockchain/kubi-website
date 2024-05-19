@@ -77,8 +77,8 @@ export default function EventsPage() {
                     style={{ border: 0 }}
                     width="800"
                     height="600"
-                    ></iframe>
-                  </Center>
+                  ></iframe>
+                </Center>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
@@ -121,25 +121,15 @@ export default function EventsPage() {
         >
           <WebpageHeading heading={"Events"} />
 
-          <Accordion allowToggle>
-            <AccordionItem>
-              <AccordionButton>
-                <Box flex="1" textAlign="center">
-                  <Text fontSize="3xl" fontWeight={500}>-+-+-+-+-+-+-+-+-  Follow our Calendar  -+-+-+-+-+-+-+-+-</Text> 
-                </Box>
-              </AccordionButton>
-              <AccordionPanel>
-                <Center>
-                  <iframe
-                    src="https://calendar.google.com/calendar/embed?src=ku.blockchain.institute%40gmail.com&ctz=America%2FChicago"
-                    style={{ border: 0 }}
-                    width="800"
-                    height="600"
-                    ></iframe>
-                  </Center>
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
+
+          <Box flex="1" textAlign="center">
+            <Text fontSize="3xl" fontWeight={500}>-+-+-+-+-+-+-+-+-  Follow our Calendar  -+-+-+-+-+-+-+-+-</Text> 
+          </Box>
+          <Center>
+            <iframe src="https://embed.styledcalendar.com/#MjFRXlTG1mAbqA5XgGxc" title="Styled Calendar" class="styled-calendar-container" style={{width:"75%", height:"654px", border:"none"}} data-cy="calendar-embed-iframe"></iframe>
+            <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+          </Center>
+
           <br></br>
 
           <Text fontSize='3xl' align="center" fontWeight="bold">Some of our past events</Text>

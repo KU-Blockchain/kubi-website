@@ -26,7 +26,8 @@ function Footer() {
                 <IconButton variant='outline' colorScheme='#23406D' aria-label="Discord" icon={<BsDiscord />} />
               </Link>
             </HStack>
-            <Text>Blockchain can be a confusing topic. Dont know here to start? KUBIs got you! You will find plenty of resources here to expand your blockchain knowledge between Block Talks to explain the basics of blockchain, weekly newsletters to highlight important blockchain topics, and articles written by our team to express the use cases of blockchain.</Text>
+            <Text align="center" px={100}>Blockchain can be a confusing topic. Don\'t know where to start? KUBI\'s got you! You will find plenty of resources here to expand your blockchain knowledge between Block Talks to explain the basics of blockchain, weekly newsletters to highlight important blockchain topics, and articles written by our team to express the use cases of blockchain.</Text>
+            <br></br>
           </VStack> 
         </motion.div>
       </Flex>

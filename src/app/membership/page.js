@@ -1,107 +1,13 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { Box, Center, Flex, Img, Text, Input, Textarea, Button, useToast, HStack, VStack, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@chakra-ui/react";
+import { Box, Card, Heading, CardBody, Center, Flex, Img, Text, Input, Textarea, Button, useToast, HStack, VStack, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@chakra-ui/react";
 import WebpageHeading from "@/components/webpageheading";
+import SubscribeForm from "@/components/SubscribeForm";
+import { colors } from "@/components/globalStyles";
 
 export default function MembershipPage() {
-  const toast = useToast();
-  const [valid, setValid] = useState(true);
-  const [firstNameValidity, setFirstNameValidity] = useState(false);
-  const [lastNameValidity, setLastNameValidity] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  function emailValidity(event){
-    let email = event.target.value;
-    if(email.includes('@') && email.includes('.')){
-      setValid(true);
-    }
-    else if(email === ""){
-      setValid(true);
-    }
-    else{
-      setValid(false);
-    }
-
-  }
-
-  function checkValidityFname(event){
-    let firstName = event.target.value;
-    if(firstName.trim() === ""){
-      setFirstNameValidity(false);
-    }
-    else{
-      setFirstNameValidity(true);
-    }
-  }
-
-  function checkValidityLName(event){
-    let lastName = event.target.value;
-    if(lastName.trim() === ""){
-      setLastNameValidity(false);
-    }
-    else{
-      setLastNameValidity(true);
-    }
-  }
-
-  function handleForm(){
-    if(!valid || !firstNameValidity || !lastNameValidity){
-      toast({
-        title: 'Invalid Email!',
-        description: "Please enter a valid details.",
-        status: 'error',
-        duration: 5000,
-        isClosable: true,
-      })
-    }
-    else{
-      toast({
-        title: 'Form Submitted!',
-        description: "Thank you for reaching out to us! We will get back to you soon.",
-        status: 'success',
-        duration: 5000,
-        isClosable: true,
-      })
-    
-      let firstName = document.getElementById("firstName").value;
-      let lastName = document.getElementById("lastName").value;
-      let email = document.getElementById("email").value;
-      let message = document.getElementById("message").value;
-      const packMessage={firstName: firstName, lastName: lastName, emailID: email, message: message};
-      
-      const data = sendEmail(packMessage);
-      //clearForm();
-    }
-  }
-
-  async function sendEmail(packMessage) {
-    console.log(packMessage);
-    try {
-      const res = await fetch('/api/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(packMessage),
-      });
-
-      if (res.ok) {
-        
-      } else {
-        const errorData = await res.text(); // Or res.text() if response is not JSON
-        console.error('Failed to send the email:', res.status, errorData);
-      }
-    } catch (error) {
-      console.error('An error occurred while sending the email:', error);
-    }
-  }
-
-  function clearForm(){
-    document.getElementById("firstName").value = "";
-    document.getElementById("lastName").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -124,46 +30,35 @@ export default function MembershipPage() {
         <Box>
           <WebpageHeading heading={"Membership"} />
 
-          <HStack spacing={5} style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
-            <Box id="FormHolder" style={{width:"50%", flex:1}}>
-        
-              <Text align="center" fontSize="2xl">Get in touch:</Text><br></br>
-              
-              <Box id="Form" style={{display:"flex", flexDirection:"column", rowGap:"2rem", paddingLeft:"3rem", paddingRight:"3rem", paddingBottom: "5%"}}>
+          <VStack style={{justify:"center"}}>
+            <Text fontSize='3xl' align="center" fontWeight="bold">Steps to Join KUBI: </Text>
+            <Text fontSize='2xl' align="center" fontWeight="bold">1. Join our Discord server</Text>
+            <Button>Discord</Button>
+            <Text fontSize='2xl' align="center" fontWeight="bold">2. Join the DAO</Text>
+            <Button>DAO</Button>
+            <Text fontSize='2xl' align="center" fontWeight="bold">3. Come to our next meeting!</Text>
+          </VStack>
+          <br></br>
 
-                <Box style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
-                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px", width:"45%"}}>
-                    First Name:
-                    <Input id="firstName" variant='filled' placeholder='First Name' onChange={checkValidityFname}/>
-                  </Box>
-                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px", width:"45%"}}>
-                    Last Name:
-                    <Input id="lastName" variant='filled' placeholder='Last Name' onChange={checkValidityLName}/>
-                  </Box>
+          <Card 
+            p={0}
+            style={{borderRadius: "0px", backgroundColor: colors.headerBackground, color: "white"}}
+          >
+            <VStack spacing={4} align="center">
+              <CardBody>
+                <Flex alignItems='center' direction="column" justify="space-between" h="100%">
+                <Heading size="lg" mb={2} textAlign="center">
+                  Subscribe to our mailing list
+                </Heading>
+                <Box py={6} style={{width:"80%"}}>
+                  <SubscribeForm />
+                  <Text>Subscribe for weekly newsletters and quarterly organization updates.</Text>
                 </Box>
-
-                <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
-                    Email:
-                    <Input id="email" variant='filled' placeholder='yourname@example.com' onChange={emailValidity} isInvalid={!valid}/>
-                </Box>
-
-                <Flex style={{flexDirection:"column", rowGap:"10px"}}>
-                    Message:
-                    <Textarea
-                      placeholder='Enter your message here...'
-                      size='md'
-                      variant='filled'
-                      id="message"
-                    />
                 </Flex>
+              </CardBody>
+            </VStack>
+          </Card>
 
-                <Flex style={{justifyContent:"space-between"}}>
-                  <Button style={{width:"75%"}} onClick={handleForm}>Submit</Button>
-                  <Button style={{width:"20%"}} onClick={clearForm}>Clear</Button>
-                </Flex>
-              </Box>
-            </Box>
-          </HStack>
         </Box>
       ) : (
         <Box
@@ -183,47 +78,32 @@ export default function MembershipPage() {
           </VStack>
           <br></br>
 
-          <HStack spacing={5} style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
-            <Box id="FormHolder" style={{width:"50%", flex:1}}>
-        
-              <Text align="center" fontSize="2xl">Get in touch:</Text><br></br>
-              
-              <Box id="Form" style={{display:"flex", flexDirection:"column", rowGap:"2rem", paddingLeft:"3rem", paddingRight:"3rem", paddingBottom: "5%"}}>
+          <Card 
+              p={0}
+              style={{borderRadius: "0px", backgroundColor: colors.headerBackground, color: "white"}}
+            >
+              <HStack>
+                <CardBody>
+                  <Flex alignItems='center' direction="column" justify="space-between" h="100%">
+                    <Heading size="xl" mb={4} textAlign="center">
+                      Subscribe to our mailing list
+                    </Heading>
+                    <Box py={6} style={{width:"50%"}}>
+                      <SubscribeForm />
+                      <Text>Subscribe for weekly newsletters and quarterly organization updates.</Text>
+                    </Box>
+                  </Flex>
+                </CardBody>
+                <Image
+                  width="35%"
+                  maxW="50%"
+                  paddingRight={4}
+                  src="\images\WebsiteAssets\Blockchalk-450.png"
+                  alt="KUBI"
+                />
+              </HStack>
+            </Card>
 
-                <Box style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
-                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px", width:"45%"}}>
-                    First Name:
-                    <Input id="firstName" variant='filled' placeholder='First Name' onChange={checkValidityFname}/>
-                  </Box>
-                  <Box style={{display:"flex", flexDirection:"column", rowGap:"10px", width:"45%"}}>
-                    Last Name:
-                    <Input id="lastName" variant='filled' placeholder='Last Name' onChange={checkValidityLName}/>
-                  </Box>
-                </Box>
-
-                <Box style={{display:"flex", flexDirection:"column", rowGap:"10px"}}>
-                    Email:
-                    <Input id="email" variant='filled' placeholder='yourname@example.com' onChange={emailValidity} isInvalid={!valid}/>
-                </Box>
-
-                <Flex style={{flexDirection:"column", rowGap:"10px"}}>
-                    Message:
-                    <Textarea
-                      placeholder='Enter your message here...'
-                      size='md'
-                      variant='filled'
-                      id="message"
-                    />
-                </Flex>
-
-                <Flex style={{justifyContent:"space-between"}}>
-                  <Button style={{width:"80%"}} onClick={handleForm}>Submit</Button>
-                  <Button style={{width:"15%"}} onClick={clearForm}>Clear Form</Button>
-                </Flex>
-              </Box>
-            </Box>
-            <Image alt="KUBI" src="\images\WebsiteAssets\Blockchalk-450.png" width="35%"></Image>
-          </HStack>
           </Box>
         )}
     </>

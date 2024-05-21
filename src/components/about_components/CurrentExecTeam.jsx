@@ -29,7 +29,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/micah_borghese.JPG",
       title: "President",
       name: "Micah Borghese",
-      shortBio: "",
+      shortBio: "Micah is a senior Honors student studying Computer Science and Mathematics. He was been involved with the KU Blockchain Institute since Fall 2023 but his interest in blockchain started long before then. In 8th grade, Micah gave a presentation on if Bitcoin would be the future of currency. Since then, he was explored developing on the blockchain, winning 3rd place at HackKU 2024 for his XRPL sidechain NFT supply chain solution.",
       longBio:
         "Micah is a senior Honors student studying Computer Science and Mathematics. He was been involved with the KU Blockchain Institute since Fall 2023 but his interest in blockchain started long before then. In 8th grade, Micah gave a presentation on if Bitcoin would be the future of currency. Since then, he was explored developing on the blockchain, winning 3rd place at HackKU 2024 for his XRPL sidechain NFT supply chain solution.",
     },
@@ -37,7 +37,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/yash_prajapati.jpeg",
       title: "VP of Finance",
       name: "Yash Prajapati",
-      shortBio: "",
+      shortBio: "To be added.",
       longBio:
         "To be added.",
     },
@@ -45,7 +45,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/jahnvi_maddila.jpeg",
       title: "VP of Engineering",
       name: "Jahnvi Maddila",
-      shortBio: "",
+      shortBio: "To be added.",
       longBio:
         "To be added.",
     },
@@ -53,23 +53,23 @@ const CurrentExecTeam = () => {
       headshot: "",
       title: "Director of Research and Development",
       name: "Kyle Spragg",
-      shortBio: "",
+      shortBio: "To be added.",
       longBio:
         "To be added.",
     },
     {
-      headshot: "",
+      headshot: "/images/headshots/emma_du.JPG",
       title: "Director of Marketing and Communications",
       name: "Emma Du",
-      shortBio: "",
+      shortBio: "Emma is a sophomore majoring in computer science and minoring in business. She has been involved in KU Blockchain Institute since Fall 2023. Emma is interested in blockchain's potential to create a more transparent and fair digital economy, as well as its applications in the healthcare industry. Outside of KUBI, she is a part of the KU SELF Program and plays the violin in the KU Symphony Orchestra. In her free time, she enjoys playing soccer and tennis.",
       longBio:
-        "To be added.",
+        "Emma is a sophomore majoring in computer science and minoring in business. She has been involved in KU Blockchain Institute since Fall 2023. Emma is interested in blockchain's potential to create a more transparent and fair digital economy, as well as its applications in the healthcare industry. Outside of KUBI, she is a part of the KU SELF Program and plays the violin in the KU Symphony Orchestra. In her free time, she enjoys playing soccer and tennis.",
     },
     {
       headshot: "",
       title: "Director of Outreach and Growth",
       name: "Alex Perez",
-      shortBio: "",
+      shortBio: "To be added.",
       longBio:
         "To be added.",
     },
@@ -77,7 +77,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/emma_nasseri.jpeg",
       title: "Interim Director of Education",
       name: "Emma Nasseri",
-      shortBio: "",
+      shortBio: "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute",
       longBio:
         "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
     },

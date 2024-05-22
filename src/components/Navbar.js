@@ -33,23 +33,13 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      {isMobile ? (
-        <Link href="/">
-          <Image
-            src="/images/WebsiteAssets/KUBI_Logos/white_logo.png"
-            width="4rlh"
-            alt="KUBI Logo"
-          />
-        </Link>
-      ) : (
-        <Link href="/">
-          <Image
-            src="/images/WebsiteAssets/KUBI_Logos/white_logo.png"
-            width="5rlh"
-            alt="KUBI Logo"
-          />
-        </Link>
-      )}
+      <Link href="/">
+        <Image
+          src="/images/WebsiteAssets/KUBI_Logos/white_logo.png"
+          width="110px"
+          alt="KUBI Logo"
+        />
+      </Link>
 
       {isMobile ? (
         <div

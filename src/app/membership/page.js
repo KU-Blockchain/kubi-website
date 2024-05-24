@@ -74,7 +74,7 @@ export default function MembershipPage() {
             <Button as="a" href="https://discord.gg/GAznpHUzny" target="_blank">Discord</Button>
             {/* <Text fontSize='2xl' align="center" fontWeight="bold">2. Join the DAO</Text>
             <Button>DAO</Button> */}
-            <Text fontSize='2xl' align="center" fontWeight="bold">3. Come to our <Link href="/events">next meeting!</Link></Text>
+            <Text fontSize='2xl' align="center" fontWeight="bold">2. Come to our <Link href="/events">next meeting!</Link></Text>
           </VStack>
           <br></br>
 

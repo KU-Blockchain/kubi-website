@@ -88,7 +88,7 @@ export default function ResearchPage() {
                   fontWeight={500}
                   fontSize="large"
                   >
-                    Weekly Newsletter
+                    <Link href="/membership">Weekly Newsletter</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
                   Sign up to receive weekly updates on the latest blockchain news and events
@@ -98,17 +98,17 @@ export default function ResearchPage() {
                   fontWeight={500}
                   fontSize="large"
                   >
-                    Notion Page
+                    <Link href="https://kublockchain.notion.site/Foundations-of-Blockchain-7ff28f61d6c347feb624866d32f0242b" isExternal>Notion Page</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
-                  Foundations of Blockcahin Bootcamp, etc
+                  Foundations of Blockchain Bootcamp, etc
                 </Box>
 
                 <Text 
                   fontWeight={500}
                   fontSize="large"
                   >
-                    YouTube Channel
+                    <Link href="https://www.youtube.com/@kublockchaininstitute9672" isExternal>YouTube Channel</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
                   Blockchain 101, etc
@@ -118,7 +118,6 @@ export default function ResearchPage() {
 
           </Tabs>
 
-        
         </Box>
       ) : (
       <Box
@@ -184,7 +183,7 @@ export default function ResearchPage() {
             fontWeight={500}
             fontSize="large"
             >
-              Weekly Newsletter
+              <Link href="/membership">Weekly Newsletter</Link>
           </Text>
           <Box w="100%" paddingBottom={4}>
             Sign up to receive weekly updates on the latest blockchain news and events
@@ -194,17 +193,17 @@ export default function ResearchPage() {
             fontWeight={500}
             fontSize="large"
             >
-              Notion Page
+              <Link href="https://kublockchain.notion.site/Foundations-of-Blockchain-7ff28f61d6c347feb624866d32f0242b" isExternal>Notion Page</Link>
           </Text>
           <Box w="100%" paddingBottom={4}>
-            Foundations of Blockcahin Bootcamp, etc
+            Foundations of Blockchain Bootcamp, etc
           </Box>
 
           <Text 
             fontWeight={500}
             fontSize="large"
             >
-              YouTube Channel
+              <Link href="https://www.youtube.com/@kublockchaininstitute9672" isExternal>YouTube Channel</Link>
           </Text>
           <Box w="100%" paddingBottom={4}>
             Blockchain 101, etc

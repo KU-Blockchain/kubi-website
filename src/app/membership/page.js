@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { Box, Card, Heading, CardBody, Center, Flex, Img, Text, Input, Textarea, Button, useToast, HStack, VStack, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@chakra-ui/react";
+import { Box, Card, Heading, CardBody, Center, Flex, Img, Link, Text, Input, Textarea, Button, useToast, HStack, VStack, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@chakra-ui/react";
 import WebpageHeading from "@/components/webpageheading";
 import SubscribeForm from "@/components/SubscribeForm";
 import { colors } from "@/components/globalStyles";
@@ -33,10 +33,10 @@ export default function MembershipPage() {
           <VStack style={{justify:"center"}}>
             <Text fontSize='3xl' align="center" fontWeight="bold">Steps to Join KUBI: </Text>
             <Text fontSize='2xl' align="center" fontWeight="bold">1. Join our Discord server</Text>
-            <Button>Discord</Button>
-            <Text fontSize='2xl' align="center" fontWeight="bold">2. Join the DAO</Text>
-            <Button>DAO</Button>
-            <Text fontSize='2xl' align="center" fontWeight="bold">3. Come to our next meeting!</Text>
+            <Button as="a" href="https://discord.gg/GAznpHUzny" target="_blank">Discord</Button>
+            {/* <Text fontSize='2xl' align="center" fontWeight="bold">2. Join the DAO</Text>
+            <Button>DAO</Button> */}
+            <Text fontSize='2xl' align="center" fontWeight="bold">2. Come to our <Link href="/events">next meeting!</Link>!</Text>
           </VStack>
           <br></br>
 
@@ -71,10 +71,10 @@ export default function MembershipPage() {
           <VStack style={{justify:"center"}}>
             <Text fontSize='3xl' align="center" fontWeight="bold">Steps to Join KUBI: </Text>
             <Text fontSize='2xl' align="center" fontWeight="bold">1. Join our Discord server</Text>
-            <Button>Discord</Button>
-            <Text fontSize='2xl' align="center" fontWeight="bold">2. Join the DAO</Text>
-            <Button>DAO</Button>
-            <Text fontSize='2xl' align="center" fontWeight="bold">3. Come to our next meeting!</Text>
+            <Button as="a" href="https://discord.gg/GAznpHUzny" target="_blank">Discord</Button>
+            {/* <Text fontSize='2xl' align="center" fontWeight="bold">2. Join the DAO</Text>
+            <Button>DAO</Button> */}
+            <Text fontSize='2xl' align="center" fontWeight="bold">3. Come to our <Link href="/events">next meeting!</Link></Text>
           </VStack>
           <br></br>
 

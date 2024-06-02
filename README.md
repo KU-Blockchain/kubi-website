@@ -28,4 +28,5 @@ Currently deployed on Vercel [here](https://kubi-website.vercel.app/)
 
 1. Use **`git add .`** to stage all the files you’ve made changes to.
 2. Commit your changes by using **`git commit -m "<yourCommitMessag>"`**.
+    - Example: **`git commit -m "changed bio and headshot for micah"`**
 3. Create a pull request by going to the Github repository and requesting to merge into the main branch.

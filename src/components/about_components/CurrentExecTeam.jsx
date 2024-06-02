@@ -12,6 +12,8 @@ import {
   VStack,
   Image,
   Text,
+  Button,
+  HStack,
 } from "@chakra-ui/react";
 import PersonCard from "../PersonCard";
 import { colors } from "../globalStyles.js";
@@ -32,6 +34,8 @@ const CurrentExecTeam = () => {
       shortBio: "Micah is a senior Honors student studying Computer Science and Mathematics. He was been involved with the KU Blockchain Institute since Fall 2023 but his interest in blockchain started long before then. In 8th grade, Micah gave a presentation on if Bitcoin would be the future of currency. Since then, he was explored developing on the blockchain, winning 3rd place at HackKU 2024 for his XRPL sidechain NFT supply chain solution.",
       longBio:
         "Micah is a senior Honors student studying Computer Science and Mathematics. He was been involved with the KU Blockchain Institute since Fall 2023 but his interest in blockchain started long before then. In 8th grade, Micah gave a presentation on if Bitcoin would be the future of currency. Since then, he was explored developing on the blockchain, winning 3rd place at HackKU 2024 for his XRPL sidechain NFT supply chain solution.",
+      linkedin: "https://www.linkedin.com/in/micah-borghese/",
+      email: "mailto:micah@kublockchain.com",
     },
     {
       headshot: "/images/headshots/yash_prajapati.jpeg",
@@ -40,6 +44,8 @@ const CurrentExecTeam = () => {
       shortBio: "To be added.",
       longBio:
         "To be added.",
+      linkedin: "https://www.linkedin.com/in/yashprajapati23/",
+      email: "mailto:yash@kublockchain.com",
     },
     {
       headshot: "/images/headshots/jahnvi_maddila.jpeg",
@@ -48,6 +54,8 @@ const CurrentExecTeam = () => {
       shortBio: "To be added.",
       longBio:
         "To be added.",
+      linkedin: "https://www.linkedin.com/in/jahnvi-maddila-228359250/",
+      email: "mailto:jahnvi@kublockchain.com",
     },
     {
       headshot: "",
@@ -56,6 +64,8 @@ const CurrentExecTeam = () => {
       shortBio: "To be added.",
       longBio:
         "To be added.",
+      linkedin: "",
+      email: "mailto:kyle@kublockchain.com",
     },
     {
       headshot: "/images/headshots/emma_du.JPG",
@@ -64,6 +74,8 @@ const CurrentExecTeam = () => {
       shortBio: "Emma is a sophomore majoring in computer science and minoring in business. She has been involved in KU Blockchain Institute since Fall 2023. Emma is interested in blockchain's potential to create a more transparent and fair digital economy, as well as its applications in the healthcare industry. Outside of KUBI, she is a part of the KU SELF Program and plays the violin in the KU Symphony Orchestra. In her free time, she enjoys playing soccer and tennis.",
       longBio:
         "Emma is a sophomore majoring in computer science and minoring in business. She has been involved in KU Blockchain Institute since Fall 2023. Emma is interested in blockchain's potential to create a more transparent and fair digital economy, as well as its applications in the healthcare industry. Outside of KUBI, she is a part of the KU SELF Program and plays the violin in the KU Symphony Orchestra. In her free time, she enjoys playing soccer and tennis.",
+      linkedin: "https://www.linkedin.com/in/emma-du-/",
+      email: "mailto:emmadu@kublockchain.com",
     },
     {
       headshot: "",
@@ -72,6 +84,8 @@ const CurrentExecTeam = () => {
       shortBio: "To be added.",
       longBio:
         "To be added.",
+      linkedin: "",
+      email: "mailto:alex@kublockchain.com",
     },
     {
       headshot: "/images/headshots/emma_nasseri.jpeg",
@@ -80,6 +94,8 @@ const CurrentExecTeam = () => {
       shortBio: "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute",
       longBio:
         "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
+      linkedin: "https://www.linkedin.com/in/emma-nasseri/",
+      email: "mailto:emma@kublockchain.com",
     },
   ];
 
@@ -128,6 +144,18 @@ const CurrentExecTeam = () => {
                 <Text fontSize="md" textAlign="center">
                   {selectedExec.longBio}
                 </Text>
+                <HStack spacing={4}>
+                  {selectedExec.linkedin && (
+                  <Button as="a" href={selectedExec.linkedin} target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </Button>
+                  )}
+                  {selectedExec.email && (
+                  <Button as="a" href={selectedExec.email} target="_blank" rel="noopener noreferrer">
+                    Email
+                  </Button>
+                  )}
+                </HStack>
               </VStack>
             </ModalBody>
           </ModalContent>

@@ -183,7 +183,7 @@ export default function ResearchPage() {
             fontWeight={500}
             fontSize="large"
             >
-              <Link href="/membership">Weekly Newsletter</Link>
+              <Link href="/membership#newsletter">Weekly Newsletter</Link>
           </Text>
           <Box w="100%" paddingBottom={4}>
             Sign up to receive weekly updates on the latest blockchain news and events

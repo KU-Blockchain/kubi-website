@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       title: "The DAO",
       description: "KUBI DAO (Decentralized Autonomous Organization) offers a unique model for collaboration, incentives, and privileges. Our hybrid tokenomics system combines KUBIX and KUBI tokens to create a platform that encourages active participation and fair distribution of rewards. This is all enabled by blockchain technology, built on the Polygon Mumbai testnet. Welcome to the KU Blockchain DAO!",
       preview_image: "/images/projectImages/DAO.png",
-      link: "#dao",
+      link: "https://kublockchaindao.on.fleek.co/",
     },
     {
       title: "The Kansas Blockchain Fellowship",

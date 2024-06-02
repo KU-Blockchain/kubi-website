@@ -208,6 +208,8 @@ export default function ResearchPage() {
           <Box w="100%" paddingBottom={4}>
             Blockchain 101, etc
           </Box>
+          
+          <Text>Blockchain can be a confusing topic. Dont know where to start? KUBIs got you! You will find plenty of resources here to expand your blockchain knowledge between Block Talks to explain the basics of blockchain, weekly newsletters to highlight important blockchain topics, and articles written by our team to express the use cases of blockchain.</Text>
         </Box>
 
       </Flex>

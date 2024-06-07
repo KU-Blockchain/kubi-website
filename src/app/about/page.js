@@ -112,7 +112,7 @@ export default function AboutPage() {
                   <Heading as="h2" size="xl" textAlign="center" my={5}>
                     Our History
                   </Heading>
-                  <p>should have info on our history</p>
+                  <p>To be added: information on our history.</p>
                 </Stack>
               </TabPanel>
 

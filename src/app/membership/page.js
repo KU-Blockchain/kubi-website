@@ -1,28 +1,13 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import { Box, Card, Heading, CardBody, Center, Flex, Img, Link, Text, Input, Textarea, Button, useToast, HStack, VStack, Image, FormControl, FormLabel, FormErrorMessage, FormHelperText } from "@chakra-ui/react";
-import WebpageHeading from "@/components/webpageheading";
+import WebpageHeading from "@/components/PageHeading";
 import SubscribeForm from "@/components/SubscribeForm";
-import { colors } from "@/components/globalStyles";
+import { colors } from "@/styles/theme.js";
+import { useLayout } from "@/contexts/LayoutContext";
 
 export default function MembershipPage() {
-  const [isMobile, setIsMobile] = useState(false);
-
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-
-  }, []);
-
+  const isMobile = useLayout();
 
   return (
     <>
@@ -61,11 +46,7 @@ export default function MembershipPage() {
 
         </Box>
       ) : (
-        <Box
-          m="auto"
-          px={20}
-          py={5}
-        >
+        <Box>
           <WebpageHeading heading={"Membership"} />
 
           <VStack style={{justify:"center"}}>

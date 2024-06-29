@@ -13,8 +13,8 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import PersonCard from "../PersonCard";
-import { colors } from "../globalStyles.js";
+import PersonCard from "./PersonCard";
+import { colors } from "@/styles/theme.js";
 
 const AdvisoryBoard = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);

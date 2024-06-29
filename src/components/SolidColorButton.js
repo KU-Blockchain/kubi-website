@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@chakra-ui/react";
-import navStyles from "./Navbar.module.css";
+import navStyles from "@/styles/Navbar.module.css";
 const OutlineButton = ({ title, onClick, link, textColor = "white" }) => {
   if (link) {
     return (

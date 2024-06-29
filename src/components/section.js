@@ -2,7 +2,7 @@
 import { Box, Center, Flex, Img, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { colors } from "./globalStyles";
-import styles from "@/components/globalstyles.module.css";
+import styles from "@/styles/globals.css";
 function Section({
   image,
   text,

@@ -2,33 +2,17 @@
 import React, { useEffect, useState } from "react";
 import CurrentExecTeam from "@/components/about_components/CurrentExecTeam";
 import AdvisoryBoard from "@/components/about_components/AdvisoryBoard";
-import WebpageHeading from "@/components/webpageheading";
+import WebpageHeading from "@/components/PageHeading";
 import { Heading, Box, Stack, Tab, Tabs, TabList, TabPanels, TabPanel } from "@chakra-ui/react";
+import { useLayout } from "@/contexts/LayoutContext";
 
 export default function AboutPage() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-
-  }, []);
-
+  const isMobile = useLayout();
 
   return (
     <>
       { isMobile ? (
-        <Box
-          m="auto"
-        >
+        <Box>
           <WebpageHeading heading={"About KUBI"} />
 
           <Tabs mx={6} isFitted variant='soft-rounded' colorScheme='blue'>
@@ -73,11 +57,7 @@ export default function AboutPage() {
   
         </Box>
       ) : (
-        <Box
-          m="auto"
-          px={20}
-          py={5}
-        >
+        <Box>
           <WebpageHeading heading={"About KUBI"} />
 
           <Tabs variant='soft-rounded' colorScheme='blue'>

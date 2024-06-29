@@ -1,10 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Box, Text, Stack, Card, CardBody, CardFooter, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
-import WebpageHeading from "@/components/webpageheading";
+import WebpageHeading from "@/components/PageHeading";
+import { useLayout } from "@/contexts/LayoutContext";
 
 export default function ProjectsPage() {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useLayout();
 
   const projects = [
     {
@@ -33,28 +34,10 @@ export default function ProjectsPage() {
     },
   ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-
-  }, []);
-
   return (
     <>
       {isMobile ? (
-      <Box
-        m="auto"
-        px={2}
-        py={5}
-      >
+      <Box>
         <WebpageHeading heading={"Our Projects"} />
 
         <Stack spacing={5}>
@@ -85,11 +68,7 @@ export default function ProjectsPage() {
         </Stack>
       </Box>
       ) : (
-        <Box
-          m="auto"
-          px={20}
-          py={5}
-        >
+        <Box>
           <WebpageHeading heading={"Our Projects"} />
           
             <Stack spacing={5}>

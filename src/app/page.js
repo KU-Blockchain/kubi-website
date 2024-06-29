@@ -1,13 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Text, Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack } from "@chakra-ui/react";
-import { colors } from "@/components/globalStyles";
-import styles from "@/components/globalstyles.module.css";
-import Section from "@/components/section";
-
+import { useLayout } from "@/contexts/LayoutContext";
+import { colors } from "@/styles/theme.js";
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useLayout();
 
   const slidesArray = [
     {
@@ -34,51 +32,28 @@ export default function Home() {
     },
   ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-
-  }, []);
-
   return (
     <>
-      <Box
-        m="auto"
-      >
-        <Box
-          py={6}
-        >
+        <Box>
           <VStack alignItems="center">
             
-            { isMobile ? (
-              <Heading fontSize="3xl">KU Blockchain Institute</Heading>
-            ) : <Heading fontSize="5xl">KU Blockchain Institute</Heading>
-            }
+            <Heading textAlign="center" fontSize={isMobile ? "3xl" : "5xl"}>Driving blockchain <Box as="span" color={colors.accentYellow}>education</Box> and <Box as="span" color={colors.accentYellow}>adoption</Box> in the Midwest.</Heading>
 
             <Box maxW="2xl" p={4}>
-              <Text textAlign="center" fontSize="2xl">A student led organization promoting blockchain education and adoption at the University of Kansas.</Text>
+              <Text textAlign="center" fontSize="2xl">We&apos;re a student-led organization promoting blockchain education and adoption at the University of Kansas.</Text>
             </Box>
             <HStack>
-              <Button colorScheme="blue" size="lg" onClick={() => window.location.href = "/membership"}>Join Us {'>'}</Button>
+              <Button scolorScheme="blackAlpha" size="lg" onClick={() => window.location.href = "/membership"}>➤ Join Us</Button>
             </HStack>
             <Image py={4} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />
           </VStack>
         </Box>
 
-        <Stack m={4} spacing={4}>
+        <Stack my={4} spacing={4}>
           {slidesArray.map((slide, index) => (
             <Card 
               key={index} 
               p={0}
-              style={{borderRadius: "0px", backgroundColor: colors.headerBackground, color: "white"}}
             >
               {isMobile ? (
                 <VStack spacing={4} align="center">
@@ -133,8 +108,6 @@ export default function Home() {
             </Card>
           ))}
         </Stack>
-
-      </Box>
     </>
   );
 }

@@ -2,13 +2,12 @@
 import React, { useEffect, useState } from "react";
 import { Center, Button, Image, Switch, Accordion, AccordionItem, AccordionButton, AccordionPanel, Fade, Box, Stack, Card, HStack, CardBody, VStack, Flex, Heading  } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
-import Section from "@/components/section";
-import WebpageHeading from "@/components/webpageheading";
-import { colors } from "@/components/globalStyles";
+import WebpageHeading from "@/components/PageHeading";
+import { useLayout } from "@/contexts/LayoutContext";
 
 export default function EventsPage() {
-  const [isMobile, setIsMobile] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
+  const isMobile = useLayout();
 
   const toggleIframeVisibility = () => {
     setShowIframe(!showIframe);
@@ -37,30 +36,10 @@ export default function EventsPage() {
     },
   ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-
-  }, []);
-
-
-
   return (
     <>
       {isMobile ? (
-        <Box
-          m="auto"
-          px={2}
-          py={5}
-        >
+        <Box>
           <WebpageHeading heading={"Events"} />
 
           <Accordion allowToggle>
@@ -115,8 +94,6 @@ export default function EventsPage() {
         </Box>
       ) : (
         <Box
-          m="auto"
-          px={20}
           py={5}
         >
           <WebpageHeading heading={"Events"} />

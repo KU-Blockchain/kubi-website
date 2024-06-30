@@ -8,7 +8,6 @@ const PersonCard = ({ headshot, name, title, shortBio }) => {
       position="relative"
       borderRadius="lg"
       borderWidth={3}
-      m={3}
       maxWidth="100%"
       w="full"
       bg="white"

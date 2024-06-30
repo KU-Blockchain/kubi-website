@@ -27,7 +27,6 @@ export default function MembershipPage() {
 
           <Card 
             p={0}
-            style={{borderRadius: "0px", backgroundColor: colors.headerBackground, color: "white"}}
           >
             <VStack spacing={4} align="center">
               <CardBody>

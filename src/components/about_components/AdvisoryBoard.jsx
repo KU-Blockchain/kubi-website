@@ -56,8 +56,8 @@ const AdvisoryBoard = () => {
   ];
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" my={5} m="5">
-      <SimpleGrid columns={[1, null, 3]} spacing={10}>
+    <Box display="flex" flexDirection="column" alignItems="center" my={5}>
+      <SimpleGrid columns={[1, null, 3]} spacing={8}>
         {people.map((person, index) => (
           <Box
             key={index}

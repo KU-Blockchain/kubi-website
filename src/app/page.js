@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Text, Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack } from "@chakra-ui/react";
+import { Text, Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack, CardHeader } from "@chakra-ui/react";
 import { useLayout } from "@/contexts/LayoutContext";
 import { colors } from "@/styles/theme.js";
 import { motion } from "framer-motion";
@@ -39,8 +39,9 @@ export default function Home() {
     <>
         <Box 
           mt={-5} 
-          mx={-20} 
-          {...isMobile ? {height: "700px"} : {height: "600px"}} 
+          position="relative" 
+          overflow="hidden" 
+          {...isMobile ? {mx: -5, height: "700px"} : {mx: -20, height: "600px"}} 
           backgroundSize="cover"
           backgroundPosition="center"
           backgroundImage="url('/images/WebsiteAssets/campus-blur.png')"
@@ -71,7 +72,19 @@ export default function Home() {
 
         {/* {isMobile ? "" : <Image mt={-205} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />} */}
 
-        <Stack {...isMobile ? {mt: -180} : {mt: -20}} spacing={4}>
+        <Stack {...isMobile ? {mt: -250} : {mt: -20}} spacing={4}>
+          
+          <Link href="https://kansasblockchain.org" isExternal>
+          <Card color="black" bgGradient="linear(to-r, yellow.200, orange.400)" borderColor="orange.600" borderWidth="6px">
+            <CardHeader>
+              <Heading mb={-5} size="lg" textAlign="center">What's New:</Heading>
+            </CardHeader>
+            <CardBody>
+              <Heading fontFamily="Inconsolata, monospace" size="lg" textAlign="left">Introducing: The Kansas Blockchain Fellowship</Heading>
+              <Text fontFamily="Inconsolata, monospace" fontSize="2xl" textAlign="left">A seven-week experiential learning intensive, scholarship program, and talent incubator to prepare students in Kansas for careers in blockchain and web3.</Text>
+            </CardBody>
+          </Card>
+          </Link>
   
           {slidesArray.map((slide, index) => (
             <Card 

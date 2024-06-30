@@ -100,8 +100,8 @@ const CurrentExecTeam = () => {
   ];
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" my={5} m="5">
-      <SimpleGrid columns={[1, null, 4]} spacing={10}>
+    <Box display="flex" flexDirection="column" alignItems="center" my={5}>
+      <SimpleGrid columns={[1, null, 4]} spacing={8}>
         {currentExecs.map((exec, index) => (
           <Box
             key={index}

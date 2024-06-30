@@ -16,7 +16,7 @@ export default function AboutPage() {
         <Box>
           <WebpageHeading heading={"About KUBI"} />
 
-          <Tabs mx={6} isFitted>
+          <Tabs isFitted>
 
             <TabList>
               <Tab>Executive Team</Tab>

@@ -3,7 +3,9 @@ import React, { useEffect, useState } from "react";
 import { Text, Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack } from "@chakra-ui/react";
 import { useLayout } from "@/contexts/LayoutContext";
 import { colors } from "@/styles/theme.js";
-import TypingEffect from "@/components/TypingEffect";
+import { motion } from "framer-motion";
+
+const MotionHeading = motion(Heading);
 
 export default function Home() {
   const isMobile = useLayout();
@@ -46,7 +48,15 @@ export default function Home() {
           <Box py={10} {...isMobile ? {px: "15%"} : {px: "22%"}}>
             <VStack alignItems="center">
               
-              <Heading textAlign="center" fontSize={isMobile ? "3xl" : "5xl"}>Driving blockchain <Box as="span" color={colors.accentRed}>education</Box> and <Box as="span" color={colors.accentRed}>adoption</Box> in the midwest.</Heading>
+              <MotionHeading 
+                textAlign="center" 
+                fontSize={isMobile ? "3xl" : "5xl"}
+                initial={{ opacity: 0, y: 20 }} // Starting state: transparent and 20px down
+                animate={{ opacity: 1, y: 0 }} // Ending state: fully visible and in original position
+                transition={{ duration: 1 }} // Animation duration
+              >
+                Driving blockchain <Box as="span" color={colors.accentRed}>education</Box> and <Box as="span" color={colors.accentRed}>adoption</Box> in the midwest.
+              </MotionHeading>
 
               {isMobile ? "" : 
                 <Box maxW="2xl" p={4}>
@@ -61,13 +71,12 @@ export default function Home() {
 
         {/* {isMobile ? "" : <Image mt={-205} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />} */}
 
-        <Stack {...isMobile ? {mt: -120} : {mt: -20}} spacing={4}>
+        <Stack {...isMobile ? {mt: -180} : {mt: -20}} spacing={4}>
   
           {slidesArray.map((slide, index) => (
             <Card 
               key={index} 
               p={0}
-              style={{borderRadius: "0px", backgroundColor: colors.primaryBlue, color: "white"}}
             >
               {isMobile ? (
                 <VStack spacing={4} align="center">

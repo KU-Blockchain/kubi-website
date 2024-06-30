@@ -73,6 +73,9 @@ const theme = extendTheme({
     Card: {
       baseStyle: {
         container: {
+          borderRadius: "0px",
+          backgroundColor: colors.primaryBlue,
+          color: "white",
           "&:hover": {
             transform: "translateY(-10px)",
             transition: "all 0.3s ease",

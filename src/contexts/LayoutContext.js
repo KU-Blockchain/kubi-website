@@ -82,7 +82,7 @@ const Footer = ({ isMobile }) => {
                         <IconButton variant='outline' colorScheme='#23406D' aria-label="Discord" icon={<BsFillEnvelopeFill />} />
                     </Link>
                     </HStack>
-                    <Text align="center">Made with 🔥 by the University of Kansas Blockchain Institute</Text>
+                    <Text mx={10} align="center">Made with 🔥 by the University of Kansas Blockchain Institute</Text>
                 </VStack> 
                 </motion.div>
             </Flex>

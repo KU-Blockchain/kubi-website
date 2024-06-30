@@ -77,7 +77,7 @@ export default function Home() {
           <Link href="https://kansasblockchain.org" isExternal>
           <Card color="black" bgGradient="linear(to-r, yellow.200, orange.400)" borderColor="orange.600" borderWidth="6px">
             <CardHeader>
-              <Heading mb={-5} size="lg" textAlign="center">What's New:</Heading>
+              <Heading mb={-5} size="lg" textAlign="center">What&apos;s New:</Heading>
             </CardHeader>
             <CardBody>
               <Heading fontFamily="Inconsolata, monospace" size="lg" textAlign="left">Introducing: The Kansas Blockchain Fellowship</Heading>

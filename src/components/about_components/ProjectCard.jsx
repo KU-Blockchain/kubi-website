@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function ProjectCard({ title, description, preview_image, link }) {
   if (link == null) {
-    link = "https://www.google.com";
+    link = "https://www.kublockchain.com";
   }
   return (
     <>

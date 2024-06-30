@@ -10,6 +10,7 @@ export const colors = {
   red: "#A21521",
   accentYellow: "#EAB611",
   primaryBlue: "#23406D",
+  headerBackground: "#23406D",
   pageBackground: "#DCDCDC",
   // pageBackground: "#F5F5F5",
 };
@@ -50,6 +51,14 @@ const theme = extendTheme({
         //   // color: "white",
         //   textDecoration: "underline",
         // },
+      },
+    },
+    Card: {
+      baseStyle: {
+        borderRadius: "0px",
+        padding: "16px",
+        backgroundColor: "colors.primaryBlue",
+        color: "white",
       },
     },
     // Link: {

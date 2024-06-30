@@ -1,5 +1,6 @@
 import { Box, Text, VStack, HStack, Button } from "@chakra-ui/react";
 import Image from "next/image";
+import { colors } from "@/styles/theme";
 
 const PersonCard = ({ headshot, name, title, shortBio }) => {
   return (
@@ -15,6 +16,8 @@ const PersonCard = ({ headshot, name, title, shortBio }) => {
       minH="300px"
       maxH="500px"
       overflow="hidden"
+      backgroundColor="white"
+
     >
       <VStack
         p={4}

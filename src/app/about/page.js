@@ -5,6 +5,7 @@ import AdvisoryBoard from "@/components/about_components/AdvisoryBoard";
 import WebpageHeading from "@/components/PageHeading";
 import { Heading, Box, Stack, Tab, Tabs, TabList, TabPanels, TabPanel } from "@chakra-ui/react";
 import { useLayout } from "@/contexts/LayoutContext";
+import { colors } from "@/styles/theme.js";
 
 export default function AboutPage() {
   const isMobile = useLayout();
@@ -15,7 +16,9 @@ export default function AboutPage() {
         <Box>
           <WebpageHeading heading={"About KUBI"} />
 
-          <Tabs mx={6} isFitted variant='soft-rounded' colorScheme='blue'>
+          <Tabs mx={6} isFitted variant='soft-rounded' _selected={
+            { color: colors.accentYellow, bg: colors.primaryBlue }
+          }>
 
             <TabList>
               <Tab>Executive Team</Tab>

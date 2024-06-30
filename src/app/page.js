@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Text, Box, Button, Center, Flex, Image, Stack, Card, HStack, CardBody, Heading, Link, VStack } from "@chakra-ui/react";
 import { useLayout } from "@/contexts/LayoutContext";
 import { colors } from "@/styles/theme.js";
+import TypingEffect from "@/components/TypingEffect";
 
 export default function Home() {
   const isMobile = useLayout();
@@ -34,22 +35,33 @@ export default function Home() {
 
   return (
     <>
-        <Box py={10} {...isMobile ? {} : {px: "22%"}}>
-          <VStack alignItems="center">
-            
-            <Heading textAlign="center" fontSize={isMobile ? "3xl" : "5xl"}>Driving blockchain <Box as="span" color={colors.accentYellow}>education</Box> and <Box as="span" color={colors.accentYellow}>adoption</Box> in the midwest.</Heading>
+        <Box 
+          mt={-5} 
+          mx={-20} 
+          {...isMobile ? {height: "700px"} : {height: "700px"}} 
+          backgroundSize="cover"
+          backgroundPosition="center"
+          backgroundImage="url('/images/WebsiteAssets/campus-blur.png')"
+        >
+          <Box py={10} {...isMobile ? {px: "15%"} : {px: "22%"}}>
+            <VStack alignItems="center">
+              
+              <Heading textAlign="center" fontSize={isMobile ? "3xl" : "5xl"}>Driving blockchain <Box as="span" color={colors.accentYellow}>education</Box> and <Box as="span" color={colors.accentYellow}>adoption</Box> in the midwest.</Heading>
 
-            <Box maxW="2xl" p={4}>
-              <Text textAlign="center" fontSize="2xl">We&apos;re a student-led organization of innovators at the University of Kansas through open source research projects, industry-focused events, and technical workshops.</Text>
-            </Box>
-            <HStack>
-              <Button scolorScheme="blackAlpha" size="lg" onClick={() => window.location.href = "/membership"}>➤ Join Us</Button>
-            </HStack>
-          </VStack>
+              <Box maxW="2xl" p={4}>
+                <Text textAlign="center" fontSize="2xl">We&apos;re a student-led organization of innovators at the University of Kansas through open source research projects, industry-focused events, and technical workshops.</Text>
+              </Box>
+              <HStack>
+                <Button colorScheme="blackAlpha" size="lg" onClick={() => window.location.href = "/membership"}>➤ Join Us</Button>
+              </HStack>
+            </VStack>
+          </Box>
         </Box>
 
-        <Stack my={4} spacing={4}>
-        <Image py={4} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />
+        {/* {isMobile ? "" : <Image mt={-205} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />} */}
+
+        <Stack mt={-20} spacing={4}>
+  
           {slidesArray.map((slide, index) => (
             <Card 
               key={index} 

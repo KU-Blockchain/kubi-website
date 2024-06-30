@@ -88,4 +88,53 @@ body {
     justify-content: space-between;
 }
   
+.gradient-overlay {
+    position: relative;
+    display: inline-block; /* Adjust based on your layout needs */
+}
+
+.gradient-overlay img {
+    display: block;
+    width: 100%; /* Make sure the image takes full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.gradient-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /* Example gradient - adjust colors and direction as needed */
+    z-index: 1;
+    pointer-events: none; /* Allows clicks to pass through to the image */
+}
+
+.my-custom-cursor {
+    animation: blink-cursor 1s step-end infinite;
+  }
   
+@keyframes blink-cursor {
+    from, to {
+        opacity: 0;
+}
+    50% {
+        opacity: 0;
+    }
+}
+
+.my-custom-cursor.hide-cursor {
+    opacity: 0; /* Hide the cursor */
+    animation: none; /* Stop the blinking animation */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.3s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}

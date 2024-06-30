@@ -40,16 +40,16 @@ const theme = extendTheme({
     Button: {
       colorScheme: "blue",
       baseStyle: {
-        borderRadius: "0px",
+        borderRadius: "2px",
         backgroundColor: colors.primaryBlue,
         colorScheme: "blue",
-        variant: "outline",
+        variant: "solid",
         cursor: "pointer",
-        "&:hover": {
-          // backgroundColor: "black",
-          // color: "white",
-          textDecoration: "underline",
-        },
+        // "&:hover": {
+        //   // backgroundColor: "black",
+        //   // color: "white",
+        //   textDecoration: "underline",
+        // },
       },
     },
     // Link: {

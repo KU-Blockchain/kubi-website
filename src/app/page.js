@@ -34,26 +34,27 @@ export default function Home() {
 
   return (
     <>
-        <Box>
+        <Box py={10} {...isMobile ? {} : {px: "22%"}}>
           <VStack alignItems="center">
             
-            <Heading textAlign="center" fontSize={isMobile ? "3xl" : "5xl"}>Driving blockchain <Box as="span" color={colors.accentYellow}>education</Box> and <Box as="span" color={colors.accentYellow}>adoption</Box> in the Midwest.</Heading>
+            <Heading textAlign="center" fontSize={isMobile ? "3xl" : "5xl"}>Driving blockchain <Box as="span" color={colors.accentYellow}>education</Box> and <Box as="span" color={colors.accentYellow}>adoption</Box> in the midwest.</Heading>
 
             <Box maxW="2xl" p={4}>
-              <Text textAlign="center" fontSize="2xl">We&apos;re a student-led organization promoting blockchain education and adoption at the University of Kansas.</Text>
+              <Text textAlign="center" fontSize="2xl">We&apos;re a student-led organization of innovators at the University of Kansas through open source research projects, industry-focused events, and technical workshops.</Text>
             </Box>
             <HStack>
               <Button scolorScheme="blackAlpha" size="lg" onClick={() => window.location.href = "/membership"}>➤ Join Us</Button>
             </HStack>
-            <Image py={4} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />
           </VStack>
         </Box>
 
         <Stack my={4} spacing={4}>
+        <Image py={4} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />
           {slidesArray.map((slide, index) => (
             <Card 
               key={index} 
               p={0}
+              style={{borderRadius: "0px", backgroundColor: colors.primaryBlue, color: "white"}}
             >
               {isMobile ? (
                 <VStack spacing={4} align="center">

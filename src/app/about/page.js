@@ -16,9 +16,7 @@ export default function AboutPage() {
         <Box>
           <WebpageHeading heading={"About KUBI"} />
 
-          <Tabs mx={6} isFitted variant='soft-rounded' _selected={
-            { color: colors.accentYellow, bg: colors.primaryBlue }
-          }>
+          <Tabs mx={6} isFitted>
 
             <TabList>
               <Tab>Executive Team</Tab>
@@ -63,7 +61,7 @@ export default function AboutPage() {
         <Box>
           <WebpageHeading heading={"About KUBI"} />
 
-          <Tabs variant='soft-rounded' colorScheme='blue'>
+          <Tabs variant='soft-rounded'>
 
             <TabList>
               <Tab>Executive Team</Tab>

@@ -100,7 +100,7 @@ export default function EventsPage() {
 
 
           <Box flex="1" textAlign="center">
-            <Text fontSize="3xl" fontWeight={500}>-+-+-+-+-+-+-+-+-  Follow our Calendar  -+-+-+-+-+-+-+-+-</Text> 
+            <Text fontSize="3xl" fontWeight={500}>-+-+-+-+-+-+  Follow our Calendar  +-+-+-+-+-+-</Text> 
           </Box>
           <Center>
             <iframe src="https://embed.styledcalendar.com/#MjFRXlTG1mAbqA5XgGxc" title="Styled Calendar" class="styled-calendar-container" style={{width:"75%", height:"654px", border:"none"}} data-cy="calendar-embed-iframe"></iframe>

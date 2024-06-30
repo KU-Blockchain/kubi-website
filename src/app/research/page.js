@@ -14,7 +14,7 @@ export default function ResearchPage() {
         <Box>
           <WebpageHeading heading={"Blockchain @ KU"} />
 
-          <Tabs mx={6} isFitted variant='soft-rounded' colorScheme='blue'>
+          <Tabs mx={6} isFitted>
             <TabList>
               <Tab>UBRI</Tab>
               <Tab>Block News</Tab>
@@ -140,7 +140,7 @@ export default function ResearchPage() {
                     >
                       Dr. Perry Alexander is The AT&T Foundation Distinguished Professor of Electrical Engineering and Computer Science Department and Director of the Information and Telecommunication Technology Center at The University of Kansas. Dr. Alexander oversees the University Blockchain Research Initiative (UBRI) Grant of $2 million donated by Ripple for blockchain research and development at KU. His research interests include system-level modeling, formal verification, language semantics, and trusted computing.
                   </Text>
-                  <Button colorScheme="blue" onClick={() => window.open("https://ripple.com/insights/on-campus-university-of-kansas-emphasizes-interdisciplinary-blockchain-study-for-budding-entrepreneurs/", "_blank")}>Learn More</Button>
+                  <Button onClick={() => window.open("https://ripple.com/insights/on-campus-university-of-kansas-emphasizes-interdisciplinary-blockchain-study-for-budding-entrepreneurs/", "_blank")}>Learn More</Button>
                 </VStack>
               </Box>
             </HStack>

@@ -38,7 +38,7 @@ export default function Home() {
         <Box 
           mt={-5} 
           mx={-20} 
-          {...isMobile ? {height: "700px"} : {height: "700px"}} 
+          {...isMobile ? {height: "700px"} : {height: "600px"}} 
           backgroundSize="cover"
           backgroundPosition="center"
           backgroundImage="url('/images/WebsiteAssets/campus-blur.png')"
@@ -46,21 +46,22 @@ export default function Home() {
           <Box py={10} {...isMobile ? {px: "15%"} : {px: "22%"}}>
             <VStack alignItems="center">
               
-              <Heading textAlign="center" fontSize={isMobile ? "3xl" : "5xl"}>Driving blockchain <Box as="span" color={colors.accentYellow}>education</Box> and <Box as="span" color={colors.accentYellow}>adoption</Box> in the midwest.</Heading>
+              <Heading textAlign="center" fontSize={isMobile ? "3xl" : "5xl"}>Driving blockchain <Box as="span" color={colors.accentRed}>education</Box> and <Box as="span" color={colors.accentRed}>adoption</Box> in the midwest.</Heading>
 
-              <Box maxW="2xl" p={4}>
-                <Text textAlign="center" fontSize="2xl">We&apos;re a student-led organization of innovators at the University of Kansas through open source research projects, industry-focused events, and technical workshops.</Text>
-              </Box>
-              <HStack>
-                <Button colorScheme="blackAlpha" size="lg" onClick={() => window.location.href = "/membership"}>➤ Join Us</Button>
-              </HStack>
+              {isMobile ? "" : 
+                <Box maxW="2xl" p={4}>
+                  <Text textAlign="center" fontSize="2xl">We&apos;re a student-led organization of innovators at the University of Kansas through open source research projects, industry-focused events, and technical workshops.</Text>
+                </Box>
+              }
+            
+            <Button mt={10} colorScheme="blackAlpha" size="lg" onClick={() => window.location.href = "/membership"}>➤ Join Us</Button>
             </VStack>
           </Box>
         </Box>
 
         {/* {isMobile ? "" : <Image mt={-205} alt="Campus Art" src="/images/WebsiteAssets/campus_line_art_transparent.png" />} */}
 
-        <Stack mt={-20} spacing={4}>
+        <Stack {...isMobile ? {mt: -120} : {mt: -20}} spacing={4}>
   
           {slidesArray.map((slide, index) => (
             <Card 

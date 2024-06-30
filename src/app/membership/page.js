@@ -18,7 +18,7 @@ export default function MembershipPage() {
           <VStack style={{justify:"center"}}>
             <Text fontSize='3xl' align="center" fontWeight="bold">Steps to Join KUBI: </Text>
             <Text fontSize='2xl' align="center" fontWeight="bold">1. Join our Discord server</Text>
-            <Button as="a" href="https://discord.gg/GAznpHUzny" target="_blank">Discord</Button>
+            <Button href="https://discord.gg/GAznpHUzny" target="_blank">Discord</Button>
             {/* <Text fontSize='2xl' align="center" fontWeight="bold">2. Join the DAO</Text>
             <Button>DAO</Button> */}
             <Text fontSize='2xl' align="center" fontWeight="bold">2. Come to our <Link href="/events">next meeting!</Link>!</Text>

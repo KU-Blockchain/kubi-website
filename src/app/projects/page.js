@@ -95,7 +95,7 @@ export default function ProjectsPage() {
                             <Text mb={4}>{project.description}</Text>
                           </Box>
                           <Box>
-                            <Button colorScheme="blue" size="md">
+                            <Button size="md">
                               <Link href={project.link}>Learn more</Link>
                             </Button>
                           </Box>

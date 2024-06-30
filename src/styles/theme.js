@@ -1,5 +1,6 @@
+import { color } from 'framer-motion';
 import styles from './globals.css';
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme, defineStyle, defineStyleConfig } from '@chakra-ui/react'
 
 export const colors = {
   blue5: "#1A202C",
@@ -8,7 +9,8 @@ export const colors = {
   blue2: "#336285",
   blue1: "#576E7E",
   red: "#A21521",
-  accentYellow: "#EAB611",
+  accentYellow: "#f2a900",
+  accentRed: "#971b2f",
   primaryBlue: "#23406D",
   headerBackground: "#23406D",
   pageBackground: "#DCDCDC",
@@ -39,26 +41,43 @@ const theme = extendTheme({
   },
   components: {
     Button: {
-      colorScheme: "blue",
       baseStyle: {
-        borderRadius: "2px",
-        backgroundColor: colors.primaryBlue,
-        colorScheme: "blue",
-        variant: "solid",
+        borderRadius: "0px",
+        //borderColor: colors.accentRed,
+        //borderWidth: "2px",
+        //color: "black",
         cursor: "pointer",
-        // "&:hover": {
-        //   // backgroundColor: "black",
-        //   // color: "white",
-        //   textDecoration: "underline",
-        // },
+        "&:hover": {
+          textDecoration: "underline",
+        },
+      },
+      defaultProps: {
+        variant: "solid",
+        colorScheme: "gray",
+      },
+    },
+    Tabs: {
+      baseStyle: {
+        tab: {
+          _selected: {
+            color: "white",
+            backgroundColor: colors.primaryBlue,
+          },
+        },
+      },
+      defaultProps: {
+        colorScheme: "gray",
+        variant: 'soft-rounded',
       },
     },
     Card: {
       baseStyle: {
-        borderRadius: "0px",
-        padding: "16px",
-        backgroundColor: "colors.primaryBlue",
-        color: "white",
+        container: {
+          "&:hover": {
+            transform: "translateY(-10px)",
+            transition: "all 0.3s ease",
+          },
+        },
       },
     },
     // Link: {

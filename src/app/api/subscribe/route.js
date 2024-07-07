@@ -17,7 +17,8 @@ export async function POST(request) {
   });
 
   const sheets = google.sheets({ version: 'v4', auth });
-
+ 
+  // TODO: check if email already exists in the sheet
   try {
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,

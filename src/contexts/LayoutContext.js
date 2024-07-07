@@ -75,11 +75,11 @@ const Footer = ({ isMobile }) => {
                     <Link href="https://www.linkedin.com/company/kublockchain/">
                         <IconButton variant='outline' colorScheme='#23406D' aria-label="Linkedin" icon={<BsLinkedin />} />
                     </Link>
-                    <Link href="https://discord.gg/HKyd3dSDSh">
+                    <Link href="https://discord.gg/GAznpHUzny">
                         <IconButton variant='outline' colorScheme='#23406D' aria-label="Discord" icon={<BsDiscord />} />
                     </Link>
                     <Link href="mailto:blockchalk@kublockchain.com">
-                        <IconButton variant='outline' colorScheme='#23406D' aria-label="Discord" icon={<BsFillEnvelopeFill />} />
+                        <IconButton variant='outline' colorScheme='#23406D' aria-label="Email" icon={<BsFillEnvelopeFill />} />
                     </Link>
                     </HStack>
                     <Text mx={10} align="center">Made with 🔥 by the University of Kansas Blockchain Institute</Text>

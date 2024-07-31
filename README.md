@@ -1,5 +1,9 @@
 Currently deployed on Vercel [here](https://kubi-website.vercel.app/) 
 
+# What is the KU Blockchain Institute (KUBI)?
+
+The KU Blockchain Institute aims to promote blockchain technology education and adoption in the midwest, but what is blockchain? Essentialy, a blockchain is a permanent, decentralized, immutable ledger of transactions where blocks hold the transactions linked in a chain. We believe the inherent properties of this technology is the future of the internet, allowing communities to form where ownership does not come from a single entity.
+
 # Workflow for editing the KUBI Website
 
 ## Starting out

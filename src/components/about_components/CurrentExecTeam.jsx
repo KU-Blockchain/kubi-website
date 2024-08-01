@@ -118,49 +118,6 @@ const CurrentExecTeam = () => {
           </Box>
         ))}
       </SimpleGrid>
-
-      {selectedExec && (
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          size="4xl"
-        >
-          <ModalOverlay />
-          <ModalContent m={2} borderRadius="xl" style={{ color: "white", background: colors.headerBackground }}>
-            <ModalHeader textAlign="center">{selectedExec.name}</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody pb={6}>
-              <VStack spacing={4} align="center">
-                <Image
-                  src={selectedExec.headshot}
-                  borderRadius="full"
-                  boxSize="150px"
-                  alt="person"
-                />
-                <Text fontSize="2xl" fontWeight="bold">
-                  {selectedExec.title}
-                </Text>
-
-                <Text fontSize="md" textAlign="center">
-                  {selectedExec.longBio}
-                </Text>
-                <HStack spacing={4}>
-                  {selectedExec.linkedin && (
-                  <Button as="a" href={selectedExec.linkedin} target="_blank" rel="noopener noreferrer">
-                    LinkedIn
-                  </Button>
-                  )}
-                  {selectedExec.email && (
-                  <Button as="a" href={selectedExec.email} target="_blank" rel="noopener noreferrer">
-                    Email
-                  </Button>
-                  )}
-                </HStack>
-              </VStack>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-      )}
     </Box>
   );
 };

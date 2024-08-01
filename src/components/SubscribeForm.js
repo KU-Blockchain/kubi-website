@@ -44,6 +44,7 @@ const SubscribeForm = () => {
                 setFirstName('');
                 setEmail('');
             } else {
+                setIsSubmitting(false);
                 setMessage(result.message || 'Failed to subscribe.');
             }
         } catch (error) {

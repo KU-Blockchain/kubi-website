@@ -18,8 +18,18 @@ export async function POST(request) {
 
   const sheets = google.sheets({ version: 'v4', auth });
  
-  // TODO: check if email already exists in the sheet
   try {
+    const checkEmail = await sheets.spreadsheets.values.get({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      range: 'Sheet1!B:B',
+    });
+
+    for (const row of checkEmail.data.values) {
+      if (row[0] === email) {
+        return NextResponse.json({ message: 'Email already subscribed' }, { status: 400 });
+      }
+    }
+
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: 'Sheet1!A:B',

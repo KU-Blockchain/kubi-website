@@ -24,13 +24,13 @@ export default function ProjectsPage() {
       title: "The Spencer Collaboration",
       description: "This project is executed in collaboration with the Spencer Museum of Art, investigating the social implications of attacks on democracy and the parallels between consensus in computing and privilege in society. The initial goal of this project was to model a 51% attack on an Ethereum Classic testnet to create media for the collaborating artists to manipulate for a public installation to take place in 2023. The focus later developed towards intervening in EIP forums as an examination of social structures and Ethereum.",
       preview_image: "/images/projectImages/spencer.png",
-      link: "#spencer-collaboration",
+      link: "https://i2s-research.ku.edu/university-kansas-and-ubri",
     },
     {
       title: "NFT Gallery Tutorial",
-      description: "to be implemented",
+      description: "The tutorial is a step-by-step guide to creating a decentralized application (dApp) that allows users to mint and display NFTs. The tutorial covers the basics of blockchain, smart contracts, and decentralized applications. The tutorial is designed for beginners and requires no prior knowledge of blockchain technology.",
       preview_image: "/images/projectImages/NFTGallery.png",
-      link: "#nft-gallery",
+      link: "https://kublockchain.notion.site/NFT-Gallery-dApp-tutorial-8ccbda66968b4b55b1808e8c2abe1272",
     },
   ];
 

@@ -161,7 +161,6 @@ const CurrentExecTeam = () => {
           </ModalContent>
         </Modal>
       )}
-      
     </Box>
   );
 };

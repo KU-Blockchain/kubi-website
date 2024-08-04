@@ -55,7 +55,7 @@ export default function ProjectsPage() {
     <>
         <Box>
             <WebpageHeading heading={"Our Links"} />
-            <Text mt={-7} mb={7} textAlign="center" px={20}>Promoting blockchain education and adoption at the University of Kansas.</Text>
+            <Text mt={-3} mb={7} textAlign="center" px={20}>Promoting blockchain education and adoption at the University of Kansas.</Text>
 
             <Stack spacing={5}>
                 {links.map((link, index) => (

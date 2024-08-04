@@ -16,7 +16,7 @@ export default function ProjectsPage() {
 
             <Stack spacing={5}>
                 <Center>
-                <iframe src="https://embed.styledcalendar.com/#MjFRXlTG1mAbqA5XgGxc" title="Styled Calendar" class="styled-calendar-container" style={{width:"90%", border:"none"}} data-cy="calendar-embed-iframe"></iframe>
+                <iframe src="https://embed.styledcalendar.com/#MjFRXlTG1mAbqA5XgGxc" title="Styled Calendar" class="styled-calendar-container" style={{width:"95%", border:"none"}} data-cy="calendar-embed-iframe"></iframe>
                 <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
                 </Center>
             </Stack>

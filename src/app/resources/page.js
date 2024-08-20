@@ -40,7 +40,7 @@ export default function ResearchPage() {
             <TabPanels>
               <TabPanel>
 
-              <SimpleGrid columns={2} spacing={1} mb={10}>
+              <SimpleGrid columns={1} spacing={1} mb={10}>
                   {articles.map(article => (
                     <Card
                       borderRadius="20px"
@@ -151,7 +151,7 @@ export default function ResearchPage() {
       ) : (
       <Box>
 
-        <WebpageHeading heading={"Learn about Blockchain"} />
+        <WebpageHeading heading={"Blockchain @ KU"} />
 
         <Flex> 
           <Box 

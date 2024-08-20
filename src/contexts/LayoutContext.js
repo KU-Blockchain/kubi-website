@@ -3,9 +3,16 @@ import Link from "next/link";
 import SolidColorButton from "@/components/SolidColorButton";
 import styles from "@/styles/Navbar.module.css";
 import { Image } from "@chakra-ui/react";
-import { Box, Center, Img , Text, IconButton, Icon, Flex, HStack, VStack } from "@chakra-ui/react";
+import { Button, Box, Center, Img , Text, IconButton, Icon, Flex, HStack, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { BsGithub, BsLinkedin, BsPerson, BsDiscord, BsFillEnvelopeFill } from 'react-icons/bs';
+import { HamburgerIcon, SmallCloseIcon } from '@chakra-ui/icons';
+import {
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuItem,
+  } from '@chakra-ui/react'
 
 const navItems = [
   { path: '/about', title: 'About' },
@@ -18,7 +25,6 @@ const navItems = [
 const Layout = createContext();
 
 const Navbar = ({ isMobile }) => {
-    const [isDrawerOpen, setDrawerOpen] = useState(false);
 
     return (
         <nav className={styles.navbar}>
@@ -31,12 +37,27 @@ const Navbar = ({ isMobile }) => {
             </Link>
 
             {isMobile ? (
-                <div
-                className={styles.hamburger}
-                onClick={() => setDrawerOpen(!isDrawerOpen)}
-                >
-                <span style={{ color: "white" }}>{isDrawerOpen ? "X" : "☰"}</span>
-                </div>
+                <Menu>
+                    {({ isOpen }) => (
+                        <>
+                            <MenuButton
+                                isActive={isOpen}
+                                as={IconButton}
+                                icon={isOpen ? <SmallCloseIcon boxSize={5}/> : <HamburgerIcon />}
+                                variant='outline'
+                            />
+                            <MenuList
+                                bg='white'
+                            >
+                                {navItems.map(item => (
+                                    <MenuItem as={Link} bg="white" _hover={{ bg: 'gray.400' }} href={item.path}>
+                                    {item.title}
+                                    </MenuItem>
+                                ))}
+                            </MenuList>
+                        </>
+                    )}
+                </Menu>
             ) : (
             <div className={styles.rightMenu}>
                 {navItems.map(item => (
@@ -45,16 +66,6 @@ const Navbar = ({ isMobile }) => {
                     </Link>
                 ))}
             </div>
-            )}
-
-            {isMobile && isDrawerOpen && (
-                <div className={isDrawerOpen ? styles.drawer : styles.rightMenu}>
-                {navItems.map(item => (
-                    <Link key={item.title} className={styles.drawerItem} href={item.path} onClick={() => setDrawerOpen(false)}>
-                    {item.title}
-                    </Link>
-                ))}
-                </div>
             )}
         </nav>
     );

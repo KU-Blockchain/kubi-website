@@ -1,12 +1,29 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { Button, Center, Flex, Text, Box, Square, Image, HStack, VStack, Badge, Divider, Link, Tab, Tabs, TabList, TabPanels, TabPanel } from "@chakra-ui/react";
+import { Tag, Button, Heading, Center, Flex, Text, Box, Square, Image, HStack, VStack, Badge, Divider, Link, Tab, Tabs, TabList, TabPanels, TabPanel, SimpleGrid } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
-
+import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 export default function ResearchPage() {
+  const [articles, setArticles] = useState([]);
   const isMobile = useLayout();
+
+  useEffect(() => {
+    (async() => {
+      let response = await fetch('/api/notion', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ "databaseId": "aaab73c527594caba4ee8be33c20b1cc" }),
+      });
+
+      response = await response.json();
+      console.log(response.results);
+      setArticles(response.results);
+    })();
+  }, []); 
 
   return (
     <>
@@ -16,12 +33,41 @@ export default function ResearchPage() {
 
           <Tabs mx={6} isFitted>
             <TabList>
-              <Tab>UBRI</Tab>
+              <Tab>Articles</Tab>
               <Tab>Block News</Tab>
             </TabList>
 
             <TabPanels>
               <TabPanel>
+
+              <SimpleGrid columns={2} spacing={1} mb={10}>
+                  {articles.map(article => (
+                    <Card
+                      borderRadius="20px"
+                      borderWidth={0.5}
+                      borderColor='gray.500'
+                      maxWidth={300}
+                      key={article.id}
+                    >
+                      <CardHeader pb={0}>
+                        <Heading size='md'>{article.properties.Name.title[0].plain_text}</Heading>
+                      </CardHeader>
+                      <CardBody pt={1} pb={1}>
+                        <Text>by {article.properties.Author.rich_text[0].plain_text}</Text>
+                        <Text pt={4}>Tags: 
+                          {article.properties.Tags.multi_select.map(tag => (
+                            <Tag m={1} key={tag.id} bg={tag.color}>{tag.name}</Tag>
+                          ))}
+                        </Text>
+                      </CardBody>
+                      <CardFooter>
+                        <Button as={Link} isExternal href={article.url}>Read article</Button>
+                      </CardFooter>
+                    </Card>
+                  ),
+                )}
+              </SimpleGrid>
+
                 <HStack paddingBottom={4}>
                   <Box w="30%">
                     <Image 
@@ -105,13 +151,51 @@ export default function ResearchPage() {
       ) : (
       <Box>
 
-        <WebpageHeading heading={"Blockchain Research @ KU"} />
+        <WebpageHeading heading={"Learn about Blockchain"} />
 
         <Flex> 
           <Box 
             w="80%" 
             p={2} 
           > {/* bg='blue' */}
+
+            <Text 
+              fontWeight={500} 
+              fontSize="2xl"
+              align="center"
+              paddingBottom={4}
+              >
+                Student Written Articles
+            </Text>
+
+            <SimpleGrid columns={3} spacing={5} mb={10}>
+              {articles.map(article => (
+                <Card
+                  borderRadius="20px"
+                  borderWidth={0.5}
+                  borderColor='gray.500'
+                  maxWidth={300}
+                  key={article.id}
+                >
+                  <CardHeader pb={0}>
+                    <Heading size='md'>{article.properties.Name.title[0].plain_text}</Heading>
+                  </CardHeader>
+                  <CardBody pt={1} pb={1}>
+                    <Text>by {article.properties.Author.rich_text[0].plain_text}</Text>
+                    <Text pt={4}>Tags: 
+                      {article.properties.Tags.multi_select.map(tag => (
+                        <Tag m={1} key={tag.id} bg={tag.color}>{tag.name}</Tag>
+                      ))}
+                    </Text>
+                  </CardBody>
+                  <CardFooter>
+                    <Button as={Link} isExternal href={article.url}>Read article</Button>
+                  </CardFooter>
+                </Card>
+              ),
+            )}
+          </SimpleGrid>
+
             <HStack>
               <Box w="20%">
                 <Image 
@@ -199,16 +283,3 @@ export default function ResearchPage() {
     </>
   );
 }
-
-{/* <Text fontWeight={500} fontSize="3xl" align="center">Check out a preview of our notion page for quick blockchain knowledge</Text>
-<Flex justifyContent="center" m={5}>
-  <iframe width="100%" height="2000px" src="https://e.notionhero.io/e1/p/5e2607b-d5e9d358c1eaca582376674d8498255/7ff28f61d6c347feb624866d32f0242b"></iframe>
-</Flex>
-<Center>
-  <Text fontWeight={500} fontSize="3xl" align="center">
-      Click here to learn more!
-  </Text>
-</Center>
-<Center style={{marginBottom:"5px"}}>
-  <Button colorScheme="linkedin" onClick={() => window.open("https://www.notion.so/kublockchain/Foundations-of-Blockchain-Bootcamp-1e994c38ed8b44768504c2247ae770c2?pvs=4", "_blank")}>View Notion Page</Button>
-</Center> */}

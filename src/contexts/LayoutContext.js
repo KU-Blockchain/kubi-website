@@ -19,7 +19,7 @@ const navItems = [
   { path: '/projects', title: 'Projects' },
   { path: '/membership', title: 'Membership' },
   { path: '/events', title: 'Events' },
-  { path: '/research', title: 'Research@KU' }
+  { path: '/resources', title: 'Resources' }
 ];
 
 const Layout = createContext();

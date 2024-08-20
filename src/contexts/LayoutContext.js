@@ -50,7 +50,7 @@ const Navbar = ({ isMobile }) => {
                                 bg='white'
                             >
                                 {navItems.map(item => (
-                                    <MenuItem as={Link} bg="white" _hover={{ bg: 'gray.400' }} href={item.path}>
+                                    <MenuItem key={item.title} as={Link} bg="white" _hover={{ bg: 'gray.400' }} href={item.path}>
                                     {item.title}
                                     </MenuItem>
                                 ))}

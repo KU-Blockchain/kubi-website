@@ -43,8 +43,12 @@ const Navbar = ({ isMobile }) => {
                             <MenuButton
                                 isActive={isOpen}
                                 as={IconButton}
-                                icon={isOpen ? <SmallCloseIcon boxSize={5}/> : <HamburgerIcon />}
+                                icon={isOpen ? <SmallCloseIcon color="white" boxSize={5}/> : <HamburgerIcon color="white" />}
                                 variant='outline'
+                                borderWidth={0.5}
+                                borderColor='gray.500'
+                                _hover={{ bg: 'gray.500'}}
+                                _expanded={{ bg: 'gray.500'}}
                             />
                             <MenuList
                                 bg='white'

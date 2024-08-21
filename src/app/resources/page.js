@@ -40,13 +40,13 @@ export default function ResearchPage() {
             <TabPanels>
               <TabPanel>
 
-              <SimpleGrid columns={1} spacing={1} mb={10}>
+              <SimpleGrid columns={1} spacing={3} mb={10}>
                   {articles.map(article => (
                     <Card
                       borderRadius="20px"
                       borderWidth={0.5}
                       borderColor='gray.500'
-                      maxWidth={300}
+                      //maxWidth={300}
                       key={article.id}
                     >
                       <CardHeader pb={0}>
@@ -104,14 +104,6 @@ export default function ResearchPage() {
               </TabPanel>
 
               <TabPanel>
-                <Text 
-                fontWeight={500} 
-                fontSize="2xl"
-                align="center"
-                paddingBottom={4}
-                >
-                  Block News
-                </Text>
 
                 <Text 
                   fontWeight={500}
@@ -168,13 +160,12 @@ export default function ResearchPage() {
                 Student Written Articles
             </Text>
 
-            <SimpleGrid columns={3} spacing={5} mb={10}>
+            <SimpleGrid columns={3} spacing={7} mb={10} mr={7}>
               {articles.map(article => (
                 <Card
                   borderRadius="20px"
                   borderWidth={0.5}
                   borderColor='gray.500'
-                  maxWidth={300}
                   key={article.id}
                 >
                   <CardHeader pb={0}>

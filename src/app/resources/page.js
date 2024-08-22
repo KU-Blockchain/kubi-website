@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import { Tag, Button, Heading, Center, Flex, Text, Box, Square, Image, HStack, VStack, Badge, Divider, Link, Tab, Tabs, TabList, TabPanels, TabPanel, SimpleGrid } from "@chakra-ui/react";
+import { Skeleton, Tag, Button, Heading, Center, Flex, Text, Box, Square, Image, HStack, VStack, Badge, Divider, Link, Tab, Tabs, TabList, TabPanels, TabPanel, SimpleGrid } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
@@ -31,7 +31,7 @@ export default function ResearchPage() {
         <Box>
           <WebpageHeading heading={"Blockchain @ KU"} />
 
-          <Tabs mx={6} isFitted>
+          <Tabs isFitted>
             <TabList>
               <Tab>Articles</Tab>
               <Tab>Block News</Tab>
@@ -40,33 +40,35 @@ export default function ResearchPage() {
             <TabPanels>
               <TabPanel>
 
-              <SimpleGrid columns={1} spacing={3} mb={10}>
-                  {articles.map(article => (
-                    <Card
-                      borderRadius="20px"
-                      borderWidth={0.5}
-                      borderColor='gray.500'
-                      //maxWidth={300}
-                      key={article.id}
-                    >
-                      <CardHeader pb={0}>
-                        <Heading size='md'>{article.properties.Name.title[0].plain_text}</Heading>
-                      </CardHeader>
-                      <CardBody pt={1} pb={1}>
-                        <Text>by {article.properties.Author.rich_text[0].plain_text}</Text>
-                        <Text pt={4}>Tags: 
-                          {article.properties.Tags.multi_select.map(tag => (
-                            <Tag m={1} key={tag.id} bg={tag.color}>{tag.name}</Tag>
-                          ))}
-                        </Text>
-                      </CardBody>
-                      <CardFooter>
-                        <Button as={Link} isExternal href={article.url}>Read article</Button>
-                      </CardFooter>
-                    </Card>
-                  ),
-                )}
-              </SimpleGrid>
+              <Skeleton isLoaded={articles.length > 0} fitContent={true}>
+                <SimpleGrid columns={1} spacing={3} mb={10}>
+                    {articles.map(article => (
+                      <Card
+                        borderRadius="20px"
+                        borderWidth={0.5}
+                        borderColor='gray.500'
+                        //maxWidth={300}
+                        key={article.id}
+                      >
+                        <CardHeader pb={0}>
+                          <Heading size='md'>{article.properties.Name.title[0].plain_text}</Heading>
+                        </CardHeader>
+                        <CardBody pt={1} pb={1}>
+                          <Text>by {article.properties.Author.rich_text[0].plain_text}</Text>
+                          <Text pt={4}>Tags: 
+                            {article.properties.Tags.multi_select.map(tag => (
+                              <Tag m={1} key={tag.id} bg={tag.color}>{tag.name}</Tag>
+                            ))}
+                          </Text>
+                        </CardBody>
+                        <CardFooter>
+                          <Button as={Link} isExternal href={article.url}>Read article</Button>
+                        </CardFooter>
+                      </Card>
+                    ),
+                  )}
+                </SimpleGrid>
+              </Skeleton>
 
                 <HStack paddingBottom={4}>
                   <Box w="30%">
@@ -160,6 +162,7 @@ export default function ResearchPage() {
                 Student Written Articles
             </Text>
 
+            <Skeleton isLoaded={articles.length > 0} fitContent={true}>
             <SimpleGrid columns={3} spacing={7} mb={10} mr={7}>
               {articles.map(article => (
                 <Card
@@ -186,6 +189,7 @@ export default function ResearchPage() {
               ),
             )}
           </SimpleGrid>
+          </Skeleton>
 
             <HStack>
               <Box w="20%">

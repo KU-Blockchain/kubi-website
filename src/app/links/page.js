@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Text, Stack, Card, CardBody, CardFooter, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
-import { BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
 
 export default function ProjectsPage() {
   const isMobile = useLayout();
@@ -18,6 +18,11 @@ export default function ProjectsPage() {
       title: "LinkedIn",
       link: "https://www.linkedin.com/company/kublockchain",
       icon: <BsLinkedin />,
+    },
+    {
+      title: "Instagram",
+      link: "https://www.instagram.com/kublockchain",
+      icon: <BsInstagram />,
     },
     {
       title: "Subscribe to Google Calender Events",

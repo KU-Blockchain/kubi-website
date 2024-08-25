@@ -78,7 +78,7 @@ const CurrentExecTeam = () => {
       email: "mailto:emmadu@kublockchain.com",
     },
     {
-      headshot: "/images/headshots/alex_perez.JPG",
+      headshot: "/images/headshots/alex_perez.jpg",
       title: "Director of Outreach and Growth",
       name: "Alex Perez",
       shortBio: "Alex is a sophmore majoring in business administration from Chino Hills, California. He is also the Director of Funding for the United Business Council (UBC) at KU.",

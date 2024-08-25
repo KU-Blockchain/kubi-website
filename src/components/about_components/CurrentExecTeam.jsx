@@ -78,12 +78,12 @@ const CurrentExecTeam = () => {
       email: "mailto:emmadu@kublockchain.com",
     },
     {
-      headshot: "",
+      headshot: "/images/headshots/alex_perez.JPG",
       title: "Director of Outreach and Growth",
       name: "Alex Perez",
-      shortBio: "To be added.",
+      shortBio: "Alex is a sophmore majoring in business administration from Chino Hills, California. He is also the Director of Funding for the United Business Council (UBC) at KU.",
       longBio:
-        "To be added.",
+        "Alex is a sophmore majoring in business administration from Chino Hills, California. He is also the Director of Funding for the United Business Council (UBC) at KU.",
       linkedin: "",
       email: "mailto:alex@kublockchain.com",
     },

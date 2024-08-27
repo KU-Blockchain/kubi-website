@@ -3,12 +3,17 @@ import React, { useEffect, useState } from "react";
 import { Box, Text, Stack, Card, CardBody, CardFooter, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
-import { BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
+import { BsBug, BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
 
 export default function ProjectsPage() {
   const isMobile = useLayout();
 
   const links = [
+    {
+      title: "Come to Intro to Crypto on Thursday, September 5th @ 6pm!",
+      link: "https://forms.gle/S3UqbMTspnzdg5V99",
+      icon: <BsBug />,
+    },
     {
       title: "Discord",
       link: "https://discord.gg/GAznpHUzny",

@@ -10,11 +10,6 @@ export default function ProjectsPage() {
 
   const links = [
     {
-      title: "Come to Intro to Crypto on Thursday, September 5th @ 6pm!",
-      link: "https://forms.gle/S3UqbMTspnzdg5V99",
-      icon: <BsBug />,
-    },
-    {
       title: "Discord",
       link: "https://discord.gg/GAznpHUzny",
       icon: <BsDiscord />,

@@ -6,12 +6,14 @@ import { useLayout } from "@/contexts/LayoutContext";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 export default function ResearchPage() {
+  const [isLoading, setIsLoading] = useState(true);
   const [articles, setArticles] = useState([]);
+  const [tavelDiaries, setTravelDiaries] = useState([]);
   const isMobile = useLayout();
 
   useEffect(() => {
     (async() => {
-      let response = await fetch('/api/notion', {
+      let articles_response = await fetch('/api/notion', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -19,10 +21,27 @@ export default function ResearchPage() {
         body: JSON.stringify({ "databaseId": "aaab73c527594caba4ee8be33c20b1cc" }),
       });
 
-      response = await response.json();
-      console.log(response.results);
-      setArticles(response.results);
+      articles_response = await articles_response.json();
+      const publishedArticles = articles_response.results.filter(article => article.properties.Status.status.name === "Published");
+      console.log("Articles:", publishedArticles);
+      setArticles(publishedArticles);
     })();
+
+    (async() => {
+      let travel_response = await fetch('/api/notion', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ "databaseId": "eba3a8e3eaf941b1a3c19c5515c49192" }),
+      });
+
+      travel_response = await travel_response.json();
+      const publishedTravelDiaries = travel_response.results.filter(diary => diary.properties.Status.status.name === "Published");
+      console.log("Travel Diaries:", publishedTravelDiaries);
+      setTravelDiaries(publishedTravelDiaries);
+    })().then(() => setIsLoading(false));
+
   }, []); 
 
   return (
@@ -40,7 +59,49 @@ export default function ResearchPage() {
             <TabPanels>
               <TabPanel>
 
-              <Skeleton isLoaded={articles.length > 0} fitContent={true}>
+              <Heading size="lg" mb={2} textAlign="center">
+                Travel Diaries ✈️
+              </Heading>
+
+              <Skeleton isLoaded={!isLoading} fitContent={true}>
+                <SimpleGrid columns={1} spacing={3} mb={10}>
+
+                  {tavelDiaries.map(diary => (
+                    <Card
+
+                      borderRadius="20px"
+                      borderWidth={0.5}
+                      borderColor='gray.500'
+                      //maxWidth={300}
+                      key={diary.id}
+                    >
+                      <CardHeader pb={0}>
+                        {diary.properties['Cover Photo'] && diary.properties['Cover Photo'].files.length > 0 && (
+                          <Image mb={2} src={diary.properties['Cover Photo'].files[0].file.url} />
+                        )}
+                        <Heading size='md'>{diary.properties.Name.title[0].plain_text}</Heading>
+                      </CardHeader>
+                      <CardBody pt={1} pb={1}>
+                        <Text pt={4}>Tags:
+                          {diary.properties.Tags.multi_select.map(tag => (
+                            <Tag m={1} key={tag.id} bg={tag.color}>{tag.name}</Tag>
+                          ))}
+                        </Text>
+                      </CardBody>
+                      <CardFooter>
+                        <Button as={Link} isExternal href={diary.url}>Read article</Button>
+                      </CardFooter>
+                    </Card>
+                  ),
+                )}
+              </SimpleGrid>
+              </Skeleton>
+
+              <Heading size="lg" mb={2} textAlign="center">
+                Student Written Articles 📝
+              </Heading>
+
+              <Skeleton isLoaded={!isLoading} fitContent={true}>
                 <SimpleGrid columns={1} spacing={3} mb={10}>
                     {articles.map(article => (
                       <Card
@@ -111,10 +172,10 @@ export default function ResearchPage() {
                   fontWeight={500}
                   fontSize="large"
                   >
-                    <Link href="/membership">Weekly Newsletter</Link>
+                    <Link href="/membership">Newsletter</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
-                  Sign up to receive weekly updates on the latest blockchain news and events
+                  Sign up to receive updates on the latest blockchain news and events
                 </Box>
 
                 <Text 
@@ -124,7 +185,7 @@ export default function ResearchPage() {
                     <Link href="https://kublockchain.notion.site/Foundations-of-Blockchain-7ff28f61d6c347feb624866d32f0242b" isExternal>Notion Page</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
-                  Foundations of Blockchain Bootcamp, etc
+                  Explore our Foundations of Blockchain Bootcamp course.
                 </Box>
 
                 <Text 
@@ -134,7 +195,7 @@ export default function ResearchPage() {
                     <Link href="https://www.youtube.com/@kublockchaininstitute9672" isExternal>YouTube Channel</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
-                  Blockchain 101, etc
+                  View our latest videos, including a recap of the Kansas Blockchain Fellowship.
                 </Box>
               </TabPanel>
             </TabPanels>
@@ -159,11 +220,51 @@ export default function ResearchPage() {
               align="center"
               paddingBottom={4}
               >
-                Student Written Articles
+                Travel Diaries ✈️
             </Text>
 
-            <Skeleton isLoaded={articles.length > 0} fitContent={true}>
-            <SimpleGrid columns={3} spacing={7} mb={10} mr={7}>
+            <Skeleton isLoaded={!isLoading} fitContent={true}>
+            <SimpleGrid columns={3} spacing={4} mb={10} mr={7}>
+              {tavelDiaries.map(diary => (
+                <Card
+                  borderRadius="20px"
+                  borderWidth={0.5}
+                  borderColor='gray.500'
+                  key={diary.id}
+                >
+                  <CardHeader pb={0}>
+                    {diary.properties['Cover Photo'] && diary.properties['Cover Photo'].files.length > 0 && (
+                      <Image mb={2} src={diary.properties['Cover Photo'].files[0].file.url} />
+                    )}
+                    <Heading size='md'>{diary.properties.Name.title[0].plain_text}</Heading>
+                  </CardHeader>
+                  <CardBody pt={1} pb={1}>
+                    <Text pt={4}>Tags: 
+                      {diary.properties.Tags.multi_select.map(tag => (
+                        <Tag m={1} key={tag.id} bg={tag.color}>{tag.name}</Tag>
+                      ))}
+                    </Text>
+                  </CardBody>
+                  <CardFooter>
+                    <Button as={Link} isExternal href={diary.url}>Read article</Button>
+                  </CardFooter>
+                </Card>
+              ),
+            )}
+          </SimpleGrid>
+          </Skeleton>
+
+            <Text 
+              fontWeight={500} 
+              fontSize="2xl"
+              align="center" 
+              paddingBottom={4}
+              >
+                Student Written Articles 📝
+            </Text>
+
+            <Skeleton isLoaded={!isLoading} fitContent={true}>
+            <SimpleGrid columns={3} spacing={4} mb={10} mr={7}>
               {articles.map(article => (
                 <Card
                   borderRadius="20px"
@@ -242,10 +343,10 @@ export default function ResearchPage() {
               fontWeight={500}
               fontSize="large"
               >
-                <Link href="/membership#newsletter">Weekly Newsletter</Link>
+                <Link href="/membership#newsletter">Newsletter</Link>
             </Text>
             <Box w="100%" paddingBottom={4}>
-              Sign up to receive weekly updates on the latest blockchain news and events
+              Sign up to receive updates on the latest blockchain news and events
             </Box>
 
             <Text 
@@ -255,7 +356,7 @@ export default function ResearchPage() {
                 <Link href="https://kublockchain.notion.site/Foundations-of-Blockchain-7ff28f61d6c347feb624866d32f0242b" isExternal>Notion Page</Link>
             </Text>
             <Box w="100%" paddingBottom={4}>
-              Foundations of Blockchain Bootcamp, etc
+              Explore our Foundations of Blockchain Bootcamp course.
             </Box>
 
             <Text 
@@ -265,7 +366,7 @@ export default function ResearchPage() {
                 <Link href="https://www.youtube.com/@kublockchaininstitute9672" isExternal>YouTube Channel</Link>
             </Text>
             <Box w="100%" paddingBottom={4}>
-              Blockchain 101, etc
+              View our latest videos, including a recap of the Kansas Blockchain Fellowship.
             </Box>
             
             <Text>Blockchain can be a confusing topic. Dont know where to start? KUBI&apos;s got you! You will find plenty of resources here to expand your blockchain knowledge between Block Talks to explain the basics of blockchain, weekly newsletters to highlight important blockchain topics, and articles written by our team to express the use cases of blockchain.</Text>

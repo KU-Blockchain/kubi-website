@@ -30,7 +30,7 @@ const Navbar = ({ isMobile }) => {
         <nav className={styles.navbar}>
             <Link href="/">
                 <Image
-                src="/images/WebsiteAssets/KUBI_Logos/white_logo.png"
+                src="/images/WebsiteAssets/KUBI_Logos/kubi_white_logo.png"
                 width="110px"
                 alt="KUBI Logo"
                 />

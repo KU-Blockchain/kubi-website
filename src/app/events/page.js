@@ -98,10 +98,6 @@ export default function EventsPage() {
         >
           <WebpageHeading heading={"Events"} />
 
-
-          <Box flex="1" textAlign="center">
-            <Text fontSize="3xl" fontWeight={500}>-+-+-+-+-+-+  Follow our Calendar  +-+-+-+-+-+-</Text> 
-          </Box>
           <Center>
             <iframe src="https://embed.styledcalendar.com/#MjFRXlTG1mAbqA5XgGxc" title="Styled Calendar" class="styled-calendar-container" style={{width:"75%", height:"654px", border:"none"}} data-cy="calendar-embed-iframe"></iframe>
             <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>

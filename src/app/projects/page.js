@@ -12,12 +12,12 @@ export default function ProjectsPage() {
       title: "The DAO",
       description: "KUBI DAO (Decentralized Autonomous Organization) offers a unique model for collaboration, incentives, and privileges. Our hybrid tokenomics system combines KUBIX and KUBI tokens to create a platform that encourages active participation and fair distribution of rewards. This is all enabled by blockchain technology, built on the Polygon Mumbai testnet. Welcome to the KU Blockchain DAO!",
       preview_image: "/images/projectImages/DAO.png",
-      link: "https://kublockchaindao.on.fleek.co/",
+      link: "https://dao.kublockchain.com/",
     },
     {
       title: "The Kansas Blockchain Fellowship",
       description: "A seven-week experiential learning intensive, scholarship program, and talent incubator to prepare students in Kansas for careers in blockchain and web3. The program is designed to give exceptional students in the Midwest deep knowledge and experience around blockchain, digital assets, and web3 to prepare them for careers in the industry.",
-      preview_image: "/images/projectImages/kbf.jpeg",
+      preview_image: "/images/projectImages/kbf-2.jpg",
       link: "https://www.kansasblockchain.org/",
     },
     {
@@ -59,7 +59,7 @@ export default function ProjectsPage() {
                   </Heading>
                   <Text mb={4}>{project.description}</Text>
                   <Button colorScheme="blue" size="md">
-                    <Link href={project.link}>Learn more</Link>
+                    <Link href={project.link} isExternal>Learn more</Link>
                   </Button>
                 </CardBody>
               </VStack>
@@ -96,7 +96,7 @@ export default function ProjectsPage() {
                           </Box>
                           <Box>
                             <Button size="md">
-                              <Link href={project.link}>Learn more</Link>
+                              <Link href={project.link} isExternal>Learn more</Link>
                             </Button>
                           </Box>
                         </Flex>

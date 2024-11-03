@@ -182,7 +182,7 @@ export default function ResearchPage() {
                   fontWeight={500}
                   fontSize="large"
                   >
-                    <Link href="https://kublockchain.notion.site/Foundations-of-Blockchain-7ff28f61d6c347feb624866d32f0242b" isExternal>Notion Page</Link>
+                    <Link href="https://kublockchain.notion.site/" isExternal>Notion Page</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
                   Explore our Foundations of Blockchain Bootcamp course.
@@ -192,7 +192,7 @@ export default function ResearchPage() {
                   fontWeight={500}
                   fontSize="large"
                   >
-                    <Link href="https://www.youtube.com/@kublockchaininstitute9672" isExternal>YouTube Channel</Link>
+                    <Link href="https://www.youtube.com/@kublockchain" isExternal>YouTube Channel</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
                   View our latest videos, including a recap of the Kansas Blockchain Fellowship.
@@ -353,7 +353,7 @@ export default function ResearchPage() {
               fontWeight={500}
               fontSize="large"
               >
-                <Link href="https://kublockchain.notion.site/Foundations-of-Blockchain-7ff28f61d6c347feb624866d32f0242b" isExternal>Notion Page</Link>
+                <Link href="https://kublockchain.notion.site/" isExternal>Notion Page</Link>
             </Text>
             <Box w="100%" paddingBottom={4}>
               Explore our Foundations of Blockchain Bootcamp course.
@@ -363,7 +363,7 @@ export default function ResearchPage() {
               fontWeight={500}
               fontSize="large"
               >
-                <Link href="https://www.youtube.com/@kublockchaininstitute9672" isExternal>YouTube Channel</Link>
+                <Link href="https://www.youtube.com/@kublockchain" isExternal>YouTube Channel</Link>
             </Text>
             <Box w="100%" paddingBottom={4}>
               View our latest videos, including a recap of the Kansas Blockchain Fellowship.

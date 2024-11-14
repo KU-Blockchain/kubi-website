@@ -1,17 +1,20 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import { Skeleton, Tag, Button, Heading, Center, Flex, Text, Box, Square, Image, HStack, VStack, Badge, Divider, Link, Tab, Tabs, TabList, TabPanels, TabPanel, SimpleGrid } from "@chakra-ui/react";
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 export default function ResearchPage() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [articles, setArticles] = useState([]);
   const [tavelDiaries, setTravelDiaries] = useState([]);
   const isMobile = useLayout();
 
   useEffect(() => {
+    setIsModalOpen(true);
     (async() => {
       let articles_response = await fetch('/api/notion', {
         method: 'POST',
@@ -175,7 +178,7 @@ export default function ResearchPage() {
                     <Link href="/membership">Newsletter</Link>
                 </Text>
                 <Box w="100%" paddingBottom={4}>
-                  Sign up to receive updates on the latest blockchain news and events
+                  Sign up to receive updates on the latest blockchain news and events.
                 </Box>
 
                 <Text 
@@ -346,7 +349,7 @@ export default function ResearchPage() {
                 <Link href="/membership#newsletter">Newsletter</Link>
             </Text>
             <Box w="100%" paddingBottom={4}>
-              Sign up to receive updates on the latest blockchain news and events
+              Sign up to receive updates on the latest blockchain news and events.
             </Box>
 
             <Text 
@@ -368,14 +371,30 @@ export default function ResearchPage() {
             <Box w="100%" paddingBottom={4}>
               View our latest videos, including a recap of the Kansas Blockchain Fellowship.
             </Box>
-            
-            <Text>Blockchain can be a confusing topic. Dont know where to start? KUBI&apos;s got you! You will find plenty of resources here to expand your blockchain knowledge between Block Talks to explain the basics of blockchain, weekly newsletters to highlight important blockchain topics, and articles written by our team to express the use cases of blockchain.</Text>
           </Box>
 
         </Flex>
 
       </Box>
       )}
+
+        <Modal isOpen={isModalOpen}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader color="white">Resources from KUBI</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Text color="white">
+                Blockchain can be a confusing topic. Don&apos;t know where to start? KUBI&apos;s got you! <br></br><br></br>You will find plenty of resources here to expand your blockchain knowledge between Block Talks to explain the basics of blockchain, newsletters to highlight important blockchain topics, and articles written by our team to express the use cases of blockchain.
+              </Text>
+            </ModalBody>
+            <ModalFooter>
+              <Button onClick={() => setIsModalOpen(false)}colorScheme="blue">
+                Continue
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
     </>
   );
 }

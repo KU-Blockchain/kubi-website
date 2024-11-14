@@ -31,7 +31,7 @@ export default function Home() {
     {
       image: "/images/DevImage.png",
       title: "Development",
-      text: "The University of Kansas Digital Finance Conference was held on April 5th, 2019. Speakers from Ripple labs, C2FO, Liquifi, and others, shared insight from the Financial Technology industry. The KU Blockchain Supply Chain Symposium was hosted at the Oread Hotel on October 26th, 2018. We hosted over 100 attendees including industry executives, working professionals, students and academics.",
+      text: "We are proud to provide extensive development opportunities through our GitHub organization page. All of our projects are open-source, including our DAO and current website. KUBI frequently brings together industry executives, working professionals, and students to have technical workshops. Head over to our Projects page to see some of the things our members are working on.",
     },
   ];
 
@@ -65,7 +65,7 @@ export default function Home() {
                 </Box>
               }
             
-            <Button mt={10} colorScheme="blackAlpha" size="lg" onClick={() => window.location.href = "/membership"}>➤ Join Us</Button>
+            <Button mt={10} colorScheme="blackAlpha" size="lg" onClick={() => window.location.href = "/membership"}>Join Today</Button>
             </VStack>
           </Box>
         </Box>

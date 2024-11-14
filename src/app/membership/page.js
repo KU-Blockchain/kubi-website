@@ -36,7 +36,7 @@ export default function MembershipPage() {
                 </Heading>
                 <Box py={6} style={{width:"80%"}}>
                   <SubscribeForm />
-                  <Text>Subscribe for weekly newsletters and quarterly organization updates.</Text>
+                  <Text>Subscribe for newsletters and quarterly organization updates.</Text>
                 </Box>
                 </Flex>
               </CardBody>

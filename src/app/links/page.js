@@ -3,12 +3,17 @@ import React, { useEffect, useState } from "react";
 import { Box, Text, Stack, Card, CardBody, CardFooter, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
-import { BsBug, BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
+import { BsBugFill, BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
 
 export default function ProjectsPage() {
   const isMobile = useLayout();
 
   const links = [
+    {
+      title: "Join The Midwest Block-a-Thon",
+      link: "https://hack.kublockchain.com",
+      icon: <BsBugFill />,
+    },
     {
       title: "Discord",
       link: "https://discord.gg/GAznpHUzny",

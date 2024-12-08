@@ -74,13 +74,25 @@ export default function Home() {
 
         <Stack {...isMobile ? {mt: -250} : {mt: -20}} spacing={4}>
           
-          <Link href="https://kansasblockchain.org" isExternal>
-          <Card color="black" bgGradient="linear(to-r, yellow.200, orange.400)" borderColor="orange.600" borderWidth="6px">
+        <Link href="https://hack.kublockchain.com" isExternal>
+          <Card color="black" bgGradient="linear(to-r, orange.200, red.200)" borderColor="darkgrey" borderWidth="6px">
             <CardHeader>
               <Heading mb={-5} size="lg" textAlign="center">What&apos;s New:</Heading>
             </CardHeader>
             <CardBody>
-              <Heading fontFamily="Inconsolata, monospace" size="lg" textAlign="left">Introducing: The Kansas Blockchain Fellowship</Heading>
+              <Heading size="lg" textAlign="left">Introducing: The The Midwest Block-a-Thon</Heading>
+              <Text fontSize="2xl" textAlign="left">A 20-hour blockchain-focused hackathon hosted at the University of Kansas aimed at fostering innovation and collaboration among students of all ages.</Text>
+            </CardBody>
+          </Card>
+          </Link>
+
+          <Link href="https://kansasblockchain.org" isExternal>
+          <Card color="black" bgGradient="linear(to-r, yellow.200, orange.400)" borderColor="orange.600" borderWidth="6px">
+            {/* <CardHeader>
+              <Heading mb={-5} size="lg" textAlign="center">What&apos;s New:</Heading>
+            </CardHeader> */}
+            <CardBody>
+              <Heading fontFamily="Inconsolata, monospace" size="lg" textAlign="left">The Kansas Blockchain Fellowship</Heading>
               <Text fontFamily="Inconsolata, monospace" fontSize="2xl" textAlign="left">A seven-week experiential learning intensive, scholarship program, and talent incubator to prepare students in Kansas for careers in blockchain and web3.</Text>
             </CardBody>
           </Card>

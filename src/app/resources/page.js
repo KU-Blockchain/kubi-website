@@ -8,13 +8,13 @@ import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 
 export default function ResearchPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  //const [isModalOpen, setIsModalOpen] = useState(false);
   const [articles, setArticles] = useState([]);
   const [tavelDiaries, setTravelDiaries] = useState([]);
   const isMobile = useLayout();
 
   useEffect(() => {
-    setIsModalOpen(true);
+    //setIsModalOpen(true);
     (async() => {
       let articles_response = await fetch('/api/notion', {
         method: 'POST',
@@ -378,7 +378,7 @@ export default function ResearchPage() {
       </Box>
       )}
 
-        <Modal isOpen={isModalOpen}>
+        {/* <Modal isOpen={isModalOpen}>
           <ModalOverlay />
           <ModalContent>
             <ModalHeader>Resources from KUBI</ModalHeader>
@@ -394,7 +394,7 @@ export default function ResearchPage() {
               </Button>
             </ModalFooter>
           </ModalContent>
-        </Modal>
+        </Modal> */}
     </>
   );
 }

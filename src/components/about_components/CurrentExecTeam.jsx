@@ -38,14 +38,14 @@ const CurrentExecTeam = () => {
       email: "mailto:micah@kublockchain.com",
     },
     {
-      headshot: "/images/headshots/yash_prajapati.jpeg",
-      title: "VP of Finance",
-      name: "Yash Prajapati",
-      shortBio: "Yash has been VP of Finance at KU Blockchain Institute for over a year,  helping host workshops and the winter bootcamp. He researches market-predicting neural networks and is a campus student ambassador. Yash is the recipient of a Homecoming Award for his leadership and involvement on campus.",
+      headshot: "/images/headshots/alex_perez.jpg",
+      title: "VP of Business",
+      name: "Alex Perez",
+      shortBio: "Alex is a sophmore majoring in business administration from Chino Hills, California. He is also the Director of Funding for the United Business Council (UBC) at KU.",
       longBio:
-        "Yash has been VP of Finance at KU Blockchain Institute for over a year,  helping host workshops and the winter bootcamp. He researches market-predicting neural networks and is a campus student ambassador. Yash is the recipient of a Homecoming Award for his leadership and involvement on campus.",
-      linkedin: "https://www.linkedin.com/in/yashprajapati23/",
-      email: "mailto:yash@kublockchain.com",
+        "Alex is a sophmore majoring in business administration from Chino Hills, California. He is also the Director of Funding for the United Business Council (UBC) at KU.",
+      linkedin: "",
+      email: "mailto:alex@kublockchain.com",
     },
     {
       headshot: "/images/headshots/jahnvi_maddila.jpeg",
@@ -59,7 +59,7 @@ const CurrentExecTeam = () => {
     },
     {
       headshot: "/images/headshots/kyle_spragg.jpg",
-      title: "Director of Research and Development",
+      title: "Director of Development",
       name: "Kyle Spragg",
       shortBio: "Kyle Spragg will be a third year student at the University of Kansas this fall, studying Computer Science and Business. He is from Naperville, Illinois, and participates in athletics. He became an Academic All-American in his fourth year of high school sports, and pursued club lacrosse in college. Currently, Kyle is the Vice President of the Kansas Lacrosse Team and a Financial Analyst for the Rock Chalk Investment Club.",
       longBio:
@@ -78,24 +78,24 @@ const CurrentExecTeam = () => {
       email: "mailto:emmadu@kublockchain.com",
     },
     {
-      headshot: "/images/headshots/alex_perez.jpg",
+      headshot: "/images/headshots/caleb_hite.jpeg",
       title: "Director of Outreach and Growth",
-      name: "Alex Perez",
-      shortBio: "Alex is a sophmore majoring in business administration from Chino Hills, California. He is also the Director of Funding for the United Business Council (UBC) at KU.",
+      name: "Caleb Hite",
+      shortBio: "Caleb is a Sophomore Computer Science student from Shawnee, Kansas. Caleb is a member of ACM and German Club. Caleb was also a part of the Kansas Blockchain Fellowship.",
       longBio:
-        "Alex is a sophmore majoring in business administration from Chino Hills, California. He is also the Director of Funding for the United Business Council (UBC) at KU.",
+        "Caleb is a Sophomore Computer Science student from Shawnee, Kansas. Caleb is a member of ACM and German Club. Caleb was also a part of the Kansas Blockchain Fellowship.",
       linkedin: "",
-      email: "mailto:alex@kublockchain.com",
+      email: "mailto:caleb@kublockchain.com",
     },
     {
-      headshot: "/images/headshots/emma_nasseri.jpeg",
-      title: "Interim Director of Education",
-      name: "Emma Nasseri",
-      shortBio: "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute",
+      headshot: "/images/headshots/nischay_rawal.png",
+      title: "Director of Education",
+      name: "Nischay Rawal",
+      shortBio: "Nischay Rawal is a current honors freshman and self fellow dual majoring in Computer Science and Mathematics. He has been involved with the KU Blockchain Institute since Fall 2024 and is now the Director of Education. Nischay is currently also involved with research on programming synthesis.",
       longBio:
-        "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
-      linkedin: "https://www.linkedin.com/in/emma-nasseri/",
-      email: "mailto:emma@kublockchain.com",
+        "Nischay Rawal is a current honors freshman and self fellow dual majoring in Computer Science and Mathematics. He has been involved with the KU Blockchain Institute since Fall 2024 and is now the Director of Education. Nischay is currently also involved with research on programming synthesis.",
+      linkedin: "https://www.linkedin.com/in/nischay-rawal-821902288/",
+      email: "mailto:nischay@kublockchain.com",
     },
   ];
 

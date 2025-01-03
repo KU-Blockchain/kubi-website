@@ -38,7 +38,7 @@ const CurrentExecTeam = () => {
       email: "mailto:micah@kublockchain.com",
     },
     {
-      headshot: "/images/headshots/alex_perez.jpg",
+      headshot: "/images/headshots/alex_perez.jpeg",
       title: "VP of Business",
       name: "Alex Perez",
       shortBio: "Alex is a sophmore majoring in business administration from Chino Hills, California. He is also the Director of Funding for the United Business Council (UBC) at KU.",
@@ -88,6 +88,16 @@ const CurrentExecTeam = () => {
       email: "mailto:caleb@kublockchain.com",
     },
     {
+      headshot: "/images/headshots/vatsa_pandey.jpg",
+      title: "Director of Research",
+      name: "Vatsa Pandey",
+      shortBio: "Vatsa is a freshman studying CS, Math, and Economics, Competitive programmer, Machine learning researcher and KU Blockchain's director of Research. His hobbies include robots and rockets.",
+      longBio:
+        "Vatsa is a freshman studying CS, Math, and Economics, Competitive programmer, Machine learning researcher and KU Blockchain's director of Research. His hobbies include robots and rockets.",
+      linkedin: "https://www.linkedin.com/in/vatsadev/",
+      email: "mailto:vatsa@kublockchain.com",
+    },
+    {
       headshot: "/images/headshots/nischay_rawal.png",
       title: "Director of Education",
       name: "Nischay Rawal",
@@ -96,6 +106,15 @@ const CurrentExecTeam = () => {
         "Nischay Rawal is a current honors freshman and self fellow dual majoring in Computer Science and Mathematics. He has been involved with the KU Blockchain Institute since Fall 2024 and is now the Director of Education. Nischay is currently also involved with research on programming synthesis.",
       linkedin: "https://www.linkedin.com/in/nischay-rawal-821902288/",
       email: "mailto:nischay@kublockchain.com",
+    },{
+      headshot: "/images/headshots/wolfgang_sell.jpg",
+      title: "Director of Education",
+      name: "Wolfgang Sell",
+      shortBio: "Wolfgang is a freshman majoring in Cybersecurity Engineering from Shawnee, Kansas. His interest in decentralized technology began by participating in the Kansas Blockchain Fellowship, and has since been inspired to pass on that knowledge to others as Director of Education. His current research is in healthcare applications of LLMs, and is also an avid violist playing in the KU Symphony Orchestra and numerous other ensembles.",
+      longBio:
+        "Wolfgang is a freshman majoring in Cybersecurity Engineering from Shawnee, Kansas. His interest in decentralized technology began by participating in the Kansas Blockchain Fellowship, and has since been inspired to pass on that knowledge to others as Director of Education. His current research is in healthcare applications of LLMs, and is also an avid violist playing in the KU Symphony Orchestra and numerous other ensembles.",
+      linkedin: "",
+      email: "mailto:wolfgang@kublockchain.com",
     },
   ];
 

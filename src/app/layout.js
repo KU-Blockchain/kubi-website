@@ -4,6 +4,7 @@ import theme from '@/styles/theme.js'
 require('dotenv').config();
 import { ChakraProvider } from '@chakra-ui/react'
 import { LayoutProvider } from '@/contexts/LayoutContext';
+import { Analytics } from "@vercel/analytics/react";
 
 
 export default function RootLayout({ children }) {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <ChakraProvider theme={theme}>
         <LayoutProvider>
           {children}
+          <Analytics />
         </LayoutProvider>
       </ChakraProvider>
       </body>

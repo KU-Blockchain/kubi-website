@@ -3,12 +3,17 @@ import React, { useEffect, useState } from "react";
 import { Box, Text, Stack, Card, CardBody, CardFooter, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
-import { BsBugFill, BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
+import { BsBackpackFill, BsBugFill, BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
 
 export default function ProjectsPage() {
   const isMobile = useLayout();
 
   const links = [
+    {
+      title: "RSVP to our FIRST MEETING of the semester!",
+      link: "https://lu.ma/4xya9his",
+      icon: <BsBackpackFill />,
+    },
     {
       title: "Join The Midwest Block-a-Thon",
       link: "https://hack.kublockchain.com",
@@ -35,7 +40,7 @@ export default function ProjectsPage() {
       icon: <BsCalendar2WeekFill />,
     },
     {
-      title: "Foundations of Blockchain Notion Learning Portal",
+      title: "Foundations of Blockchain Learning Portal",
       link: "https://www.notion.so/kublockchain/Foundations-of-Blockchain-7ff28f61d6c347feb624866d32f0242b",
       icon: <BsFillCupHotFill />,
     },
@@ -65,7 +70,7 @@ export default function ProjectsPage() {
     <>
         <Box>
             <WebpageHeading heading={"Our Links"} />
-            <Text mt={-3} mb={7} textAlign="center" px={20}>Promoting blockchain education and adoption at the University of Kansas.</Text>
+            <Text mt={-3} mb={7} textAlign="center" px={10}>Promoting blockchain education and adoption at the University of Kansas.</Text>
 
             <Stack spacing={5}>
                 {links.map((link, index) => (

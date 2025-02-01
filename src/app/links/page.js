@@ -9,11 +9,11 @@ export default function ProjectsPage() {
   const isMobile = useLayout();
 
   const links = [
-    {
-      title: "RSVP to our FIRST MEETING of the semester!",
-      link: "https://lu.ma/4xya9his",
-      icon: <BsBackpackFill />,
-    },
+    // {
+    //   title: "RSVP to our FIRST MEETING of the semester!",
+    //   link: "https://lu.ma/4xya9his",
+    //   icon: <BsBackpackFill />,
+    // },
     {
       title: "Join The Midwest Block-a-Thon",
       link: "https://hack.kublockchain.com",

@@ -31,6 +31,10 @@ export const roundImage = {
 };
 
 const theme = extendTheme({
+  fonts: {
+    heading: `'Montserrat', sans-serif`,
+    body: `'Montserrat', sans-serif`,
+  },
   styles: {
     global: {
       body: {

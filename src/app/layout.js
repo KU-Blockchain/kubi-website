@@ -5,6 +5,9 @@ require('dotenv').config();
 import { ChakraProvider } from '@chakra-ui/react'
 import { LayoutProvider } from '@/contexts/LayoutContext';
 import { Analytics } from "@vercel/analytics/react";
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 
 export default function RootLayout({ children }) {
@@ -13,7 +16,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>KU Blockchain Institute</title>
       </head>
-      <body>
+      <body className={montserrat.className}>
       <ChakraProvider theme={theme}>
         <LayoutProvider>
           {children}

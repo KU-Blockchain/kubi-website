@@ -16,7 +16,7 @@ export default function ProjectsPage() {
     },
     {
       title: "The Midwest Block-a-Thon",
-      description: "The Midwest Block-a-Thon is a 20-hour blockchain-focused hackathon hosted at the University of Kansas aimed at fostering innovation and collaboration among students of all ages in the surrounding region. This hackathon plans to bring in 200 hackers and community members with hands-on experience in web3 development, mentorship from industry experts, and a chance to win big prizes.",
+      description: "The Midwest Block-a-Thon is a 36-hour blockchain-focused hackathon hosted at the University of Kansas aimed at fostering innovation and collaboration among students of all ages in the surrounding region. This hackathon plans to bring in 500+ hackers and community members with hands-on experience in Web3 development, mentorship from industry experts, and a chance to win big prizes.",
       preview_image: "/images/projectImages/blockathon.png",
       link: "https://hack.kublockchain.com/",
     },

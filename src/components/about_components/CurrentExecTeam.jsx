@@ -105,7 +105,7 @@ const CurrentExecTeam = () => {
       longBio:
         "Heet is an Honors and SELF Fellow sophomore majoring in Computer Science and minoring in Data Science, serving as the Director of Research at the KU Blockchain Institute. In his free time he likes to watch movies and show, when that has been binge watched he takes long walks from his dorm (GSP) to basically anywhere. He is interested in the intersection of AI and Web3 and how the both of them could change technology together.",
       linkedin: "https://www.linkedin.com/in/heet-jani/",
-      email: "mailto:heetjani@ku.edu",
+      email: "mailto:heet2404@gmail.com",
     },
     {
       headshot: "/images/headshots/AnthonyBlack.jpeg.jpeg",
@@ -125,7 +125,7 @@ const CurrentExecTeam = () => {
       longBio:
         "Jag is a Honors sophomore and SELF Fellow majoring in Cybersecurity Engineering and minoring in Business, serving as the Director of Product & Innovation at the KU Blockchain Institute. Outside of school, Jag loves to play pickleball and watch movies. He is interested in the real-world applications of blockchain and enjoys learning how emerging web3 technologies can be used to solve industry challenges and create new opportunities for innovation beyond the classroom.",
       linkedin: "https://www.linkedin.com/in/jagannath-sritinath-nair/",
-      email: "mailto:jsritinathnair@ku.edu",
+      email: "mailto:jagannathsn25@gmail.com",
     },
     {
       headshot: "/images/headshots/SharivaPradhan.jpeg.jpeg",

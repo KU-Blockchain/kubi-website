@@ -93,7 +93,7 @@ const Footer = ({ isMobile }) => {
                     <Link href="https://discord.gg/GAznpHUzny">
                         <IconButton variant='outline' colorScheme='#23406D' aria-label="Discord" icon={<BsDiscord />} />
                     </Link>
-                    <Link href="mailto:blockchalk@kublockchain.com">
+                    <Link href="mailto:ku.blockchain.institute@gmail.com">
                         <IconButton variant='outline' colorScheme='#23406D' aria-label="Email" icon={<BsFillEnvelopeFill />} />
                     </Link>
                     </HStack>

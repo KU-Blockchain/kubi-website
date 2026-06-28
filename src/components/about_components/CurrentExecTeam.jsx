@@ -35,7 +35,7 @@ const CurrentExecTeam = () => {
       longBio:
         "Caleb is a senior studying Computer Science serving as Co-President of the KU Blockchain Institute. He is interested in decentralized finance, digital identity, and emerging markets. Outside of school, Caleb loves cooking and fitness.",
       linkedin: "https://www.linkedin.com/in/caleb-hite-463214176/",
-      email: "mailto:caleb@kublockchain.com",
+      email: "mailto:chite2457@gmail.com",
     },
     {
       headshot: "/images/headshots/CharlieDoherty.JPG",
@@ -45,7 +45,7 @@ const CurrentExecTeam = () => {
       longBio:
         "Charlie is a Senior in the Honors Program studying Computer Science and Entrepreneurship. He is from Overland Park, Kansas, and joined KUBI in Fall 2025. Outside of KUBI, Charlie is an Mentor in the Catalyst Accelerator and enjoys tennis and basketball. He is most interested in the economic and social freedoms decentralized applications can provide.",
       linkedin: "https://www.linkedin.com/in/charlie-doherty/",
-      email: "mailto:charlie@kublockchain.com",
+      email: "mailto:charlieedoherty@gmail.com",
     },
     {
       headshot: "/images/headshots/NischayRawal1.jpeg.jpeg",
@@ -55,7 +55,7 @@ const CurrentExecTeam = () => {
       longBio:
         "Nischay is a Honors junior and SELF fellow majoring in Computer Science and Mathematics, serving as the VP of Engineering for Kansas Blockchain. Outside of school, Nischay loves to play sports, go on walks, travel, and do random side quests. He first got into this space because of his interest in zk proofs.",
       linkedin: "https://www.linkedin.com/in/nischay-rawal-821902288/",
-      email: "mailto:nischay@kublockchain.com",
+      email: "mailto:nisch.rawal@gmail.com",
     },
     {
       headshot: "/images/headshots/WolfgangSell1.jpg.jpg",
@@ -65,7 +65,7 @@ const CurrentExecTeam = () => {
       longBio:
         "Wolfgang is a junior cybersecurity engineering major at the University of Kansas currently serving as the Vice President of Education. He was inspired to join the web3 community because of the potential for blockchain technology to bring power back to the people, and what keeps him here is the challenge of supporting the club and building in web3 competitively. He is world-class violist who has performed abroad with the university's top orchestra and regularly takes gig opportunities. He also enjoys competitive strategy games such as chess.",
       linkedin: "https://www.linkedin.com/in/wolfgangsell/",
-      email: "mailto:caleb@kublockchain.com",
+      email: "mailto:wolfiesell@gmail.com",
     },
     {
       headshot: "/images/headshots/Alexandro Perez1.jpeg.jpeg",
@@ -75,7 +75,7 @@ const CurrentExecTeam = () => {
       longBio:
         "Alex is a Senior and HSF Scholar majoring in Finance and Business Analytics. Alex joined KUBI his freshman year and previously served as Director of Outreach/Growth. He is primarily interested in how tokenization will modernize traditional finance. Outside of KUBI Alex enjoys playing guitar and watching live music.",
       linkedin: "https://www.linkedin.com/in/alexandro-perez-596128243/",
-      email: "mailto:charlie@kublockchain.com",
+      email: "mailto:alexandrojperez@gmail.com",
     },
     {
       headshot: "/images/headshots/ShivendiranKabaleeswaran.jpg.jpg",
@@ -95,7 +95,7 @@ const CurrentExecTeam = () => {
       longBio:
         "Will is a senior majoring in Computer Science, and serves as the Direct of Education at Kansas Blockchain. Outside of school, Will likes to hang out with friends and watch KU sports. He is currently interested in stablecoins and the modernization of banking infrastructure.",
       linkedin: "https://www.linkedin.com/in/will-calhoun-3400a52b8/",
-      email: "mailto:will@kublockchain.com",
+      email: "mailto:will_calhoun@ku.edu",
     },
     {
       headshot: "/images/headshots/HeetJani.jpg.jpg",

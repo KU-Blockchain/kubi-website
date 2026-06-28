@@ -56,7 +56,7 @@ export default function ProjectsPage() {
     },
     {
       title: "Email Us",
-      link: "mailto:blockchalk@kublockchain.com",
+      link: "mailto:ku.blockchain.institute@gmail.com",
       icon: <BsFillEnvelopeFill />,
     },
     {

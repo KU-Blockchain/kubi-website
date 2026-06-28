@@ -38,7 +38,7 @@ const CurrentExecTeam = () => {
       email: "mailto:caleb@kublockchain.com",
     },
     {
-      headshot: "/images/headshots/charlie_doherty.jpg",
+      headshot: "/images/headshots/CharlieDoherty.JPG",
       title: "Co-President",
       name: "Charlie Doherty",
       shortBio: "Charlie is a Senior in the Honors Program studying Computer Science and Entrepreneurship. Charlie is from Overland Park, Kansas.",

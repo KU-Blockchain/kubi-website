@@ -51,7 +51,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/NischayRawal1.jpeg.jpeg",
       title: "Vice President of Engineering",
       name: "Nischay Rawal",
-      shortBio: "Nischay Rawal is an Honors Sophomore and SELF fellow dual majoring in Computer Science and Mathematics.",
+      shortBio: "Nischay Rawal is an Honors Junior and SELF fellow dual majoring in Computer Science and Mathematics.",
       longBio:
         "Nischay is a Honors junior and SELF fellow majoring in Computer Science and Mathematics, serving as the VP of Engineering for Kansas Blockchain. Outside of school, Nischay loves to play sports, go on walks, travel, and do random side quests. He first got into this space because of his interest in zk proofs.",
       linkedin: "https://www.linkedin.com/in/nischay-rawal-821902288/",
@@ -61,7 +61,7 @@ const CurrentExecTeam = () => {
       headshot: "/images/headshots/WolfgangSell1.jpg.jpg",
       title: "Vice President of Education",
       name: "Wolfgang Sell",
-      shortBio: "Wolfgang is a SELF Fellow Sophomore Majoring in Cybersecurity Engineering. He is from Shawnee, Kansas.",
+      shortBio: "Wolfgang is a SELF Fellow Junior Majoring in Cybersecurity Engineering. He is from Shawnee, Kansas.",
       longBio:
         "Wolfgang is a junior cybersecurity engineering major at the University of Kansas currently serving as the Vice President of Education. He was inspired to join the web3 community because of the potential for blockchain technology to bring power back to the people, and what keeps him here is the challenge of supporting the club and building in web3 competitively. He is world-class violist who has performed abroad with the university's top orchestra and regularly takes gig opportunities. He also enjoys competitive strategy games such as chess.",
       linkedin: "https://www.linkedin.com/in/wolfgangsell/",
@@ -120,8 +120,8 @@ const CurrentExecTeam = () => {
     {
       headshot: "/images/headshots/JagannathSritinathNair.jpg.jpg",
       title: "Director of Product & Innovation",
-      name: "Jag Nair",
-      shortBio: "Jag is a Honors sophomore and SELF Fellow majoring in Cybersecurity Engineering/minoring in Business.",
+      name: "Jagannath Sritinath Nair",
+      shortBio: "Jag is a Honors sophomore and SELF Fellow majoring in Cybersecurity Engineering/minoring in Business. He is from Overland Park, Kansas.",
       longBio:
         "Jag is a Honors sophomore and SELF Fellow majoring in Cybersecurity Engineering and minoring in Business, serving as the Director of Product & Innovation at the KU Blockchain Institute. Outside of school, Jag loves to play pickleball and watch movies. He is interested in the real-world applications of blockchain and enjoys learning how emerging web3 technologies can be used to solve industry challenges and create new opportunities for innovation beyond the classroom.",
       linkedin: "https://www.linkedin.com/in/jagannath-sritinath-nair/",

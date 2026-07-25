@@ -5,7 +5,7 @@ import styles from "@/styles/Navbar.module.css";
 import { Image } from "@chakra-ui/react";
 import { Button, Box, Center, Img , Text, IconButton, Icon, Flex, HStack, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { BsGithub, BsLinkedin, BsPerson, BsDiscord, BsFillEnvelopeFill } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsPerson, BsDiscord, BsFillEnvelopeFill, BsTwitterX } from 'react-icons/bs';
 import { HamburgerIcon, SmallCloseIcon } from '@chakra-ui/icons';
 import {
     Menu,
@@ -19,7 +19,8 @@ const navItems = [
   { path: '/projects', title: 'Projects' },
   { path: '/membership', title: 'Membership' },
   { path: '/events', title: 'Events' },
-  { path: '/resources', title: 'Resources' }
+  { path: '/resources', title: 'Resources' },
+  { path: '/capstone', title: 'Capstone' }
 ];
 
 const Layout = createContext();
@@ -89,6 +90,9 @@ const Footer = ({ isMobile }) => {
                     </Link>
                     <Link href="https://www.linkedin.com/company/kublockchain/">
                         <IconButton variant='outline' colorScheme='#23406D' aria-label="Linkedin" icon={<BsLinkedin />} />
+                    </Link>
+                    <Link href="https://x.com/kublockchain">
+                        <IconButton variant='outline' colorScheme='#23406D' aria-label="Twitter" icon={<BsTwitterX />} />
                     </Link>
                     <Link href="https://discord.gg/GAznpHUzny">
                         <IconButton variant='outline' colorScheme='#23406D' aria-label="Discord" icon={<BsDiscord />} />

@@ -29,9 +29,9 @@ const AdvisoryBoard = () => {
       headshot: "/images/headshots/emma_nasseri.jpeg",
       title: "Former President",
       name: "Emma Nasseri",
-      shortBio: "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
+      shortBio: "Emma is a former Honors Computer Science and Visual Arts student and former President of the KU Blockchain Institute.",
       longBio:
-        "Emma is a final year Honors Computer Science and Visual Arts student. She was the previous President of the KU Blockchain Institute.",
+        "Emma is a former Honors Computer Science and Visual Arts student and former President of the KU Blockchain Institute.",
     },
     {
       headshot: "/images/headshots/jennifer_lohoefener.jpeg",

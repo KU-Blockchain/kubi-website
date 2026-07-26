@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Box, Text, Stack, Card, CardBody, CardFooter, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
+import React from "react";
+import { Box, Text, Stack, Card, CardBody, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
 
@@ -9,16 +9,17 @@ export default function ProjectsPage() {
 
   const projects = [
     {
-      title: "The DAO",
-      description: "KUBI DAO (Decentralized Autonomous Organization) offers a unique model for collaboration, incentives, and privileges. Our hybrid tokenomics system combines KUBIX and KUBI tokens to create a platform that encourages active participation and fair distribution of rewards. This is all enabled by blockchain technology, built on the Polygon Mumbai testnet. Welcome to the KU Blockchain DAO!",
-      preview_image: "/images/projectImages/DAO-new.png",
-      link: "https://dao.kublockchain.com/",
-    },
-    {
       title: "The Midwest Block-a-Thon",
       description: "The Midwest Block-a-Thon is a 36-hour blockchain-focused hackathon hosted at the University of Kansas aimed at fostering innovation and collaboration among students of all ages in the surrounding region. This hackathon plans to bring in 500+ hackers and community members with hands-on experience in Web3 development, mentorship from industry experts, and a chance to win big prizes.",
       preview_image: "/images/projectImages/blockathon.png",
       link: "https://hack.kublockchain.com/",
+    },
+    {
+      title: "Cohort Capstone",
+      description: "The KU Blockchain Institute (KUBI) capstone projects are final decentralized application (dApp) builds created by cohort students to finish their experiential learning programs. Fellows present these practical Web3 and digital asset solutions at end-of-cohort showcase ceremonies.",
+      preview_image: "/images/projectImages/cohort-capstone.png",
+      link: "https://fall-2025-cohort-capstones.devpost.com/project-gallery",
+      imageScale: 0.9,
     },
     {
       title: "The Kansas Blockchain Fellowship",
@@ -55,7 +56,8 @@ export default function ProjectsPage() {
             >
               <VStack spacing={4} align="stretch">
                 <Image
-                  width="100%"
+                  width={`${(project.imageScale ?? 1) * 100}%`}
+                  alignSelf="center"
                   src={project.preview_image}
                   alt={project.title}
                 />
@@ -86,7 +88,7 @@ export default function ProjectsPage() {
                 >
                     <HStack>
                       <Image
-                        maxW="50%"
+                        maxW={`${(project.imageScale ?? 1) * 50}%`}
                         src={project.preview_image}
                         alt={project.title}
                       />

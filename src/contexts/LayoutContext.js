@@ -19,8 +19,7 @@ const navItems = [
   { path: '/projects', title: 'Projects' },
   { path: '/membership', title: 'Membership' },
   { path: '/events', title: 'Events' },
-  { path: '/resources', title: 'Resources' },
-  { path: '/capstone', title: 'Capstone' }
+  { path: '/dao', title: 'DAO' }
 ];
 
 const Layout = createContext();

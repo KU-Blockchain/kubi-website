@@ -15,6 +15,16 @@ export default function EventsPage() {
 
   const events = [
     {
+      image: "/images/eventimages/ethdenver2026.png",
+      text: "The world’s largest and longest-running Ethereum #BUIDLathon, held in Denver, Colorado. ETHDenver brings together developers, founders, and innovators from around the globe for a week of hackathons, workshops, talks, and networking around open-source blockchain technology. KUBI members attended the 2026 “New #BUIDL City” edition to learn, build, and connect with the broader Ethereum community.",
+      heading: "ETHDenver 2026"
+    },
+    {
+      image: "/images/eventimages/university-blockchain-conference-2025.png",
+      text: "KUBI represented the University of Kansas at the University Blockchain Conference 2025, joining student blockchain organizations and industry sponsors from across the country. Members networked with leading Web3 companies, attended talks, and showcased the work coming out of our community in the Midwest.",
+      heading: "University Blockchain Conference 2025"
+    },
+    {
       image: "/images/eventimages/ethdenver2024.jpg", 
       text: "The premier Ethereum event in Denver, Colorado, bringing together blockchain enthusiasts, developers, and innovators worldwide. Explore workshops, hackathons, and networking opportunities while immersing yourself in the latest in decentralized technology. Join a vibrant community driving the future of blockchain innovation.", 
       heading: "ETHDenver 2024"

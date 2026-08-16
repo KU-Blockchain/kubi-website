@@ -1,19 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Box, Text, Stack, Card, CardBody, CardFooter, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
+import React from "react";
+import { Box, Text, Stack, Card, Link, HStack } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
-import { useLayout } from "@/contexts/LayoutContext";
-import { BsBackpackFill, BsBugFill, BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
+import { BsBugFill, BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill, BsInstagram } from 'react-icons/bs';
+import { colors } from "@/styles/theme.js";
 
 export default function ProjectsPage() {
-  const isMobile = useLayout();
-
   const links = [
-    // {
-    //   title: "RSVP to our FIRST MEETING of the semester!",
-    //   link: "https://lu.ma/4xya9his",
-    //   icon: <BsBackpackFill />,
-    // },
     {
       title: "Join The Midwest Block-a-Thon",
       link: "https://hack.kublockchain.com",
@@ -67,29 +60,38 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <>
-        <Box>
-            <WebpageHeading heading={"Our Links"} />
-            <Text mt={-3} mb={7} textAlign="center" px={10}>Promoting blockchain education and adoption at the University of Kansas.</Text>
+    <Box>
+      <WebpageHeading heading={"Our Links"} subtitle="Promoting blockchain education and adoption at the University of Kansas." />
 
-            <Stack spacing={5}>
-                {links.map((link, index) => (
-                    <Card 
-                    key={index} 
-                    borderRadius="20px" 
-                    p={5}
-                    >
-                    <VStack spacing={4} align="stretch">
-                        <HStack>
-                        {link.icon}
-                        <Link href={link.link} isExternal>{link.title}</Link>
-                        </HStack>
-                    </VStack>
-                    </Card>
-                ))}
-            </Stack>
-
-        </Box>
-    </>
+      <Stack spacing={4} maxW="720px" mx="auto">
+        {links.map((link, index) => (
+          <Card
+            key={index}
+            p={4}
+            as={Link}
+            href={link.link}
+            isExternal
+            _hover={{ textDecoration: "none", transform: "translateY(-4px)" }}
+          >
+            <HStack spacing={4} color="white">
+              <Box
+                w="42px"
+                h="42px"
+                borderRadius="full"
+                bg={colors.ice}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                color={colors.blue}
+                flexShrink={0}
+              >
+                {link.icon}
+              </Box>
+              <Text fontWeight="600">{link.title}</Text>
+            </HStack>
+          </Card>
+        ))}
+      </Stack>
+    </Box>
   );
 }

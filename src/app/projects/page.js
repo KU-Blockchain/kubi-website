@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
-import { Box, Text, Stack, Card, CardBody, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
-import { useLayout } from "@/contexts/LayoutContext";
+import ProjectCoverflow from "@/components/projects/ProjectCoverflow";
 
 export default function ProjectsPage() {
-  const isMobile = useLayout();
-
   const projects = [
     {
       title: "The Midwest Block-a-Thon",
@@ -19,7 +17,6 @@ export default function ProjectsPage() {
       description: "The KU Blockchain Institute (KUBI) capstone projects are final decentralized application (dApp) builds created by cohort students to finish their experiential learning programs. Fellows present these practical Web3 and digital asset solutions at end-of-cohort showcase ceremonies.",
       preview_image: "/images/projectImages/cohort-capstone.png",
       link: "https://fall-2025-cohort-capstones.devpost.com/project-gallery",
-      imageScale: 0.9,
     },
     {
       title: "The Kansas Blockchain Fellowship",
@@ -42,79 +39,9 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <>
-      {isMobile ? (
-      <Box>
-        <WebpageHeading heading={"Our Projects"} />
-
-        <Stack spacing={5}>
-          {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              borderRadius="20px" 
-              p={5}
-            >
-              <VStack spacing={4} align="stretch">
-                <Image
-                  width={`${(project.imageScale ?? 1) * 100}%`}
-                  alignSelf="center"
-                  src={project.preview_image}
-                  alt={project.title}
-                />
-                <CardBody>
-                  <Heading size="lg" mb={2}>
-                    {project.title}
-                  </Heading>
-                  <Text mb={4}>{project.description}</Text>
-                  <Button colorScheme="blue" size="md">
-                    <Link href={project.link} isExternal>Learn more</Link>
-                  </Button>
-                </CardBody>
-              </VStack>
-            </Card>
-          ))}
-        </Stack>
-      </Box>
-      ) : (
-        <Box>
-          <WebpageHeading heading={"Our Projects"} />
-          
-            <Stack spacing={5}>
-              {projects.map((project, index) => (
-                <Card 
-                  key={index} 
-                  borderRadius="20px" 
-                  p={5}
-                >
-                    <HStack>
-                      <Image
-                        maxW={`${(project.imageScale ?? 1) * 50}%`}
-                        src={project.preview_image}
-                        alt={project.title}
-                      />
-                      <CardBody>
-                        <Flex direction="column" justify="space-between" h="100%">
-                          <Box>
-                            <Heading size="lg" mb={4}>
-                              {project.title}
-                            </Heading>
-                          </Box>
-                          <Box flex="1">
-                            <Text mb={4}>{project.description}</Text>
-                          </Box>
-                          <Box>
-                            <Button size="md">
-                              <Link href={project.link} isExternal>Learn more</Link>
-                            </Button>
-                          </Box>
-                        </Flex>
-                      </CardBody>
-                    </HStack>
-                </Card>
-              ))}
-            </Stack>
-        </Box>
-      )}
-    </>
+    <Box>
+      <WebpageHeading heading={"Our Projects"} mb={6} />
+      <ProjectCoverflow projects={projects} />
+    </Box>
   );
 }

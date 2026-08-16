@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { colors } from "@/styles/theme.js";
 import { useLayout } from "@/contexts/LayoutContext";
+import HistoryCarousel from "./HistoryCarousel";
 
 const milestones = [
   {
@@ -58,7 +59,7 @@ export default function OurHistory() {
 
   return (
     <VStack spacing={10} align="stretch">
-      <Box maxW="820px" mx="auto" textAlign="center">
+      <Box maxW="100%" mx="auto" textAlign="center">
         <Text fontSize={isMobile ? "md" : "lg"} lineHeight="1.7">
           The KU Blockchain Institute is a student-led technology initiative founded in 2018
           at the University of Kansas. If you are new to the club, this timeline is a quick
@@ -67,50 +68,19 @@ export default function OurHistory() {
         </Text>
       </Box>
 
-      <VStack spacing={6} align="stretch" maxW="900px" mx="auto" w="100%">
-        {milestones.map((item) => (
-          <Box
-            key={item.year}
-            bg="white"
-            borderLeft="4px solid"
-            borderColor={colors.primaryBlue}
-            px={isMobile ? 4 : 5}
-            py={4}
-            borderRadius="md"
-            boxShadow="sm"
-          >
-            <HStack spacing={3} mb={2} flexWrap="wrap">
-              <Badge
-                bg={colors.primaryBlue}
-                color="white"
-                px={3}
-                py={1}
-                borderRadius="full"
-                fontSize="sm"
-              >
-                {item.year}
-              </Badge>
-              <Heading as="h3" size={isMobile ? "sm" : "md"} color={colors.primaryBlue}>
-                {item.title}
-              </Heading>
-            </HStack>
-            <Text fontSize={isMobile ? "sm" : "md"} lineHeight="1.7" color="gray.700">
-              {item.description}
-            </Text>
-          </Box>
-        ))}
-      </VStack>
+      <HistoryCarousel milestones={milestones} />
 
       <Box
-        maxW="900px"
+        maxW="100%"
         mx="auto"
         w="100%"
-        bg="white"
-        borderRadius="md"
+        bg="rgba(24, 32, 60, 0.45)"
+        borderRadius="8px"
         p={isMobile ? 4 : 6}
-        boxShadow="sm"
+        backdropFilter="blur(10px)"
+        border="1px solid rgba(180, 206, 239, 0.22)"
       >
-        <Heading as="h3" size="md" mb={4} color={colors.primaryBlue}>
+        <Heading as="h3" size="md" mb={4} color="white">
           Research roots: UBRI at KU
         </Heading>
 

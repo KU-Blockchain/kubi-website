@@ -71,6 +71,9 @@ const SubscribeForm = () => {
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
                             placeholder="Enter your first name"
+                            bg="white"
+                            color="#152238"
+                            borderRadius="12px"
                         />
                     </FormControl>
                     <FormControl isRequired>
@@ -80,6 +83,9 @@ const SubscribeForm = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Enter your email"
+                            bg="white"
+                            color="#152238"
+                            borderRadius="12px"
                         />
                     </FormControl>
                     <Button 

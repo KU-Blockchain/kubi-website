@@ -72,7 +72,10 @@ export default function UnsubscribeForm() {
             { isMobile ? (
                 <Card 
                 p={0}
-                style={{borderRadius: "0px", backgroundColor: colors.headerBackground, color: "white"}}
+                bg="rgba(24, 32, 60, 0.45)"
+                color="white"
+                border="1px solid rgba(180, 206, 239, 0.22)"
+                _hover={{ transform: "none" }}
                 id="newsletter"
                 >
                     <CardBody>
@@ -113,7 +116,10 @@ export default function UnsubscribeForm() {
             ) : (
                 <Card 
                     p={0}
-                    style={{borderRadius: "0px", backgroundColor: colors.headerBackground, color: "white"}}
+                    bg="rgba(24, 32, 60, 0.45)"
+                    color="white"
+                    border="1px solid rgba(180, 206, 239, 0.22)"
+                    _hover={{ transform: "none" }}
                     id="newsletter"
                 >
                     <HStack>

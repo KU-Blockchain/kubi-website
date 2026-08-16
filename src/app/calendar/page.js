@@ -1,27 +1,28 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Box, Text, Center, Stack, Card, CardBody, CardFooter, Button, Link, Image, Heading, HStack, Flex, VStack } from "@chakra-ui/react";
+import React from "react";
+import { Box, Center, Stack } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
-import { useLayout } from "@/contexts/LayoutContext";
-import { BsGithub, BsLinkedin, BsCalendar2WeekFill, BsFillCupHotFill, BsFillFloppyFill, BsFillDiagram3Fill, BsDiscord, BsFillEnvelopeFill } from 'react-icons/bs';
 
 export default function ProjectsPage() {
-  const isMobile = useLayout();
-
   return (
-    <>
-        <Box>
-            <WebpageHeading heading={"Calendar"} />
-            <Text mt={-3} mb={7} textAlign="center" px={20}>Promoting blockchain education and adoption at the University of Kansas.</Text>
+    <Box>
+      <WebpageHeading heading={"Calendar"} subtitle="Promoting blockchain education and adoption at the University of Kansas." />
 
-            <Stack spacing={5}>
-                <Center>
-                <iframe src="https://embed.styledcalendar.com/#MjFRXlTG1mAbqA5XgGxc" title="Styled Calendar" class="styled-calendar-container" style={{width:"95%", border:"none"}} data-cy="calendar-embed-iframe"></iframe>
-                <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
-                </Center>
-            </Stack>
-
-        </Box>
-    </>
+      <Stack spacing={5}>
+        <Center>
+          <Box
+            w="100%"
+            bg="rgba(24, 32, 60, 0.45)"
+            borderRadius="8px"
+            overflow="hidden"
+            border="1px solid rgba(180, 206, 239, 0.22)"
+            p={3}
+          >
+            <iframe src="https://embed.styledcalendar.com/#MjFRXlTG1mAbqA5XgGxc" title="Styled Calendar" className="styled-calendar-container" style={{width:"100%", border:"none", minHeight: "640px"}} data-cy="calendar-embed-iframe"></iframe>
+            <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+          </Box>
+        </Center>
+      </Stack>
+    </Box>
   );
 }

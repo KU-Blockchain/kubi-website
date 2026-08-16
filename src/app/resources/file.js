@@ -72,9 +72,9 @@ export default function ResearchPage() {
                   {tavelDiaries.map(diary => (
                     <Card
 
-                      borderRadius="20px"
-                      borderWidth={0.5}
-                      borderColor='gray.500'
+                  borderRadius="8px"
+                  borderWidth={1}
+                  borderColor='rgba(255, 255, 255, 0.1)'
                       //maxWidth={300}
                       key={diary.id}
                     >

@@ -1,11 +1,11 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import SolidColorButton from "@/components/SolidColorButton";
 import styles from "@/styles/Navbar.module.css";
-import { Image } from "@chakra-ui/react";
-import { Button, Box, Center, Img , Text, IconButton, Icon, Flex, HStack, VStack } from "@chakra-ui/react";
+import { Image, Box, Text, IconButton, Flex, HStack, VStack, Container } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { BsGithub, BsLinkedin, BsPerson, BsDiscord, BsFillEnvelopeFill, BsTwitterX } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsDiscord, BsFillEnvelopeFill, BsTwitterX } from 'react-icons/bs';
 import { HamburgerIcon, SmallCloseIcon } from '@chakra-ui/icons';
 import {
     Menu,
@@ -13,6 +13,8 @@ import {
     MenuList,
     MenuItem,
   } from '@chakra-ui/react'
+import { colors } from "@/styles/theme.js";
+import SiteBackdrop from "@/components/ui/SiteBackdrop";
 
 const navItems = [
   { path: '/about', title: 'About' },
@@ -24,14 +26,15 @@ const navItems = [
 
 const Layout = createContext();
 
-const Navbar = ({ isMobile }) => {
+const Navbar = ({ isMobile, isHome }) => {
+    const pathname = usePathname();
 
     return (
-        <nav className={styles.navbar}>
+        <nav className={`${styles.navbar} ${styles.navbarHome}`}>
             <Link href="/">
                 <Image
                 src="/images/WebsiteAssets/KUBI_Logos/kubi_white_logo.png"
-                width="110px"
+                width="96px"
                 alt="KUBI Logo"
                 />
             </Link>
@@ -45,16 +48,27 @@ const Navbar = ({ isMobile }) => {
                                 as={IconButton}
                                 icon={isOpen ? <SmallCloseIcon color="white" boxSize={5}/> : <HamburgerIcon color="white" />}
                                 variant='outline'
-                                borderWidth={0.5}
-                                borderColor='gray.500'
-                                _hover={{ bg: 'gray.500'}}
-                                _expanded={{ bg: 'gray.500'}}
+                                borderWidth={1}
+                                borderColor='whiteAlpha.400'
+                                _hover={{ bg: 'whiteAlpha.200'}}
+                                _expanded={{ bg: 'whiteAlpha.200'}}
                             />
                             <MenuList
                                 bg='white'
+                                borderColor={colors.steel}
+                                borderRadius="16px"
+                                py={2}
                             >
                                 {navItems.map(item => (
-                                    <MenuItem key={item.title} as={Link} bg="white" _hover={{ bg: 'gray.400' }} href={item.path}>
+                                    <MenuItem
+                                      key={item.title}
+                                      as={Link}
+                                      bg="white"
+                                      color={colors.navy}
+                                      fontWeight={pathname === item.path ? "700" : "500"}
+                                      _hover={{ bg: colors.ice }}
+                                      href={item.path}
+                                    >
                                     {item.title}
                                     </MenuItem>
                                 ))}
@@ -66,7 +80,10 @@ const Navbar = ({ isMobile }) => {
             <div className={styles.rightMenu}>
                 {navItems.map(item => (
                     <Link key={item.title} href={item.path}>
-                    <SolidColorButton title={item.title} />
+                    <SolidColorButton
+                      title={item.title}
+                      className={pathname === item.path ? styles.navActive : ""}
+                    />
                     </Link>
                 ))}
             </div>
@@ -76,40 +93,81 @@ const Navbar = ({ isMobile }) => {
 }
 
 const Footer = ({ isMobile }) => {
-
     return (
         <footer>
-            <Flex py={20} justifyContent="Center" maxWidth="100%">
+            <Box
+              mt={0}
+              bg="transparent"
+              color="white"
+              borderTop="1px solid rgba(255,255,255,0.08)"
+              position="relative"
+              zIndex={1}
+              px={isMobile ? 4 : "1.25in"}
+            >
+            <Container maxW="100%" px={0} py={isMobile ? 10 : 14}>
                 <motion.div initial={{ opacity: 0}} whileInView={{ opacity: 1 }}>
-                <VStack spacing={5}>
-                    <Image width="150" height="150" alt="KUBI Logo" src="/images/WebsiteAssets/KUBI_Logos/KU-Blockchain-logo.svg"/>
-                    <HStack spacing={5}>
-                    <Link href="https://github.com/KU-Blockchain">
-                        <IconButton variant='outline' colorScheme='#23406D' aria-label="Github" icon={<BsGithub style={{ color: "#23406D" }} />} />
-                    </Link>
-                    <Link href="https://www.linkedin.com/company/kublockchain/">
-                        <IconButton variant='outline' colorScheme='#23406D' aria-label="Linkedin" icon={<BsLinkedin />} />
-                    </Link>
-                    <Link href="https://x.com/kublockchain">
-                        <IconButton variant='outline' colorScheme='#23406D' aria-label="Twitter" icon={<BsTwitterX />} />
-                    </Link>
-                    <Link href="https://discord.gg/GAznpHUzny">
-                        <IconButton variant='outline' colorScheme='#23406D' aria-label="Discord" icon={<BsDiscord />} />
-                    </Link>
-                    <Link href="mailto:ku.blockchain.institute@gmail.com">
-                        <IconButton variant='outline' colorScheme='#23406D' aria-label="Email" icon={<BsFillEnvelopeFill />} />
-                    </Link>
-                    </HStack>
-                    <Text mx={10} align="center">Made with 🔥 by the University of Kansas Blockchain Institute</Text>
-                </VStack> 
+                <Flex
+                  direction={isMobile ? "column" : "row"}
+                  justify="space-between"
+                  align={isMobile ? "center" : "flex-start"}
+                  gap={10}
+                  textAlign={isMobile ? "center" : "left"}
+                >
+                    <VStack spacing={4} align={isMobile ? "center" : "flex-start"} maxW="320px">
+                        <Image width="120px" alt="KUBI Logo" src="/images/WebsiteAssets/KUBI_Logos/kubi_white_logo.png"/>
+                        <Text color={colors.steel} fontSize="sm" lineHeight="1.7">
+                          Student-led blockchain research, education, and development at the University of Kansas.
+                        </Text>
+                    </VStack>
+
+                    <VStack spacing={3} align={isMobile ? "center" : "flex-start"}>
+                        <Text fontWeight="700" letterSpacing="0.08em" fontSize="xs" textTransform="uppercase" color={colors.steel}>
+                          Explore
+                        </Text>
+                        {navItems.map((item) => (
+                          <Link key={item.path} href={item.path}>
+                            <Text _hover={{ color: "white" }} color={colors.ice} fontSize="sm">{item.title}</Text>
+                          </Link>
+                        ))}
+                    </VStack>
+
+                    <VStack spacing={4} align={isMobile ? "center" : "flex-start"}>
+                        <Text fontWeight="700" letterSpacing="0.08em" fontSize="xs" textTransform="uppercase" color={colors.steel}>
+                          Connect
+                        </Text>
+                        <HStack spacing={3}>
+                            <Link href="https://github.com/KU-Blockchain">
+                                <IconButton variant='outline' borderColor="whiteAlpha.400" color="white" _hover={{ bg: colors.blue, borderColor: colors.blue }} aria-label="Github" icon={<BsGithub />} />
+                            </Link>
+                            <Link href="https://www.linkedin.com/company/kublockchain/">
+                                <IconButton variant='outline' borderColor="whiteAlpha.400" color="white" _hover={{ bg: colors.blue, borderColor: colors.blue }} aria-label="Linkedin" icon={<BsLinkedin />} />
+                            </Link>
+                            <Link href="https://x.com/kublockchain">
+                                <IconButton variant='outline' borderColor="whiteAlpha.400" color="white" _hover={{ bg: colors.blue, borderColor: colors.blue }} aria-label="Twitter" icon={<BsTwitterX />} />
+                            </Link>
+                            <Link href="https://discord.gg/GAznpHUzny">
+                                <IconButton variant='outline' borderColor="whiteAlpha.400" color="white" _hover={{ bg: colors.blue, borderColor: colors.blue }} aria-label="Discord" icon={<BsDiscord />} />
+                            </Link>
+                            <Link href="mailto:ku.blockchain.institute@gmail.com">
+                                <IconButton variant='outline' borderColor="whiteAlpha.400" color="white" _hover={{ bg: colors.blue, borderColor: colors.blue }} aria-label="Email" icon={<BsFillEnvelopeFill />} />
+                            </Link>
+                        </HStack>
+                    </VStack>
+                </Flex>
+                <Text mt={10} color={colors.steel} fontSize="sm" align="center">
+                  Made with 🔥 by the University of Kansas Blockchain Institute
+                </Text>
                 </motion.div>
-            </Flex>
+            </Container>
+            </Box>
         </footer>
     );
 }
 
 export const LayoutProvider = ({ children }) => {
     const [isMobile, setIsMobile] = useState(false);
+    const pathname = usePathname();
+    const isHome = pathname === "/";
     
     useEffect(() => {
         const handleResize = () => {
@@ -126,9 +184,18 @@ export const LayoutProvider = ({ children }) => {
     
     return (
         <Layout.Provider value={isMobile}>
-            <Navbar isMobile={isMobile} />
+            <SiteBackdrop />
+            <Navbar isMobile={isMobile} isHome={isHome} />
 
-            <Box m="auto" {...isMobile ? {p: 5} : { px: 20, py: 5 }}>
+            <Box
+              position="relative"
+              zIndex={1}
+              minH={isHome ? "auto" : "70vh"}
+              w="100%"
+              {...(isHome
+                ? { p: 0 }
+                : { px: isMobile ? 4 : "1.25in", pt: isMobile ? "110px" : "120px", pb: 10 })}
+            >
                 {children}
             </Box>
 

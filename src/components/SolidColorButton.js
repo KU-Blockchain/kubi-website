@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "@chakra-ui/react";
 import navStyles from "@/styles/Navbar.module.css";
-const OutlineButton = ({ title, onClick, link, textColor = "white" }) => {
+
+const OutlineButton = ({ title, onClick, link, textColor = "white", className = "" }) => {
+  const combinedClass = `${navStyles.button} ${className}`.trim();
+
   if (link) {
     return (
       <Link
-        className={navStyles.buttonLink}
+        className={`${navStyles.buttonLink} ${className}`.trim()}
         href={link}
         style={{
           color: textColor,
         }}
-        
       >
         {title}
       </Link>
@@ -19,38 +21,13 @@ const OutlineButton = ({ title, onClick, link, textColor = "white" }) => {
 
   if (onClick && typeof onClick === "function") {
     return (
-      <button className={navStyles.button} onClick={onClick}>
+      <button className={combinedClass} onClick={onClick}>
         {title}
       </button>
     );
   }
 
-  return <button className={navStyles.button}>{title}</button>;
+  return <button className={combinedClass}>{title}</button>;
 };
 
 export default OutlineButton;
-const styles = {
-  button: {
-    borderRadius: "8px",
-    padding: "8px 16px",
-    backgroundColor: "#0051ba",
-    color: "red",
-    cursor: "pointer",
-    "&:hover": {
-      backgroundColor: "black",
-      color: "white",
-    },
-  },
-  buttonLink: {
-    display: "inline-block",
-    borderRadius: "8px",
-    padding: "8px 16px",
-    color: "white",
-    cursor: "pointer",
-    textDecoration: "none",
-
-    "&:hover": {
-      color: "white",
-    },
-  },
-};

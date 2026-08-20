@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import WebpageHeading from "@/components/PageHeading";
 import { useLayout } from "@/contexts/LayoutContext";
+import { colors } from "@/styles/theme.js";
 
 const DAO_HOME_URL = "https://dao.kublockchain.com/home/";
 
@@ -41,8 +42,8 @@ export default function DaoPage() {
       <Heading size="lg" mb={4}>
         About
       </Heading>
-      <Text mb={6}>{aboutText}</Text>
-      <Button size="md" as={Link} href={DAO_HOME_URL} isExternal>
+      <Text mb={6} lineHeight="1.75">{aboutText}</Text>
+      <Button size="md" as={Link} href={DAO_HOME_URL} isExternal variant="accent" _hover={{ textDecoration: "none" }}>
         Access the DAO
       </Button>
     </Flex>
@@ -70,24 +71,24 @@ export default function DaoPage() {
       <WebpageHeading heading="The KUBI DAO" />
 
       <Stack spacing={8}>
-        <Card borderRadius="20px" p={5}>
+        <Card p={0}>
           {isMobile ? (
-            <VStack spacing={4} align="stretch">
+            <VStack spacing={0} align="stretch">
               {daoImage}
-              <CardBody>{aboutContent}</CardBody>
+              <CardBody p={6}>{aboutContent}</CardBody>
             </VStack>
           ) : (
-            <HStack align="stretch">
+            <HStack align="stretch" spacing={0}>
               {daoImage}
-              <CardBody display="flex" alignItems="center" justifyContent="center">
+              <CardBody display="flex" alignItems="center" justifyContent="center" p={8}>
                 {aboutContent}
               </CardBody>
             </HStack>
           )}
         </Card>
 
-        <Card borderRadius="20px" p={5}>
-          <CardBody>
+        <Card p={isMobile ? 5 : 8}>
+          <CardBody p={0}>
             <Flex
               direction={isMobile ? "column" : "row"}
               align="center"
@@ -97,12 +98,12 @@ export default function DaoPage() {
                 <Heading size="lg" mb={4}>
                   How to Use the DAO
                 </Heading>
-                <OrderedList spacing={3} mb={6}>
+                <OrderedList spacing={3} mb={6} color={colors.ice}>
                   {instructions.map((step) => (
-                    <ListItem key={step}>{step}</ListItem>
+                    <ListItem key={step} lineHeight="1.7">{step}</ListItem>
                   ))}
                 </OrderedList>
-                <Button size="md" as={Link} href="https://docs.kublockchain.com/" isExternal>
+                <Button size="md" as={Link} href="https://docs.kublockchain.com/" isExternal _hover={{ textDecoration: "none" }}>
                   Learn more
                 </Button>
               </Box>

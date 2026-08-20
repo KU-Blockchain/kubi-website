@@ -43,6 +43,7 @@ export default function MembershipPage() {
 
       {isMobile ? (
         <VStack spacing={10} align="stretch">
+          <Card p={6} _hover={{ transform: "none" }}>
           <VStack spacing={3}>
             <Text fontSize="2xl" align="center" fontWeight="bold">
               Steps to Join KUBI:
@@ -50,15 +51,16 @@ export default function MembershipPage() {
             <Text fontSize="xl" align="center" fontWeight="bold">
               1. Join our Discord server
             </Text>
-            <Button as="a" href="https://discord.gg/GAznpHUzny" target="_blank">
+            <Button as="a" href="https://discord.gg/GAznpHUzny" target="_blank" variant="accent">
               Discord
             </Button>
             <Text fontSize="xl" align="center" fontWeight="bold">
-              2. Come to our <Link href="/events">next meeting!</Link>
+              2. Come to our <Link href="/events" color={colors.blue} fontWeight="800">next meeting!</Link>
             </Text>
           </VStack>
+          </Card>
 
-          <Card p={0}>
+          <Card p={0} bg="rgba(24, 32, 60, 0.45)" color="white" border="1px solid rgba(180, 206, 239, 0.22)" _hover={{ transform: "none" }}>
             <CardBody>
               <Flex alignItems="center" direction="column" justify="center" h="100%">
                 <Heading size="lg" mb={2} textAlign="center">
@@ -106,6 +108,7 @@ export default function MembershipPage() {
       ) : (
         <Flex gap={10} align="stretch" mb={10}>
           <VStack spacing={8} align="stretch" flex="1.15">
+            <Card p={6} _hover={{ transform: "none" }}>
             <VStack spacing={3}>
               <Text fontSize="3xl" align="center" fontWeight="bold">
                 Steps to Join KUBI:
@@ -113,23 +116,23 @@ export default function MembershipPage() {
               <Text fontSize="2xl" align="center" fontWeight="bold">
                 1. Join our Discord server
               </Text>
-              <Button as="a" href="https://discord.gg/GAznpHUzny" target="_blank">
+              <Button as="a" href="https://discord.gg/GAznpHUzny" target="_blank" variant="accent">
                 Discord
               </Button>
               <Text fontSize="2xl" align="center" fontWeight="bold">
-                2. Come to our <Link href="/events">next meeting!</Link>
+                2. Come to our <Link href="/events" color={colors.blue} fontWeight="800">next meeting!</Link>
               </Text>
             </VStack>
+            </Card>
 
             <Card
               p={0}
               flex="1"
               display="flex"
-              style={{
-                borderRadius: "0px",
-                backgroundColor: colors.headerBackground,
-                color: "white",
-              }}
+              bg="rgba(24, 32, 60, 0.45)"
+              color="white"
+              border="1px solid rgba(180, 206, 239, 0.22)"
+              _hover={{ transform: "none" }}
               id="newsletter"
             >
               <HStack
@@ -216,7 +219,7 @@ export default function MembershipPage() {
           size={isMobile ? "lg" : "xl"}
           textAlign="center"
           mb={6}
-          color={colors.primaryBlue}
+          color="white"
         >
           Meet the Community
         </Heading>
@@ -231,8 +234,8 @@ export default function MembershipPage() {
                 w="100%"
                 maxH="260px"
                 objectFit="cover"
-                borderRadius="lg"
-                boxShadow="md"
+                borderRadius="18px"
+                boxShadow="0 12px 28px rgba(11, 14, 20, 0.08)"
               />
             ))}
           </VStack>
@@ -242,9 +245,9 @@ export default function MembershipPage() {
               <Box
                 key={photo.src}
                 overflow="hidden"
-                borderRadius="lg"
-                boxShadow="md"
-                bg="white"
+                borderRadius="8px"
+                boxShadow="0 12px 28px rgba(0, 0, 0, 0.28)"
+                bg="rgba(24, 32, 60, 0.45)"
                 transition="transform 0.25s ease"
                 _hover={{ transform: "translateY(-6px)" }}
               >

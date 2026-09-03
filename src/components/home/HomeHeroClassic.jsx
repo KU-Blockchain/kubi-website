@@ -77,7 +77,7 @@ export default function HomeHeroClassic() {
 
           <Flex gap={4} wrap="wrap" justify={isMobile ? "center" : "flex-start"} pt={2}>
             <Button as={Link} href="/membership" variant="accent" size="lg" _hover={{ textDecoration: "none" }}>
-              Join KUBI
+              Join Kansas Blockchain
             </Button>
             <Button as={Link} href="/projects" variant="outline" size="lg" color="white" borderColor="whiteAlpha.600" _hover={{ bg: "whiteAlpha.200", textDecoration: "none" }}>
               See our work

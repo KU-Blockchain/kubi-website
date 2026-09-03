@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { colors } from "@/styles/theme.js";
 import { useLayout } from "@/contexts/LayoutContext";
-import HistoryCarousel from "./HistoryCarousel";
+import HistoryTimeline from "./HistoryTimeline";
 
 const milestones = [
   {
@@ -32,25 +32,25 @@ const milestones = [
     year: "2022",
     title: "Student research initiative expands",
     description:
-      "KUBI launched the KU Blockchain Research Initiative to give members structured learning opportunities, faculty and peer mentorship, technical help, and a path to funding for hands-on blockchain projects.",
+      "Kansas Blockchain launched the KU Blockchain Research Initiative to give members structured learning opportunities, faculty and peer mentorship, technical help, and a path to funding for hands-on blockchain projects.",
   },
   {
     year: "2023–2024",
     title: "DAO and interdisciplinary projects",
     description:
-      "Members built the KUBI DAO for tasks, learning rewards, and on-chain club governance—including elections. In the same period, KUBI students contributed to interdisciplinary work such as the Spencer Museum of Art blockchain collaboration.",
+      "Members built the Kansas Blockchain DAO for tasks, learning rewards, and on-chain club governance—including elections. In the same period, Kansas Blockchain students contributed to interdisciplinary work such as the Spencer Museum of Art blockchain collaboration.",
   },
   {
     year: "2024",
     title: "Kansas Blockchain Fellowship launches",
     description:
-      "KUBI students launched the Kansas Blockchain Fellowship, a seven-week summer scholarship program and talent incubator designed to prepare Midwest students for careers in blockchain and web3.",
+      "Kansas Blockchain students launched the Kansas Blockchain Fellowship, a seven-week summer scholarship program and talent incubator designed to prepare Midwest students for careers in blockchain and web3.",
   },
   {
     year: "2025–2026",
     title: "Midwest Block-a-Thon grows",
     description:
-      "KUBI hosted the first Midwest Block-a-Thon in 2025 and followed with the second annual hackathon in 2026, expanding regional Web3 education alongside cohort capstones and continued DAO participation.",
+      "Kansas Blockchain hosted the first Midwest Block-a-Thon in 2025 and followed with the second annual hackathon in 2026, expanding regional Web3 education alongside cohort capstones and continued DAO participation.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function OurHistory() {
         </Text>
       </Box>
 
-      <HistoryCarousel milestones={milestones} />
+      <HistoryTimeline milestones={milestones} />
 
       <Box
         maxW="100%"

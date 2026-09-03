@@ -33,9 +33,9 @@ const Navbar = ({ isMobile, isHome }) => {
         <nav className={`${styles.navbar} ${styles.navbarHome}`}>
             <Link href="/">
                 <Image
-                src="/images/WebsiteAssets/KUBI_Logos/kubi_white_logo.png"
+                src="/images/WebsiteAssets/KansasBlockchain_Logos/kansas-blockchain-logo-white.png"
                 width="96px"
-                alt="KUBI Logo"
+                alt="Kansas Blockchain Logo"
                 />
             </Link>
 
@@ -104,34 +104,33 @@ const Footer = ({ isMobile }) => {
               zIndex={1}
               px={isMobile ? 4 : "1.25in"}
             >
-            <Container maxW="100%" px={0} py={isMobile ? 10 : 14}>
+            <Container maxW="100%" px={0} py={isMobile ? 8 : 10}>
                 <motion.div initial={{ opacity: 0}} whileInView={{ opacity: 1 }}>
                 <Flex
                   direction={isMobile ? "column" : "row"}
                   justify="space-between"
-                  align={isMobile ? "center" : "flex-start"}
-                  gap={10}
+                  align={isMobile ? "center" : "center"}
+                  gap={isMobile ? 8 : 10}
                   textAlign={isMobile ? "center" : "left"}
                 >
-                    <VStack spacing={4} align={isMobile ? "center" : "flex-start"} maxW="320px">
-                        <Image width="120px" alt="KUBI Logo" src="/images/WebsiteAssets/KUBI_Logos/kubi_white_logo.png"/>
-                        <Text color={colors.steel} fontSize="sm" lineHeight="1.7">
+                    <Flex
+                      direction="row"
+                      align="center"
+                      gap={4}
+                      maxW={isMobile ? "100%" : "480px"}
+                    >
+                        <Image
+                          width="96px"
+                          flexShrink={0}
+                          alt="Kansas Blockchain Logo"
+                          src="/images/WebsiteAssets/KansasBlockchain_Logos/kansas-blockchain-logo-white.png"
+                        />
+                        <Text color={colors.steel} fontSize="sm" lineHeight="1.6">
                           Student-led blockchain research, education, and development at the University of Kansas.
                         </Text>
-                    </VStack>
+                    </Flex>
 
-                    <VStack spacing={3} align={isMobile ? "center" : "flex-start"}>
-                        <Text fontWeight="700" letterSpacing="0.08em" fontSize="xs" textTransform="uppercase" color={colors.steel}>
-                          Explore
-                        </Text>
-                        {navItems.map((item) => (
-                          <Link key={item.path} href={item.path}>
-                            <Text _hover={{ color: "white" }} color={colors.ice} fontSize="sm">{item.title}</Text>
-                          </Link>
-                        ))}
-                    </VStack>
-
-                    <VStack spacing={4} align={isMobile ? "center" : "flex-start"}>
+                    <VStack spacing={3} align={isMobile ? "center" : "flex-end"}>
                         <Text fontWeight="700" letterSpacing="0.08em" fontSize="xs" textTransform="uppercase" color={colors.steel}>
                           Connect
                         </Text>
@@ -154,8 +153,8 @@ const Footer = ({ isMobile }) => {
                         </HStack>
                     </VStack>
                 </Flex>
-                <Text mt={10} color={colors.steel} fontSize="sm" align="center">
-                  Made with 🔥 by the University of Kansas Blockchain Institute
+                <Text mt={6} color={colors.steel} fontSize="sm" align="center">
+                  Made with 🔥 by Kansas Blockchain
                 </Text>
                 </motion.div>
             </Container>

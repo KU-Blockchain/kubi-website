@@ -14,7 +14,7 @@ export default function ProjectsPage() {
     },
     {
       title: "Cohort Capstone",
-      description: "The KU Blockchain Institute (KUBI) capstone projects are final decentralized application (dApp) builds created by cohort students to finish their experiential learning programs. Fellows present these practical Web3 and digital asset solutions at end-of-cohort showcase ceremonies.",
+      description: "The Kansas Blockchain Institute capstone projects are final decentralized application (dApp) builds created by cohort students to finish their experiential learning programs. Fellows present these practical Web3 and digital asset solutions at end-of-cohort showcase ceremonies.",
       preview_image: "/images/projectImages/cohort-capstone.png",
       link: "https://fall-2025-cohort-capstones.devpost.com/project-gallery",
     },
@@ -29,6 +29,14 @@ export default function ProjectsPage() {
       description: "This project is executed in collaboration with the Spencer Museum of Art, investigating the social implications of attacks on democracy and the parallels between consensus in computing and privilege in society. The initial goal of this project was to model a 51% attack on an Ethereum Classic testnet to create media for the collaborating artists to manipulate for a public installation to take place in 2023. The focus later developed towards intervening in EIP forums as an examination of social structures and Ethereum.",
       preview_image: "/images/projectImages/spencer.png",
       link: "https://i2s-research.ku.edu/university-kansas-and-ubri",
+    },
+    {
+      title: "The Kansas Blockchain DAO",
+      description:
+        "The Kansas Blockchain DAO offers a unique model for collaboration, incentives, and on-chain club governance. Members earn KUBIX through tasks, participate in voting and elections, and help shape how the organization runs. Built on Gnosis mainnet and maintained by Kansas Blockchain alumni.",
+      preview_image: "/images/projectImages/dao-home.png",
+      link: "/dao",
+      isExternal: false,
     },
     {
       title: "NFT Gallery Tutorial",

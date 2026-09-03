@@ -30,34 +30,29 @@ export default function EventsPage() {
 
   const events = useMemo(() => [
     {
+      image: "/images/eventimages/paris-blockchain-week-2025.jpg",
+      text: "Kansas Blockchain members spent eight days in Paris for Paris Blockchain Week 2025, one of the world’s leading gatherings for the Web3 community. Throughout April, the team attended talks, connected with founders and industry leaders, and explored the ideas and technologies shaping the future of blockchain.",
+      heading: "Paris Blockchain Week 2025"
+    },
+    {
+      image: "/images/eventimages/ethglobal-san-francisco-2024.jpg",
+      text: "In October 2024, Kansas Blockchain members traveled to San Francisco for ETHGlobal. Over a weekend of building and collaboration, the team joined workshops, connected with the Ethereum community, and explored new ideas in Web3 and open-source technology.",
+      heading: "ETHGlobal San Francisco 2024"
+    },
+    {
       image: "/images/eventimages/ethdenver2026.png",
-      text: "The world’s largest and longest-running Ethereum #BUIDLathon, held in Denver, Colorado. ETHDenver brings together developers, founders, and innovators from around the globe for a week of hackathons, workshops, talks, and networking around open-source blockchain technology. KUBI members attended the 2026 “New #BUIDL City” edition to learn, build, and connect with the broader Ethereum community.",
+      text: "The world’s largest and longest-running Ethereum #BUIDLathon, held in Denver, Colorado. ETHDenver brings together developers, founders, and innovators from around the globe for a week of hackathons, workshops, talks, and networking around open-source blockchain technology. Kansas Blockchain members attended the 2026 “New #BUIDL City” edition to learn, build, and connect with the broader Ethereum community.",
       heading: "ETHDenver 2026"
     },
     {
       image: "/images/eventimages/university-blockchain-conference-2025.png",
-      text: "KUBI represented the University of Kansas at the University Blockchain Conference 2025, joining student blockchain organizations and industry sponsors from across the country. Members networked with leading Web3 companies, attended talks, and showcased the work coming out of our community in the Midwest.",
+      text: "Kansas Blockchain represented the University of Kansas at the University Blockchain Conference 2025, joining student blockchain organizations and industry sponsors from across the country. Members networked with leading Web3 companies, attended talks, and showcased the work coming out of our community in the Midwest.",
       heading: "University Blockchain Conference 2025"
     },
     {
       image: "/images/eventimages/ethdenver2024.jpg",
       text: "The premier Ethereum event in Denver, Colorado, bringing together blockchain enthusiasts, developers, and innovators worldwide. Explore workshops, hackathons, and networking opportunities while immersing yourself in the latest in decentralized technology. Join a vibrant community driving the future of blockchain innovation.",
       heading: "ETHDenver 2024"
-    },
-    {
-      image: "/images/eventimages/hacknight.JPG",
-      text: "This semester's hacknight was a presentation from Tej (VP Engineering) and Micah (Director of Development) about tea.xyz, a platform meant to incentivize and reward open-source contributions, and Internet Computer, a blockchain-based cloud computing platform.",
-      heading: "KUBI HackNight"
-    },
-    {
-      image: "/images/eventimages/blocktalkandbreakfast.jpg",
-      text: "Blocktalk and Breakfast is a bi-semesterly gathering where members of our community come together to delve into the forefront of blockchain technology while sharing a meal. This event warmly welcomes all students and faculty to participate in enlightening discussions and enjoyable dining experiences.",
-      heading: "BlockTalk and Breakfast"
-    },
-    {
-      image: "/images/eventimages/dragonchain.jpg",
-      text: "Visited by Joe Roets, the founder of DragonChain, this event was a unique opportunity to learn about the latest in blockchain technology from an industry expert. Joe shared his insights on the future of blockchain and the potential of DragonChain to revolutionize the industry.",
-      heading: "Industry Highlight: DragonChain"
     },
   ], []);
 
@@ -137,7 +132,7 @@ export default function EventsPage() {
           textColor="#D7E5F0"
           borderRadius={0.05}
           scrollEase={0.02}
-          font="bold 28px Clash Display"
+          font="bold 22px Clash Display"
           onSelect={openEvent}
         />
       </Box>

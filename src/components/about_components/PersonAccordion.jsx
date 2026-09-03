@@ -19,7 +19,7 @@ import AccordionGallery from "@/components/ui/AccordionGallery";
 import { colors } from "@/styles/theme.js";
 
 const galleryProps = {
-  trigger: "click",
+  trigger: "hover",
   defaultIndex: 0,
   expandRatio: 0.42,
   height: 520,
@@ -37,6 +37,7 @@ const toItems = (people) =>
   people.map((person) => ({
     image: person.headshot,
     label: person.name,
+    subtitle: person.title,
     alt: `${person.name}, ${person.title}`,
     person,
   }));
@@ -57,7 +58,7 @@ export default function PersonAccordion({ people, rows }) {
         </Box>
       ))}
       <Text mt={3} fontSize="sm" color={colors.steel} textAlign="center">
-        Click a photo to expand it and read their bio.
+        Hover a photo for name and role — click to read their bio.
       </Text>
 
       <Modal isOpen={!!selected} onClose={() => setSelected(null)} size="lg" isCentered>

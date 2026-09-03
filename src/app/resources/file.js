@@ -381,11 +381,11 @@ export default function ResearchPage() {
         {/* <Modal isOpen={isModalOpen}>
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Resources from KUBI</ModalHeader>
+            <ModalHeader>Resources from Kansas Blockchain</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Text>
-                Blockchain can be a confusing topic. Don&apos;t know where to start? KUBI&apos;s got you! <br></br><br></br>You will find plenty of resources here to expand your blockchain knowledge between Block Talks to explain the basics of blockchain, newsletters to highlight important blockchain topics, and articles written by our team to express the use cases of blockchain.
+                Blockchain can be a confusing topic. Don&apos;t know where to start? Kansas Blockchain&apos;s got you! <br></br><br></br>You will find plenty of resources here to expand your blockchain knowledge between Block Talks to explain the basics of blockchain, newsletters to highlight important blockchain topics, and articles written by our team to express the use cases of blockchain.
               </Text>
             </ModalBody>
             <ModalFooter>

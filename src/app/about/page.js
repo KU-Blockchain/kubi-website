@@ -13,12 +13,12 @@ export default function AboutPage() {
 
   return (
     <Box>
-      <WebpageHeading heading={"About KUBI"} />
+      <WebpageHeading heading={"About Kansas Blockchain"} />
 
       <Tabs isFitted={isMobile} variant="unstyled">
         <TabList mb={4} gap={2} flexWrap="wrap" justifyContent="center">
           <Tab px={5} py={2} border="1px solid rgba(180, 206, 239, 0.22)">What We Do</Tab>
-          <Tab px={5} py={2} border="1px solid rgba(180, 206, 239, 0.22)">Executive Team</Tab>
+          <Tab px={5} py={2} border="1px solid rgba(180, 206, 239, 0.22)">VPs and Directors</Tab>
           <Tab px={5} py={2} border="1px solid rgba(180, 206, 239, 0.22)">Advisory Board</Tab>
           <Tab px={5} py={2} border="1px solid rgba(180, 206, 239, 0.22)">Our History</Tab>
         </TabList>
@@ -30,7 +30,7 @@ export default function AboutPage() {
 
           <TabPanel px={0} pt={4} display="flex" flexDirection="column" alignItems="center">
             <Heading as="h2" size="lg" textAlign="center" mb={4}>
-              Current Executive Team
+              VPs and Directors
             </Heading>
             <CurrentExecTeam />
           </TabPanel>

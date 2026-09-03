@@ -18,9 +18,9 @@ const faces = {
   bottom: [B, D, R, S, Y, I, R, S, D],
 };
 
-export default function RubiksCube() {
+export default function RubiksCube({ size = "min(58vw, 448px)" }) {
   return (
-    <div className="my-loader" aria-hidden="true">
+    <div className="my-loader" style={{ "--cube-size": size }} aria-hidden="true">
       <div className="rubiks-cube">
         {Object.entries(faces).map(([face, stickers]) => (
           <div className={`face ${face}`} key={face}>

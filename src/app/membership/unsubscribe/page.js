@@ -162,7 +162,7 @@ export default function UnsubscribeForm() {
                         maxW="50%"
                         paddingRight={4}
                         src="\images\WebsiteAssets\Blockchalk-450.png"
-                        alt="KUBI"
+                        alt="Kansas Blockchain"
                         />
                     </HStack>
                 </Card>

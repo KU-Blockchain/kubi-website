@@ -37,7 +37,38 @@ function FocusCard({ card, index, hovered, setHovered }) {
         h="100%"
         objectFit="cover"
         objectPosition="center"
+        transition="transform 0.3s ease"
+        transform={isActive ? "scale(1.04)" : "scale(1)"}
       />
+
+      <Box
+        position="absolute"
+        inset={0}
+        bg="linear-gradient(180deg, transparent 35%, rgba(10, 10, 12, 0.82) 100%)"
+        pointerEvents="none"
+      />
+
+      <Box
+        position="absolute"
+        left={0}
+        right={0}
+        bottom={0}
+        px={5}
+        py={6}
+        pointerEvents="none"
+        opacity={isActive ? 0 : 1}
+        transition="opacity 0.25s ease"
+      >
+        <Text
+          fontSize={{ base: "xl", md: "2xl" }}
+          fontWeight="500"
+          color="white"
+          letterSpacing="-0.02em"
+        >
+          {card.title}
+        </Text>
+      </Box>
+
       <Box
         position="absolute"
         inset={0}
@@ -49,6 +80,7 @@ function FocusCard({ card, index, hovered, setHovered }) {
         px={5}
         opacity={isActive ? 1 : 0}
         transition="opacity 0.3s ease"
+        pointerEvents="none"
       >
         <Text
           fontSize={{ base: "xl", md: "2xl" }}

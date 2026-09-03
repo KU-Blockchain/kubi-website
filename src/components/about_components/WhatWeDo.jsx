@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { colors } from "@/styles/theme.js";
 import { useLayout } from "@/contexts/LayoutContext";
 import { FocusCards } from "@/components/ui/focus-cards";
@@ -43,13 +43,9 @@ export default function WhatWeDo({ variant = "light" }) {
           fontSize="sm"
           fontWeight="700"
           color={isDark ? colors.cubeGold : colors.royal}
-          mb={2}
         >
           What we do
         </Text>
-        <Heading size={isMobile ? "lg" : "xl"} color="white">
-          Research. Education. Development.
-        </Heading>
       </Box>
 
       <FocusCards cards={cards} />

@@ -20,7 +20,7 @@ const currentExecs = [
     name: "Charlie Doherty",
     shortBio: "Charlie is a Senior in the Honors Program studying Computer Science and Entrepreneurship. Charlie is from Overland Park, Kansas.",
     longBio:
-      "Charlie is a Senior in the Honors Program studying Computer Science and Entrepreneurship. He is from Overland Park, Kansas, and joined KUBI in Fall 2025. Outside of KUBI, Charlie is an Mentor in the Catalyst Accelerator and enjoys tennis and basketball. He is most interested in the economic and social freedoms decentralized applications can provide.",
+      "Charlie is a Senior in the Honors Program studying Computer Science and Entrepreneurship. He is from Overland Park, Kansas, and joined Kansas Blockchain in Fall 2025. Outside of Kansas Blockchain, Charlie is an Mentor in the Catalyst Accelerator and enjoys tennis and basketball. He is most interested in the economic and social freedoms decentralized applications can provide.",
     linkedin: "https://www.linkedin.com/in/charlie-doherty/",
     email: "mailto:charlieedoherty@gmail.com",
   },
@@ -50,7 +50,7 @@ const currentExecs = [
     name: "Alex Perez",
     shortBio: "Alex is a Senior and HSF Scholar majoring in Finance and Business Analytics. He is from Chino Hills, California.",
     longBio:
-      "Alex is a Senior and HSF Scholar majoring in Finance and Business Analytics. Alex joined KUBI his freshman year and previously served as Director of Outreach/Growth. He is primarily interested in how tokenization will modernize traditional finance. Outside of KUBI Alex enjoys playing guitar and watching live music.",
+      "Alex is a Senior and HSF Scholar majoring in Finance and Business Analytics. Alex joined Kansas Blockchain his freshman year and previously served as Director of Outreach/Growth. He is primarily interested in how tokenization will modernize traditional finance. Outside of Kansas Blockchain Alex enjoys playing guitar and watching live music.",
     linkedin: "https://www.linkedin.com/in/alexandro-perez-596128243/",
     email: "mailto:alexandrojperez@gmail.com",
   },

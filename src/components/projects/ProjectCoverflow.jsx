@@ -116,7 +116,12 @@ export default function ProjectCoverflow({ projects }) {
           >
             {current.description}
           </Text>
-          <Button as={Link} href={current.link} isExternal _hover={{ textDecoration: "none" }}>
+          <Button
+            as={Link}
+            href={current.link}
+            isExternal={current.isExternal !== false && !String(current.link).startsWith("/")}
+            _hover={{ textDecoration: "none" }}
+          >
             Learn more
           </Button>
         </Box>

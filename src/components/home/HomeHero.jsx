@@ -169,7 +169,7 @@ export default function HomeHero() {
               transform: "translateY(-1px)",
             }}
           >
-            Join KUBI
+            Join Kansas Blockchain
             <Box as="span" ml={1} display="inline-flex">
               <FiArrowUpRight />
             </Box>

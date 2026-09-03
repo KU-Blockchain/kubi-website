@@ -222,8 +222,17 @@ const AccordionGallery = ({
                 <img src={item.image} alt={item.alt || item.label || ""} draggable="false" />
               </span>
               <span className="ag-panel__overlay" aria-hidden="true" />
+              {item.subtitle ? (
+                <span
+                  className={`ag-panel__person-overlay${isActive ? " ag-panel__person-overlay--visible" : ""}`}
+                  aria-hidden="true"
+                >
+                  <span className="ag-panel__person-name">{item.label}</span>
+                  <span className="ag-panel__person-role">{item.subtitle}</span>
+                </span>
+              ) : null}
             </span>
-            {showLabels && (
+            {showLabels && !item.subtitle && (
               <span className="ag-panel__label" aria-hidden="true">
                 <span
                   className="ag-panel__bar"

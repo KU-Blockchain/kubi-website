@@ -176,3 +176,136 @@ body {
     transform: rotateX(360deg) rotateY(360deg);
   }
 }
+
+/* Blockchain cube network — set HERO_CUBE_VARIANT="classic" in HomeHeroSplit to restore single cube */
+.blockchain-cube-network {
+  position: relative;
+  width: min(48vw, 368px);
+  height: min(48vw, 368px);
+  margin: 0 auto;
+  pointer-events: auto;
+  perspective: 1100px;
+  perspective-origin: 50% 50%;
+  isolation: isolate;
+  transform: translateZ(0);
+  touch-action: none;
+  user-select: none;
+}
+
+.blockchain-cube-network__links {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blockchain-cube-network__line {
+  stroke: rgba(142, 172, 205, 0.38);
+  stroke-width: 0.55;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.blockchain-cube-network__node {
+  position: absolute;
+  z-index: 1;
+  transform: translate3d(-50%, -50%, 0);
+  cursor: grab;
+  touch-action: none;
+  outline: none;
+}
+
+.blockchain-cube-network__node:focus-visible {
+  outline: 2px solid rgba(154, 123, 47, 0.7);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.blockchain-cube-network__node--dragging {
+  z-index: 3;
+  cursor: grabbing;
+}
+
+.blockchain-cube-network--dragging {
+  cursor: grabbing;
+}
+
+.solid-mini-cube {
+  --mini-cube-size: clamp(44px, 11vw, 72px);
+  width: var(--mini-cube-size);
+  height: var(--mini-cube-size);
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.solid-mini-cube__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 0);
+  animation: my-rotateCube 16s linear infinite;
+  animation-delay: var(--mini-spin-delay, 0s);
+}
+
+.solid-mini-cube__face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 1px solid rgba(10, 10, 12, 0.75);
+  box-sizing: border-box;
+}
+
+.solid-mini-cube__face--front {
+  transform: translate3d(0, 0, calc(var(--mini-cube-size) / 2));
+}
+.solid-mini-cube__face--back {
+  transform: rotateY(180deg) translate3d(0, 0, calc(var(--mini-cube-size) / 2));
+}
+.solid-mini-cube__face--left {
+  transform: rotateY(-90deg) translate3d(0, 0, calc(var(--mini-cube-size) / 2));
+}
+.solid-mini-cube__face--right {
+  transform: rotateY(90deg) translate3d(0, 0, calc(var(--mini-cube-size) / 2));
+}
+.solid-mini-cube__face--top {
+  transform: rotateX(90deg) translate3d(0, 0, calc(var(--mini-cube-size) / 2));
+}
+.solid-mini-cube__face--bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, calc(var(--mini-cube-size) / 2));
+}
+
+.blockchain-cube-network--paused .solid-mini-cube__inner {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solid-mini-cube__inner {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .blockchain-cube-network {
+    width: min(90vw, 345px);
+    height: min(90vw, 345px);
+  }
+}
+
+.not-found-cube-bg .blockchain-cube-network {
+  width: min(78vw, 520px);
+  height: min(78vw, 520px);
+}
+
+@media (max-width: 768px) {
+  .not-found-cube-bg .blockchain-cube-network {
+    width: min(92vw, 380px);
+    height: min(92vw, 380px);
+  }
+}

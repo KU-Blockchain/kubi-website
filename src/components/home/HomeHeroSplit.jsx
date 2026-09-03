@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useLayout } from "@/contexts/LayoutContext";
 import RubiksCube from "@/components/RubiksCube";
+import BlockchainCubeNetwork from "@/components/BlockchainCubeNetwork";
+
+// Switch to "classic" to restore the original single Rubik's cube graphic.
+const HERO_CUBE_VARIANT = "network";
 
 const MotionBox = motion(Box);
 const MotionFlex = motion(Flex);
@@ -29,9 +33,9 @@ const sharpButton = {
   fontWeight: "500",
   letterSpacing: "0.04em",
   textTransform: "uppercase",
-  fontSize: "0.78rem",
-  h: "48px",
-  px: 6,
+  fontSize: "0.7rem",
+  h: "38px",
+  px: 5,
   display: "inline-flex",
   alignItems: "center",
   gap: 2,
@@ -50,8 +54,8 @@ export default function HomeHeroSplit() {
       display="flex"
       alignItems="center"
       px={isMobile ? 4 : "1.25in"}
-      pt={isMobile ? "120px" : "108px"}
-      pb={isMobile ? 12 : 8}
+      pt={isMobile ? "110px" : "100px"}
+      pb={isMobile ? 16 : 20}
     >
       <Flex
         w="100%"
@@ -96,8 +100,8 @@ export default function HomeHeroSplit() {
               letterSpacing="-0.035em"
               lineHeight={1.02}
               color="white"
-              fontSize={isMobile ? "2.7rem" : "clamp(3.4rem, 6.4vw, 5.6rem)"}
-              mb={6}
+              fontSize={isMobile ? "2.15rem" : "clamp(2.7rem, 5.1vw, 4.5rem)"}
+              mb={5}
               textAlign={isMobile ? "center" : "left"}
               w="max-content"
               maxW="100%"
@@ -125,10 +129,10 @@ export default function HomeHeroSplit() {
           <MotionBox initial="hidden" animate="show" custom={4} variants={fadeUp}>
             <Text
               color="rgba(215, 229, 240, 0.78)"
-              fontSize={isMobile ? "md" : "lg"}
+              fontSize={isMobile ? "sm" : "md"}
               lineHeight="1.75"
-              maxW="34rem"
-              mb={6}
+              maxW="27rem"
+              mb={5}
             >
               A student-led organization of innovators at the University of Kansas working on open source research, industry-focused events, and technical workshops.
             </Text>
@@ -157,7 +161,7 @@ export default function HomeHeroSplit() {
                 transform: "translateY(-1px)",
               }}
             >
-              Join KUBI
+              Join Kansas Blockchain
               <Box as="span" ml={1} display="inline-flex">
                 <FiArrowUpRight />
               </Box>
@@ -191,7 +195,11 @@ export default function HomeHeroSplit() {
           justifyContent="center"
           w={isMobile ? "100%" : "46%"}
         >
-          <RubiksCube />
+          {HERO_CUBE_VARIANT === "network" ? (
+            <BlockchainCubeNetwork />
+          ) : (
+            <RubiksCube size="min(38.5vw, 296px)" />
+          )}
         </Box>
       </Flex>
     </Box>

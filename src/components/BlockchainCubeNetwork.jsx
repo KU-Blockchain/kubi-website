@@ -102,7 +102,7 @@ export default function BlockchainCubeNetwork() {
   );
 
   const springHome = useCallback(
-    (id, from) => {
+    (id, from, velocity = ZERO) => {
       springRefs.current[id]?.stop?.();
 
       let latestX = from.x;
@@ -123,6 +123,7 @@ export default function BlockchainCubeNetwork() {
         stiffness: 95,
         damping: 14,
         mass: 0.9,
+        velocity: velocity.x,
         onUpdate: (x) => {
           latestX = x;
           syncOffsets({
@@ -138,6 +139,7 @@ export default function BlockchainCubeNetwork() {
         stiffness: 95,
         damping: 14,
         mass: 0.9,
+        velocity: velocity.y,
         onUpdate: (y) => {
           latestY = y;
           syncOffsets({
@@ -173,6 +175,10 @@ export default function BlockchainCubeNetwork() {
       origin: offsetsRef.current[id] || ZERO,
       width: rect.width,
       height: rect.height,
+      lastX: event.clientX,
+      lastY: event.clientY,
+      lastTime: performance.now(),
+      velocity: ZERO,
     };
     setDraggingId(id);
   };
@@ -183,6 +189,18 @@ export default function BlockchainCubeNetwork() {
 
     const dx = ((event.clientX - drag.startX) / drag.width) * 100;
     const dy = ((event.clientY - drag.startY) / drag.height) * 100;
+
+    const now = performance.now();
+    const elapsed = Math.max(now - drag.lastTime, 1);
+    const velocity = {
+      x: Math.max(-85, Math.min(85, (((event.clientX - drag.lastX) / drag.width) * 100 * 1000) / elapsed)),
+      y: Math.max(-85, Math.min(85, (((event.clientY - drag.lastY) / drag.height) * 100 * 1000) / elapsed)),
+    };
+
+    drag.lastX = event.clientX;
+    drag.lastY = event.clientY;
+    drag.lastTime = now;
+    drag.velocity = velocity;
 
     syncOffsets({
       ...offsetsRef.current,
@@ -204,7 +222,7 @@ export default function BlockchainCubeNetwork() {
     const current = offsetsRef.current[drag.id] || ZERO;
     dragRef.current = null;
     setDraggingId(null);
-    springHome(drag.id, current);
+    springHome(drag.id, current, drag.velocity);
   };
 
   return (

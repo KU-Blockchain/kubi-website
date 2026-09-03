@@ -30,6 +30,16 @@ export default function EventsPage() {
 
   const events = useMemo(() => [
     {
+      image: "/images/eventimages/paris-blockchain-week-2025.jpg",
+      text: "Kansas Blockchain members spent eight days in Paris for Paris Blockchain Week 2025, one of the world’s leading gatherings for the Web3 community. Throughout April, the team attended talks, connected with founders and industry leaders, and explored the ideas and technologies shaping the future of blockchain.",
+      heading: "Paris Blockchain Week 2025"
+    },
+    {
+      image: "/images/eventimages/ethglobal-san-francisco-2024.jpg",
+      text: "In October 2024, Kansas Blockchain members traveled to San Francisco for ETHGlobal. Over a weekend of building and collaboration, the team joined workshops, connected with the Ethereum community, and explored new ideas in Web3 and open-source technology.",
+      heading: "ETHGlobal San Francisco 2024"
+    },
+    {
       image: "/images/eventimages/ethdenver2026.png",
       text: "The world’s largest and longest-running Ethereum #BUIDLathon, held in Denver, Colorado. ETHDenver brings together developers, founders, and innovators from around the globe for a week of hackathons, workshops, talks, and networking around open-source blockchain technology. Kansas Blockchain members attended the 2026 “New #BUIDL City” edition to learn, build, and connect with the broader Ethereum community.",
       heading: "ETHDenver 2026"
@@ -122,7 +132,7 @@ export default function EventsPage() {
           textColor="#D7E5F0"
           borderRadius={0.05}
           scrollEase={0.02}
-          font="bold 28px Clash Display"
+          font="bold 22px Clash Display"
           onSelect={openEvent}
         />
       </Box>

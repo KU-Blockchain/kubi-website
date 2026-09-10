@@ -5,7 +5,7 @@ import PersonAccordion from "./PersonAccordion";
 
 const currentExecs = [
   {
-    headshot: "/images/headshots/CalebHite1.jpeg.jpeg",
+    headshot: "/images/headshots/CalebHite.jpg",
     title: "Co-President",
     name: "Caleb Hite",
     shortBio: "Caleb is a Senior Computer Science Student from Shawnee, Kansas. Caleb previously served as the Vice President of Education.",
@@ -15,7 +15,7 @@ const currentExecs = [
     email: "mailto:chite2457@gmail.com",
   },
   {
-    headshot: "/images/headshots/CharlieDoherty.JPG",
+    headshot: "/images/headshots/CharlieDoherty.jpg",
     title: "Co-President",
     name: "Charlie Doherty",
     shortBio: "Charlie is a Senior in the Honors Program studying Computer Science and Entrepreneurship. Charlie is from Overland Park, Kansas.",
@@ -25,7 +25,7 @@ const currentExecs = [
     email: "mailto:charlieedoherty@gmail.com",
   },
   {
-    headshot: "/images/headshots/NischayRawal1.jpeg.jpeg",
+    headshot: "/images/headshots/NischayRawal.jpg",
     title: "Vice President of Engineering",
     name: "Nischay Rawal",
     shortBio: "Nischay Rawal is an Honors Junior and SELF fellow dual majoring in Computer Science and Mathematics.",
@@ -35,7 +35,7 @@ const currentExecs = [
     email: "mailto:nisch.rawal@gmail.com",
   },
   {
-    headshot: "/images/headshots/WolfgangSell1.jpg.jpg",
+    headshot: "/images/headshots/WolfgangSell.jpg",
     title: "Vice President of Education",
     name: "Wolfgang Sell",
     shortBio: "Wolfgang is a SELF Fellow Junior Majoring in Cybersecurity Engineering. He is from Shawnee, Kansas.",
@@ -45,7 +45,7 @@ const currentExecs = [
     email: "mailto:wolfiesell@gmail.com",
   },
   {
-    headshot: "/images/headshots/Alexandro Perez1.jpeg.jpeg",
+    headshot: "/images/headshots/AlexPerez.jpg",
     title: "Vice President of Business",
     name: "Alex Perez",
     shortBio: "Alex is a Senior and HSF Scholar majoring in Finance and Business Analytics. He is from Chino Hills, California.",
@@ -55,7 +55,7 @@ const currentExecs = [
     email: "mailto:alexandrojperez@gmail.com",
   },
   {
-    headshot: "/images/headshots/ShivendiranKabaleeswaran.jpg.jpg",
+    headshot: "/images/headshots/ShivaKabaleeswaran.jpg",
     title: "Director of Engineering",
     name: "Shiva Kabaleeswaran",
     shortBio: "Shiva is a Honors sophomore and SELF Fellow majoring in Cybersecurity Engineering and Data Science. He is from Overland Park, Kansas.",
@@ -65,7 +65,7 @@ const currentExecs = [
     email: "mailto:shivendirankabaleeswaran@ku.edu",
   },
   {
-    headshot: "/images/headshots/WillCalhounCorporatePhoto.jpg.jpg",
+    headshot: "/images/headshots/WillCalhoun.jpg",
     title: "Director of Education",
     name: "Will Calhoun",
     shortBio: "Will Calhoun is a Senior studying Computer Science. He is from Overland Park, Kansas and previously served as the Director of Education.",
@@ -75,7 +75,7 @@ const currentExecs = [
     email: "mailto:will_calhoun@ku.edu",
   },
   {
-    headshot: "/images/headshots/HeetJani.jpg.jpg",
+    headshot: "/images/headshots/HeetJani.jpg",
     title: "Director of Research",
     name: "Heet Jani",
     shortBio: "Heet is an Honors and SELF Fellow sophomore majoring in Computer Science and minoring in Data Science. He is from Dubai, UAE.",
@@ -85,7 +85,7 @@ const currentExecs = [
     email: "mailto:heet2404@gmail.com",
   },
   {
-    headshot: "/images/headshots/AnthonyBlack.jpeg.jpeg",
+    headshot: "/images/headshots/AnthonyBlack.jpg",
     title: "Director of Finance",
     name: "Anthony Black",
     shortBio: "Anthony Black is a Honors Sophomore and in the BLP Program majoring in Finance and Data Science. He is from Roseville, Minnesota.",
@@ -95,7 +95,7 @@ const currentExecs = [
     email: "mailto:anthonyb@ku.edu",
   },
   {
-    headshot: "/images/headshots/JagannathSritinathNair.jpg.jpg",
+    headshot: "/images/headshots/JagannathSritinathNair.jpg",
     title: "Director of Product & Innovation",
     name: "Jagannath Sritinath Nair",
     shortBio: "Jag is a Honors sophomore and SELF Fellow majoring in Cybersecurity Engineering/minoring in Business. He is from Overland Park, Kansas.",
@@ -105,7 +105,7 @@ const currentExecs = [
     email: "mailto:jagannathsn25@gmail.com",
   },
   {
-    headshot: "/images/headshots/SharivaPradhan.jpeg.jpeg",
+    headshot: "/images/headshots/SharivaPradhan.jpg",
     title: "Director of Public Relations",
     name: "Shariva Pradhan",
     shortBio: "Shariva is a sophomore and a SELF Fellow majoring in Mechanical Engineering. She is from Overland Park, Kansas.",

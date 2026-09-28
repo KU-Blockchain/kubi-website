@@ -43,6 +43,14 @@ export default function DaoPage() {
         About
       </Heading>
       <Text mb={6} lineHeight="1.75">{aboutText}</Text>
+      <Text mb={6} lineHeight="1.75">
+        Our DAO runs on{" "}
+        <Link href="https://poa.box/" isExternal textDecoration="underline">
+          Poa (poa.box)
+        </Link>
+        , open-source software for community governance. We use it to organize tasks,
+        recognize contributions, and give members a voice in club decisions.
+      </Text>
       <Button size="md" as={Link} href={DAO_HOME_URL} isExternal variant="accent" _hover={{ textDecoration: "none" }}>
         Access the DAO
       </Button>
